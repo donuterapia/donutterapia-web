@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adquiere tu Franquicia | Donut Terapia - Oportunidad de Negocio</title>
+    <meta name="description" content="Únete a la franquicia Donut Terapia. Desde $30,900 de inversión inicial con ganancias mensuales. 14 sucursales exitosas en Ecuador.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts: Poppins for headers, Open Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dt-pink': '#FF69B4', // Hot pink
+                        'dt-dark': '#2D2D2D',
+                        'dt-cream': '#FFF5E6',
+                    },
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif'],
+                        'heading': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(255, 105, 180, 0.6);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(255, 105, 180, 0);
+            }
+        }
+
+        .glow-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .glow-button:hover::before {
+            left: 100%;
+        }
+
+        .pulse-button {
+            animation: pulse-glow 2s infinite;
+        }
+
+        .benefit-card {
+            animation: bounceIn 0.6s ease-out forwards;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .counter-stat {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF69B4;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d14785;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased selection:bg-dt-pink selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <img src="https://static.wixstatic.com/media/96ce18_610406620eee4e10ac43a0b9d4ba7d0c~mv2.png" alt="Donut Terapia Logo" class="h-12 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#inicio" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Inicio
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="index.html#productos" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Menú
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="stores.html" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Sucursales
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="franchise.html" class="text-dt-pink font-semibold transition-colors duration-200 relative group">Franquicias
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-dt-pink transition-all duration-300"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact-form" class="glow-button pulse-button bg-dt-pink text-white px-7 py-3 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                        ¡Quiero Información!
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-dt-pink focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html#inicio" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Inicio</a>
+                <a href="index.html#productos" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Menú</a>
+                <a href="stores.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Sucursales</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Sobre Nosotros</a>
+                <a href="franchise.html" class="block px-3 py-2 text-base font-medium text-dt-pink font-bold hover:bg-gray-50 rounded-md">Franquicias</a>
+                <a href="#contact-form" class="block mt-4 text-center bg-dt-pink text-white px-4 py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors">¡Quiero Información!</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION - High Impact -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-dt-dark via-gray-800 to-black min-h-screen flex items-center overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-dt-pink rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-rose-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in-up">
+                <div class="mb-6 inline-block bg-dt-pink/20 backdrop-blur-sm px-6 py-2 rounded-full text-dt-pink text-sm font-bold tracking-widest uppercase border border-dt-pink/30">
+                    💰 Oportunidad de Negocio Probada
+                </div>
+                <h1 class="text-6xl md:text-7xl font-heading font-bold text-white mb-8 leading-tight">
+                    Crece Con <span class="text-transparent bg-clip-text bg-gradient-to-r from-dt-pink via-rose-300 to-dt-pink">Donut Terapia</span>
+                </h1>
+                <p class="text-2xl text-gray-200 mb-10 leading-relaxed">
+                    Desde <span class="font-bold text-dt-pink">$30,900</span> de inversión inicial. Ganancias mensuales aproximadas desde <span class="font-bold text-dt-pink">$1,600</span>. 14 sucursales exitosas operando en Ecuador.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact-form" class="glow-button bg-dt-pink text-white text-lg font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-rose-600 hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="rocket" class="w-6 h-6"></i>
+                        Empieza Hoy
+                    </a>
+                    <a href="#benefits" class="bg-white/10 text-white text-lg font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center justify-center gap-2">
+                        <i data-lucide="play-circle" class="w-6 h-6"></i>
+                        Ver Más
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Column -->
+            <div class="space-y-6">
+                <div class="counter-stat bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-white/60 font-semibold">Años de Experiencia</span>
+                        <i data-lucide="award" class="w-8 h-8 text-dt-pink"></i>
+                    </div>
+                    <div class="text-5xl font-heading font-bold text-dt-pink">5+</div>
+                    <p class="text-white/80 mt-2">Trayectoria probada en el mercado</p>
+                </div>
+
+                <div class="counter-stat bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all" style="animation-delay: 0.1s">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-white/60 font-semibold">Locales Operativos</span>
+                        <i data-lucide="store" class="w-8 h-8 text-dt-pink"></i>
+                    </div>
+                    <div class="text-5xl font-heading font-bold text-dt-pink">14+</div>
+                    <p class="text-white/80 mt-2">Sucursales exitosas en Ecuador</p>
+                </div>
+
+                <div class="counter-stat bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all" style="animation-delay: 0.2s">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-white/60 font-semibold">Merma Promedio</span>
+                        <i data-lucide="check-circle" class="w-8 h-8 text-dt-pink"></i>
+                    </div>
+                    <div class="text-5xl font-heading font-bold text-dt-pink">0%</div>
+                    <p class="text-white/80 mt-2">Control de calidad perfectamente optimizado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT BREAKDOWN -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">Estructura de Inversión</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink mx-auto rounded-full mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Todo lo que necesitas saber sobre los costos iniciales y operativos</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- Initial Investment -->
+                <div class="bg-gradient-to-br from-dt-pink/10 to-rose-50 p-10 rounded-3xl border-2 border-dt-pink/20 hover:border-dt-pink/50 transition-all">
+                    <h3 class="text-3xl font-heading font-bold text-gray-900 mb-8 flex items-center gap-3">
+                        <i data-lucide="dollar-sign" class="w-8 h-8 text-dt-pink"></i>
+                        Inversión Inicial
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+                            <span class="text-gray-700 font-semibold">Fee de Franquicia (5 años)</span>
+                            <span class="text-2xl font-bold text-dt-pink">$9,900</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+                            <span class="text-gray-700 font-semibold">Adecuaciones (Local)</span>
+                            <span class="text-2xl font-bold text-dt-pink">$21,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+                            <span class="text-gray-700 font-semibold">Adecuaciones (Isla)</span>
+                            <span class="text-2xl font-bold text-dt-pink">$15,000</span>
+                        </div>
+                        <div class="border-t-2 border-dt-pink/30 pt-4 mt-4 flex justify-between items-center p-4 bg-white rounded-lg">
+                            <span class="text-gray-900 font-bold">Total Mínimo</span>
+                            <span class="text-3xl font-bold text-dt-pink">$30,900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ongoing Costs -->
+                <div class="bg-gradient-to-br from-rose-50 to-pink-50 p-10 rounded-3xl border-2 border-rose-200 hover:border-dt-pink transition-all">
+                    <h3 class="text-3xl font-heading font-bold text-gray-900 mb-8 flex items-center gap-3">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-dt-pink"></i>
+                        Costos Operativos
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+                            <div>
+                                <span class="text-gray-700 font-semibold block">Royalties</span>
+                                <span class="text-sm text-gray-500">Del ingreso mensual</span>
+                            </div>
+                            <span class="text-2xl font-bold text-dt-pink">2%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+                            <div>
+                                <span class="text-gray-700 font-semibold block">Marketing</span>
+                                <span class="text-sm text-gray-500">Del ingreso mensual</span>
+                            </div>
+                            <span class="text-2xl font-bold text-dt-pink">2%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-white rounded-lg">
+                            <div>
+                                <span class="text-gray-700 font-semibold block">Soporte y Consultoría</span>
+                                <span class="text-sm text-gray-500">Incluido para siempre</span>
+                            </div>
+                            <span class="text-2xl font-bold text-green-600">✓</span>
+                        </div>
+                        <div class="border-t-2 border-rose-200 pt-4 mt-4 p-4 bg-white rounded-lg">
+                            <p class="text-sm text-gray-600">Solo 4% total de tu ingreso en costos operativos continuos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Earnings Projection -->
+            <div class="bg-gradient-to-r from-dt-dark to-black rounded-3xl p-12 text-white text-center">
+                <h3 class="text-3xl font-heading font-bold mb-4">Proyección de Ganancias Mensuales</h3>
+                <div class="grid md:grid-cols-3 gap-8 mt-10">
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+                        <p class="text-gray-300 mb-4">Estimado Conservador</p>
+                        <div class="text-4xl font-bold text-dt-pink mb-2">$1,600+</div>
+                        <p class="text-sm text-gray-400">Después de costos operativos</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 ring-2 ring-dt-pink">
+                        <p class="text-gray-300 mb-4">Estimado Promedio</p>
+                        <div class="text-4xl font-bold text-dt-pink mb-2">$2,800+</div>
+                        <p class="text-sm text-gray-400">Basado en operación de 14 meses</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+                        <p class="text-gray-300 mb-4">Punto de Equilibrio</p>
+                        <div class="text-4xl font-bold text-dt-pink mb-2">~8-10</div>
+                        <p class="text-sm text-gray-400">Meses con modelo probado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section id="benefits" class="py-24 bg-dt-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">¿Por Qué Ser Franquiciatario?</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink mx-auto rounded-full mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Todos los beneficios que recibirás como miembro de la familia Donut Terapia</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="benefit-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="brand-recognition" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Marca Reconocida</h3>
+                    <p class="text-gray-600">Únete a una marca establecida con presencia en 14+ locales y comunidad leal de clientes en todo Ecuador.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2" style="animation-delay: 0.1s">
+                    <div class="w-16 h-16 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="book-open" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Capacitación Completa</h3>
+                    <p class="text-gray-600">Recibe entrenamiento integral en operaciones, servicio al cliente, gestión de inventario y estrategias de ventas.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2" style="animation-delay: 0.2s">
+                    <div class="w-16 h-16 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="headphones" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Soporte Continuo</h3>
+                    <p class="text-gray-600">Acceso a consultoría y soporte permanente de nuestro equipo experto para resolver cualquier desafío operativo.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2" style="animation-delay: 0.3s">
+                    <div class="w-16 h-16 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Sistema Probado</h3>
+                    <p class="text-gray-600">Utiliza un modelo de negocio ya validado y optimizado con 5+ años de operación exitosa.</p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="benefit-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2" style="animation-delay: 0.4s">
+                    <div class="w-16 h-16 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Suministro Garantizado</h3>
+                    <p class="text-gray-600">Acceso directo a nuestra planta de producción con recetas exclusivas y productos de máxima calidad.</p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="benefit-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2" style="animation-delay: 0.5s">
+                    <div class="w-16 h-16 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">ROI Rápido</h3>
+                    <p class="text-gray-600">Punto de equilibrio estimado en 8-10 meses con márgenes de ganancia consistentes y 0% de merma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY NOW SECTION -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-heading font-bold text-gray-900 mb-8">¿Por Qué Ahora es el Momento Perfecto?</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-dt-pink/20">
+                                    <i data-lucide="check-circle" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Demanda en Crecimiento</h3>
+                                <p class="text-gray-600 mt-2">El mercado de donuts artesanales está en expansión con clientes buscando opciones premium y naturales.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-dt-pink/20">
+                                    <i data-lucide="check-circle" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Modelo Resiliente</h3>
+                                <p class="text-gray-600 mt-2">Hemos probado nuestra capacidad de adaptación durante tiempos desafiantes y salimos más fuertes.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-dt-pink/20">
+                                    <i data-lucide="check-circle" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Expansión Nacional</h3>
+                                <p class="text-gray-600 mt-2">Estamos buscando franquiciatarios en nuevas ciudades. ¡Este es tu momento para ser pionero!</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-dt-pink/20">
+                                    <i data-lucide="check-circle" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Bajo Costo Inicial</h3>
+                                <p class="text-gray-600 mt-2">Comparado con otras franquicias, nuestra inversión inicial es altamente accesible sin comprometer calidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-dt-pink to-rose-500 rounded-3xl p-10 text-white">
+                    <h3 class="text-3xl font-heading font-bold mb-8">Requisitos Clave</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30">
+                            <p class="font-semibold">✓ Pasión por la calidad</p>
+                            <p class="text-sm text-white/80 mt-1">Compromiso con ofrecer los mejores productos</p>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30">
+                            <p class="font-semibold">✓ Capacidad de inversión</p>
+                            <p class="text-sm text-white/80 mt-1">Mínimo $30,900 disponible</p>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30">
+                            <p class="font-semibold">✓ Ubicación estratégica</p>
+                            <p class="text-sm text-white/80 mt-1">Zona con tráfico de clientes potenciales</p>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30">
+                            <p class="font-semibold">✓ Mentalidad emprendedora</p>
+                            <p class="text-sm text-white/80 mt-1">Disposición a aprender y crecer</p>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30">
+                            <p class="font-semibold">✓ Disponibilidad</p>
+                            <p class="text-sm text-white/80 mt-1">Dedicación a la operación diaria del local</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact-form" class="py-24 bg-gradient-to-b from-dt-cream to-white">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">Da el Primer Paso</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink mx-auto rounded-full mb-6"></div>
+                <p class="text-xl text-gray-600">Completa este formulario y uno de nuestros asesores te contactará con toda la información</p>
+            </div>
+
+            <form class="bg-white rounded-3xl shadow-2xl p-10 border-2 border-dt-pink/10 space-y-6" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-900 mb-2">Nombre Completo *</label>
+                        <input type="text" name="nombre" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-dt-pink focus:outline-none transition-colors" placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-900 mb-2">Teléfono Celular *</label>
+                        <input type="tel" name="telefono" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-dt-pink focus:outline-none transition-colors" placeholder="Tu celular">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-900 mb-2">Email *</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-dt-pink focus:outline-none transition-colors" placeholder="tu@email.com">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-900 mb-2">Ciudad de Interés *</label>
+                    <input type="text" name="ciudad" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-dt-pink focus:outline-none transition-colors" placeholder="¿Dónde deseas abrir tu sucursal?">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-900 mb-2">Cuéntanos Sobre Ti *</label>
+                    <textarea name="mensaje" required rows="5" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-dt-pink focus:outline-none transition-colors resize-none" placeholder="Tu experiencia emprendedora, por qué te interesa Donut Terapia, etc."></textarea>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <input type="checkbox" name="terminos" required class="w-5 h-5 text-dt-pink rounded focus:ring-2 focus:ring-dt-pink mt-1">
+                    <label class="text-sm text-gray-600">Acepto recibir información sobre la franquicia y autorizo el contacto de Donut Terapia</label>
+                </div>
+
+                <button type="submit" class="w-full glow-button bg-dt-pink text-white font-bold py-4 px-6 rounded-full hover:bg-rose-600 transition-all duration-300 text-lg flex items-center justify-center gap-2">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                    Enviar Información
+                </button>
+
+                <p class="text-center text-sm text-gray-500">Responderemos dentro de 24 horas con toda la información sobre tu franquicia</p>
+            </form>
+
+            <!-- Direct Contact -->
+            <div class="mt-12 grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl p-8 text-center border-2 border-gray-100 hover:border-dt-pink transition-colors">
+                    <i data-lucide="phone" class="w-10 h-10 text-dt-pink mx-auto mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-2">Llamar Directamente</h4>
+                    <p class="text-gray-600 mb-4">Disponibles de lunes a viernes</p>
+                    <a href="tel:0991412403" class="font-bold text-dt-pink hover:text-rose-600">099 141 2403</a>
+                </div>
+                <div class="bg-white rounded-2xl p-8 text-center border-2 border-gray-100 hover:border-dt-pink transition-colors">
+                    <i data-lucide="message-circle" class="w-10 h-10 text-dt-pink mx-auto mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-2">WhatsApp</h4>
+                    <p class="text-gray-600 mb-4">Respuesta inmediata a tu mensaje</p>
+                    <a href="https://walink.co/c1d7ad" target="_blank" class="font-bold text-dt-pink hover:text-rose-600">Enviar Mensaje</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gradient-to-b from-dt-dark to-black text-white py-20 border-t-4 border-dt-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="https://static.wixstatic.com/media/96ce18_610406620eee4e10ac43a0b9d4ba7d0c~mv2.png" alt="Logo" class="h-16 w-auto mb-4 opacity-95 hover:opacity-100 transition-opacity">
+                    <p class="text-gray-300 max-w-sm leading-relaxed mb-6">Donut Terapia: Donde la felicidad se hornea fresh todos los días. Más que donuts, una experiencia artesanal desde 2019.</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/donuterapia/?hl=es-la" target="_blank" class="bg-gradient-to-br from-pink-500 to-rose-600 p-3 rounded-full hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 transform hover:scale-110">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.facebook.com/donuterapia/?ref=bookmarks" target="_blank" class="bg-blue-600 p-3 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-110">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@donutterapia" target="_blank" class="bg-gray-700 p-3 rounded-full hover:shadow-lg hover:shadow-gray-500/50 transition-all duration-300 transform hover:scale-110">
+                            <i data-lucide="video" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-xl mb-6 text-dt-pink flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i> Ubicación
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="hover:text-dt-pink transition-colors cursor-pointer">Quito, Ecuador</li>
+                        <li><span class="font-semibold text-white">14 Sucursales</span> disponibles</li>
+                        <li class="text-sm text-gray-400 pt-2">Abiertos L-D: 9am - 7:30pm</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-xl mb-6 text-dt-pink flex items-center gap-2">
+                        <i data-lucide="phone" class="w-5 h-5"></i> Contacto
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="hover:text-dt-pink transition-colors cursor-pointer">📞 099 141 2403</li>
+                        <li class="hover:text-dt-pink transition-colors cursor-pointer">✉️ ventas@donutterapia.com</li>
+                        <li><a href="https://walink.co/c1d7ad" target="_blank" class="text-green-400 hover:text-green-300 transition-colors font-semibold flex items-center gap-1">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h5 class="font-bold text-white mb-3">Enlaces Rápidos</h5>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="index.html#inicio" class="hover:text-dt-pink transition-colors">→ Inicio</a></li>
+                            <li><a href="index.html#productos" class="hover:text-dt-pink transition-colors">→ Menú</a></li>
+                            <li><a href="https://pedidos.donutterapia.com/pedir" target="_blank" class="hover:text-dt-pink transition-colors">→ Tienda Online</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-3">Información</h5>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="about.html" class="hover:text-dt-pink transition-colors">→ Sobre Nosotros</a></li>
+                            <li><a href="stores.html" class="hover:text-dt-pink transition-colors">→ Sucursales</a></li>
+                            <li><a href="franchise.html" class="hover:text-dt-pink transition-colors">→ Franquicias</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-3">Síguenos</h5>
+                        <p class="text-gray-400 text-sm mb-4">Actualiza con nosotros en redes para promociones y nuevos sabores.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-dt-pink/20 text-dt-pink px-2 py-1 rounded">#DonutTerapia</span>
+                            <span class="text-xs bg-rose-600/20 text-rose-300 px-2 py-1 rounded">#FelicidadHorneada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 pt-8 text-center">
+                    <p class="text-gray-400 mb-2">&copy; 2024 Donut Terapia. Todos los derechos reservados.</p>
+                    <p class="text-gray-500 text-sm">Diseñado con 🍩 y mucho amor para Quito</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://walink.co/c1d7ad" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all z-50">
+        <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Sucursales | Donut Terapia</title>
+    <meta name="description" content="Encuentra todas nuestras sucursales de Donut Terapia en Quito y otras ciudades de Ecuador. Contáctanos por WhatsApp.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts: Poppins for headers, Open Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dt-pink': '#FF69B4', // Hot pink
+                        'dt-dark': '#2D2D2D',
+                        'dt-cream': '#FFF5E6',
+                    },
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif'],
+                        'heading': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(255, 105, 180, 0.6);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .glow-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .glow-button:hover::before {
+            left: 100%;
+        }
+
+        .store-card {
+            animation: bounceIn 0.6s ease-out forwards;
+        }
+
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF69B4;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d14785;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased selection:bg-dt-pink selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <img src="https://static.wixstatic.com/media/96ce18_610406620eee4e10ac43a0b9d4ba7d0c~mv2.png" alt="Donut Terapia Logo" class="h-12 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#inicio" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Inicio
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="index.html#productos" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Menú
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="index.html#galeria" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Galería
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="stores.html" class="text-dt-pink font-semibold transition-colors duration-200 relative group">Sucursales
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-dt-pink transition-all duration-300"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://linktr.ee/donutterapia" target="_blank" class="glow-button bg-dt-pink text-white px-7 py-3 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        Comprar Ya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-dt-pink focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html#inicio" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Inicio</a>
+                <a href="index.html#productos" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Menú</a>
+                <a href="index.html#galeria" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Galería</a>
+                <a href="stores.html" class="block px-3 py-2 text-base font-medium text-dt-pink font-bold hover:bg-gray-50 rounded-md">Sucursales</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Sobre Nosotros</a>
+                <a href="https://linktr.ee/donutterapia" class="block mt-4 text-center bg-dt-pink text-white px-4 py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors">Comprar Online</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO SECTION -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-rose-50 to-pink-50 min-h-[400px] flex items-center">
+        <div class="absolute inset-0 z-0 opacity-5">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-dt-pink rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-rose-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center fade-in-up">
+            <h1 class="text-6xl md:text-7xl font-heading font-bold text-gray-900 mb-6">Nuestras Sucursales</h1>
+            <p class="text-2xl text-gray-700 max-w-2xl mx-auto">Encuentra la sucursal más cercana a ti y disfruta de nuestros donuts frescos</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Contact Info Section -->
+            <div class="mb-16 bg-gradient-to-r from-dt-pink to-rose-500 rounded-3xl p-12 text-white text-center">
+                <h2 class="text-4xl font-heading font-bold mb-4">¿Tienes Preguntas?</h2>
+                <p class="text-xl text-white/90 mb-8">Contacta directamente con cualquiera de nuestras sucursales por WhatsApp</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://walink.co/c1d7ad" target="_blank" class="glow-button bg-white text-dt-pink font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        WhatsApp General
+                    </a>
+                    <a href="tel:0991412403" class="glow-button bg-white text-dt-pink font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        Llamar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stores Grid -->
+            <div class="mb-20">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">Todas Nuestras Sucursales</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink rounded-full mb-12"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Quito Tumbaco (Main) -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Tumbaco</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Nuestra sede principal y planta de producción</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Tumbaco</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://bit.ly/3fUBCxM" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quito Condado -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2" style="animation-delay: 0.05s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Condado</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Centro comercial</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Condado</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/message/7EJHZ3X4CFF3H1" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quito Plaza de Toros -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2" style="animation-delay: 0.1s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Plaza de Toros</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Centro norte</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Plaza de Toros</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/89801b" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quito Sur Ajavi -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2" style="animation-delay: 0.15s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Sur Ajavi</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Centro sur</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Sur Ajavi</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/e2c7c8" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quito Hilacril Arenal -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2" style="animation-delay: 0.2s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Hilacril</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Arenal</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Hilacril Arenal</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/e61cee" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quito Sangolqui -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2" style="animation-delay: 0.25s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Sangolqui</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Valle de los Chillos</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Sangolqui</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.link/65hzgc" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quito Cumbaya -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2" style="animation-delay: 0.3s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Cumbaya</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Zona de Cumbaya</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Cumbaya</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/5872e0" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quito Paseo San Francisco -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-dt-pink hover:-translate-y-2" style="animation-delay: 0.35s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-dt-pink/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-dt-pink"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Paseo San Francisco</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Centro norte</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">Quito, Paseo San Francisco</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-dt-pink mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/fd9d35" target="_blank" class="w-full block text-center bg-dt-pink text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Otavalo -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-rose-500 hover:-translate-y-2" style="animation-delay: 0.4s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-rose-500/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-rose-500"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Otavalo</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Otra ciudad</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">Otavalo</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/df5f85" target="_blank" class="w-full block text-center bg-rose-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Ibarra -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-rose-500 hover:-translate-y-2" style="animation-delay: 0.45s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-rose-500/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-rose-500"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Ibarra</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Otra ciudad</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">Ibarra</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://bit.ly/3k2zpBh" target="_blank" class="w-full block text-center bg-rose-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Ambato -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-rose-500 hover:-translate-y-2" style="animation-delay: 0.5s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-rose-500/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-rose-500"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Ambato</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Otra ciudad</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">Ambato</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/eddb97" target="_blank" class="w-full block text-center bg-rose-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Latacunga -->
+                    <div class="store-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-rose-500 hover:-translate-y-2" style="animation-delay: 0.55s">
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-rose-500/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-rose-500"></i>
+                                </div>
+                                <h3 class="text-2xl font-heading font-bold text-gray-900">Latacunga</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">Otra ciudad</p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">Latacunga</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-rose-500 mt-0.5"></i>
+                                    <p class="text-gray-700">9:00 AM - 7:30 PM</p>
+                                </div>
+                            </div>
+                            <a href="https://walink.co/8af69e" target="_blank" class="w-full block text-center bg-rose-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="bg-dt-cream p-12 rounded-3xl mb-16">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-5xl font-heading font-bold text-dt-pink mb-2">14+</div>
+                        <p class="text-xl text-gray-700">Sucursales en Ecuador</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-heading font-bold text-dt-pink mb-2">24/7</div>
+                        <p class="text-xl text-gray-700">Contacto por WhatsApp</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-heading font-bold text-dt-pink mb-2">∞</div>
+                        <p class="text-xl text-gray-700">Donuts Deliciosas</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gradient-to-b from-dt-dark to-black text-white py-20 border-t-4 border-dt-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="https://static.wixstatic.com/media/96ce18_610406620eee4e10ac43a0b9d4ba7d0c~mv2.png" alt="Logo" class="h-16 w-auto mb-4 opacity-95 hover:opacity-100 transition-opacity">
+                    <p class="text-gray-300 max-w-sm leading-relaxed mb-6">Donut Terapia: Donde la felicidad se hornea fresh todos los días. Más que donuts, una experiencia artesanal desde 2019.</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/donuterapia/?hl=es-la" target="_blank" class="bg-gradient-to-br from-pink-500 to-rose-600 p-3 rounded-full hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 transform hover:scale-110">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.facebook.com/donuterapia/?ref=bookmarks" target="_blank" class="bg-blue-600 p-3 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-110">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@donutterapia" target="_blank" class="bg-gray-700 p-3 rounded-full hover:shadow-lg hover:shadow-gray-500/50 transition-all duration-300 transform hover:scale-110">
+                            <i data-lucide="video" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-xl mb-6 text-dt-pink flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i> Ubicación
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="hover:text-dt-pink transition-colors cursor-pointer">Quito, Ecuador</li>
+                        <li><span class="font-semibold text-white">14 Sucursales</span> disponibles</li>
+                        <li class="text-sm text-gray-400 pt-2">Abiertos L-D: 9am - 7:30pm</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-xl mb-6 text-dt-pink flex items-center gap-2">
+                        <i data-lucide="phone" class="w-5 h-5"></i> Contacto
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="hover:text-dt-pink transition-colors cursor-pointer">📞 099 141 2403</li>
+                        <li class="hover:text-dt-pink transition-colors cursor-pointer">✉️ ventas@donutterapia.com</li>
+                        <li><a href="https://walink.co/c1d7ad" target="_blank" class="text-green-400 hover:text-green-300 transition-colors font-semibold flex items-center gap-1">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h5 class="font-bold text-white mb-3">Enlaces Rápidos</h5>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="index.html#inicio" class="hover:text-dt-pink transition-colors">→ Inicio</a></li>
+                            <li><a href="index.html#productos" class="hover:text-dt-pink transition-colors">→ Menú</a></li>
+                            <li><a href="https://pedidos.donutterapia.com/pedir" target="_blank" class="hover:text-dt-pink transition-colors">→ Tienda Online</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-3">Información</h5>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="about.html" class="hover:text-dt-pink transition-colors">→ Sobre Nosotros</a></li>
+                            <li><a href="stores.html" class="hover:text-dt-pink transition-colors">→ Sucursales</a></li>
+                            <li><a href="https://www.donutterapia.com/politicas-de-la-tienda" target="_blank" class="hover:text-dt-pink transition-colors">→ Políticas</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-3">Síguenos</h5>
+                        <p class="text-gray-400 text-sm mb-4">Actualiza con nosotros en redes para promociones y nuevos sabores.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-dt-pink/20 text-dt-pink px-2 py-1 rounded">#DonutTerapia</span>
+                            <span class="text-xs bg-rose-600/20 text-rose-300 px-2 py-1 rounded">#FelicidadHorneada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 pt-8 text-center">
+                    <p class="text-gray-400 mb-2">&copy; 2024 Donut Terapia. Todos los derechos reservados.</p>
+                    <p class="text-gray-500 text-sm">Diseñado con 🍩 y mucho amor para Quito</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://walink.co/c1d7ad" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all z-50">
+        <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
