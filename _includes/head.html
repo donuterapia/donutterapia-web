@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Meta Title -->
+    <title>
+        {%- if page.url == "/" -%}
+        {{ site.title }} - Las Donas Más Deliciosas de Quito
+        {%- elsif page.title -%}
+        {{ page.title }} | {{ site.title }}
+        {%- else -%}
+        {{ site.title }}
+        {%- endif -%}
+    </title>
+
+    <!-- SEO Plugin -->
+    {%- seo -%}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+
+    <!-- Tailwind CSS (built from input.css) -->
+    <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts: Poppins for headers, Open Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Compiled CSS from SCSS (for production) -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+
+    <!-- Google Analytics -->
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+        {%- include google-analytics.html -%}
+    {%- endif -%}
+</head>

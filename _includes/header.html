@@ -1,0 +1,55 @@
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="{{ '/' | relative_url }}" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <img src="{{ '/images/logo.png' | relative_url }}" alt="Donut Terapia Logo" class="h-12 w-auto object-contain">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#inicio" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Inicio
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#productos" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Menú
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#galeria" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Galería
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#ubicaciones" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Sucursales
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center">
+                <a href="https://linktr.ee/donutterapia" target="_blank" class="glow-button bg-dt-pink text-white px-7 py-3 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    Comprar Ya
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-dt-pink focus:outline-none">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+            <a href="#inicio" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Inicio</a>
+            <a href="#productos" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Menú</a>
+            <a href="#galeria" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Galería</a>
+            <a href="#ubicaciones" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Sucursales</a>
+            <a href="https://linktr.ee/donutterapia" target="_blank" class="block mt-4 text-center bg-dt-pink text-white px-4 py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors">Comprar Online</a>
+        </div>
+    </div>
+</nav>

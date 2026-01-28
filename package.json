@@ -1,0 +1,26 @@
+{
+  "name": "donutterapia--web",
+  "version": "1.0.0",
+  "description": "Donut Terapia Website",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+    "jekyll:dev": "bundle exec jekyll serve --livereload",
+    "jekyll:build": "bundle exec jekyll build",
+    "start": "npm run dev & npm run jekyll:dev"
+  },
+  "keywords": [
+    "donut",
+    "therapy",
+    "website",
+    "tailwindcss",
+    "jekyll"
+  ],
+  "author": "Sebastian Iturralde",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16"
+  }
+}

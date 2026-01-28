@@ -1,0 +1,79 @@
+---
+layout: default
+title: Menú de Donut Terapia
+permalink: /products/
+---
+
+<!-- HERO SECTION -->
+<section class="relative pt-32 pb-12 bg-gradient-to-br from-dt-pink via-rose-400 to-red-400 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl font-heading font-bold mb-4">Nuestro Menú</h1>
+        <p class="text-xl md:text-2xl text-white/90">Explora nuestros deliciosos donuts frescos, combos y bebidas</p>
+    </div>
+</section>
+
+<!-- FILTERS SECTION -->
+<section class="py-8 bg-dt-cream sticky top-24 z-40 border-b-2 border-dt-pink/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <h2 class="text-lg font-bold text-gray-900">Categorías:</h2>
+            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                <button class="category-btn filter-btn px-6 py-2 rounded-full font-bold text-white bg-dt-pink hover:bg-rose-600 transition-all" data-filter="all">
+                    Todos
+                </button>
+                <button class="category-btn filter-btn px-6 py-2 rounded-full font-bold text-dt-pink bg-white border-2 border-dt-pink hover:bg-dt-pink hover:text-white transition-all" data-filter="promociones">
+                    Promociones
+                </button>
+                <button class="category-btn filter-btn px-6 py-2 rounded-full font-bold text-dt-pink bg-white border-2 border-dt-pink hover:bg-dt-pink hover:text-white transition-all" data-filter="personalizadas">
+                    Personalizadas
+                </button>
+                <button class="category-btn filter-btn px-6 py-2 rounded-full font-bold text-dt-pink bg-white border-2 border-dt-pink hover:bg-dt-pink hover:text-white transition-all" data-filter="docenas">
+                    Docenas
+                </button>
+                <button class="category-btn filter-btn px-6 py-2 rounded-full font-bold text-dt-pink bg-white border-2 border-dt-pink hover:bg-dt-pink hover:text-white transition-all" data-filter="combos">
+                    Combos
+                </button>
+                <button class="category-btn filter-btn px-6 py-2 rounded-full font-bold text-dt-pink bg-white border-2 border-dt-pink hover:bg-dt-pink hover:text-white transition-all" data-filter="bebidas">
+                    Bebidas
+                </button>
+                <button class="category-btn filter-btn px-6 py-2 rounded-full font-bold text-dt-pink bg-white border-2 border-dt-pink hover:bg-dt-pink hover:text-white transition-all" data-filter="mercaderia">
+                    Mercadería
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="py-16 bg-gradient-to-r from-dt-pink to-rose-500 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-1/2 left-1/4 text-9xl">🍩</div>
+        <div class="absolute top-1/4 right-1/4 text-8xl">🍩</div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-5xl font-heading font-bold text-white mb-6">¿Listo para ordenar?</h2>
+        <p class="text-2xl text-white/90 mb-8">
+            Envío gratis a tu ubicación en Quito
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/593991412403" target="_blank" class="glow-button bg-white text-dt-pink font-bold px-10 py-4 rounded-full hover:scale-110 transition-all duration-300 text-lg flex items-center justify-center gap-2">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                Ordenar por WhatsApp
+            </a>
+            <a href="stores.html" class="glow-button bg-white/20 text-white font-bold px-10 py-4 rounded-full hover:bg-white/30 transition-all duration-300 border-2 border-white text-lg flex items-center justify-center gap-2">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                Ver Sucursales
+            </a>
+        </div>
+    </div>
+</section>
