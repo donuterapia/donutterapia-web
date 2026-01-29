@@ -23,7 +23,7 @@ title: Home
             No son simples donuts. Son una <span class="font-bold text-rose-300">terapia de felicidad</span> horneada con los mejores ingredientes y frutas naturales.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/products/" class="glow-button bg-dt-pink text-white text-lg font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-rose-600 hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 group">
+            <a href="{{ '/products/' | relative_url }}" class="glow-button bg-dt-pink text-white text-lg font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-rose-600 hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 group">
                 <i data-lucide="zap" class="fill-current group-hover:animate-spin"></i>
                 ¡Ordenar Ahora!
             </a>
@@ -43,7 +43,7 @@ title: Home
 <section class="bg-rose-50 py-4 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-center gap-4 flex-wrap text-center">
         <span class="font-heading font-bold text-rose-500 text-lg animate-pulse">❤️ Especial San Valentín disponible</span>
-        <a href="/san-valentin/" class="text-sm font-bold underline text-rose-600 hover:text-rose-800">Ver Caja Romántica</a>
+        <a href="{{ '/san-valentin/' | relative_url }}" class="text-sm font-bold underline text-rose-600 hover:text-rose-800">Ver Caja Romántica</a>
     </div>
 </section>
 
@@ -93,7 +93,7 @@ title: Home
                     <p class="text-gray-600 mb-6 leading-relaxed">La fiesta llega a tu puerta. Cajas decoradas con variedad de sabores para sorprender a tus invitados.</p>
                     <div class="flex items-center justify-between">
                         <span class="text-dt-pink font-bold text-lg">Desde $28</span>
-                        <a href="/products/" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
+                        <a href="{{ '/products/' | relative_url }}" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
                             Ver Boxes <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -114,7 +114,7 @@ title: Home
                     <p class="text-gray-600 mb-6 leading-relaxed">Tú decides cada detalle. Elige tus sabores y toppings favoritos para tu dona perfecta.</p>
                     <div class="flex items-center justify-between">
                         <span class="text-dt-pink font-bold text-lg">Desde $5</span>
-                        <a href="/products/" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
+                        <a href="{{ '/products/' | relative_url }}" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
                             Crear <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -124,7 +124,7 @@ title: Home
         </div>
 
         <div class="text-center mt-16">
-            <a href="/products/" class="inline-block glow-button bg-dt-pink text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transition-all duration-300">
+            <a href="{{ '/products/' | relative_url }}" class="inline-block glow-button bg-dt-pink text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transition-all duration-300">
                 Ver Todo el Menú
             </a>
         </div>
@@ -174,7 +174,7 @@ title: Home
                             <span class="text-gray-700">Carnet de suscriptor exclusivo</span>
                         </li>
                     </ul>
-                    <a href="https://pedidos.donutterapia.com/suscripcion/starter" class="block w-full text-center bg-blue-500 text-white py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">
+                    <a href="#" class="block w-full text-center bg-blue-500 text-white py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">
                         Comenzar Ahora
                     </a>
                 </div>
@@ -216,7 +216,7 @@ title: Home
                             <span class="text-gray-700">Prioritario en pedidos especiales</span>
                         </li>
                     </ul>
-                    <a href="https://pedidos.donutterapia.com/suscripcion/premium" class="block w-full text-center bg-dt-pink text-white py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors glow-button">
+                    <a href="#" class="block w-full text-center bg-dt-pink text-white py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors glow-button">
                         Suscribirse Ahora
                     </a>
                 </div>
@@ -255,7 +255,7 @@ title: Home
                             <span class="text-gray-700">Evento VIP mensual exclusivo</span>
                         </li>
                     </ul>
-                    <a href="https://pedidos.donutterapia.com/suscripcion/vip" class="block w-full text-center bg-amber-500 text-white py-3 rounded-lg font-bold hover:bg-amber-600 transition-colors">
+                    <a href="#" class="block w-full text-center bg-amber-500 text-white py-3 rounded-lg font-bold hover:bg-amber-600 transition-colors">
                         Convertirme en VIP
                     </a>
                 </div>
@@ -446,7 +446,7 @@ title: Home
         <div class="bg-gradient-to-r from-dt-pink to-rose-500 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl">
             <h3 class="text-3xl font-heading font-bold mb-3">¡Hoy es el Día de los Enamorados!</h3>
             <p class="text-rose-100 mb-6 text-lg">Disponible hasta el 14 de febrero. Entrega incluida en Quito.</p>
-            <a href="/san-valentin" class="inline-block bg-white text-dt-pink font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+            <a href="{{ '/san-valentin' | relative_url }}" class="inline-block bg-white text-dt-pink font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
                 Ver Toda la Colección
             </a>
         </div>
@@ -499,7 +499,7 @@ title: Home
                     Desde 2019 hemos construido una marca amada en Quito. Ahora, con 9 locales y creciendo, buscamos socios para expandir esta locura deliciosa por todo el país.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://www.donutterapia.com/adquiere-una-franquicia" class="text-center bg-white text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                    <a href="{{ '/adquiere-una-franquicia/' | relative_url }}" class="text-center bg-white text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                         Info de Franquicias
                     </a>
                 </div>
@@ -565,7 +565,7 @@ title: Home
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-center justify-center">
                     <div class="text-center p-6">
                         <h3 class="text-white text-2xl font-bold mb-2">¿Listo para probar?</h3>
-                        <a href="/products/" class="inline-block bg-dt-pink text-white px-6 py-3 rounded-full font-bold hover:bg-rose-600 transition-transform hover:scale-105">
+                        <a href="{{ '/products/' | relative_url }}" class="inline-block bg-dt-pink text-white px-6 py-3 rounded-full font-bold hover:bg-rose-600 transition-transform hover:scale-105">
                             Comprar Ahora
                         </a>
                     </div>

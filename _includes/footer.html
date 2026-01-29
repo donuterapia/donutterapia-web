@@ -25,10 +25,10 @@
                     <i data-lucide="navigation" class="w-5 h-5"></i> Navegación
                 </h4>
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="/" class="hover:text-dt-pink transition-colors">→ Inicio</a></li>
+                    <li><a href="{{ '/' | relative_url }}" class="hover:text-dt-pink transition-colors">→ Inicio</a></li>
                     <li><a href="/#productos" class="hover:text-dt-pink transition-colors">→ Menú</a></li>
-                    <li><a href="/productos/" class="hover:text-dt-pink transition-colors">→ Productos</a></li>
-                    <li><a href="/ubicaciones/" class="hover:text-dt-pink transition-colors">→ Ubicaciones</a></li>
+                    <li><a href="{{ '/productos/' | relative_url }}" class="hover:text-dt-pink transition-colors">→ Productos</a></li>
+                    <li><a href="{{ '/ubicaciones/' | relative_url }}" class="hover:text-dt-pink transition-colors">→ Ubicaciones</a></li>
                 </ul>
             </div>
 
@@ -38,10 +38,10 @@
                     <i data-lucide="star" class="w-5 h-5"></i> Oportunidades
                 </h4>
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="/san-valentin/" class="hover:text-dt-pink transition-colors">→ San Valentín</a></li>
-                    <li><a href="/adquiere-una-franquicia/" class="hover:text-dt-pink transition-colors">→ Franquicia</a></li>
-                    <li><a href="/about/" class="hover:text-dt-pink transition-colors">→ Acerca de</a></li>
-                    <li><a href="/politicas/" class="hover:text-dt-pink transition-colors">→ Políticas</a></li>
+                    <li><a href="{{ '/san-valentin/' | relative_url }}" class="hover:text-dt-pink transition-colors">→ San Valentín</a></li>
+                    <li><a href="{{ '/adquiere-una-franquicia/' | relative_url }}" class="hover:text-dt-pink transition-colors">→ Franquicia</a></li>
+                    <li><a href="{{ '/about/' | relative_url }}" class="hover:text-dt-pink transition-colors">→ Acerca de</a></li>
+                    <li><a href="{{ '/politicas/' | relative_url }}" class="hover:text-dt-pink transition-colors">→ Políticas</a></li>
                 </ul>
             </div>
 
