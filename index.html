@@ -72,7 +72,7 @@ title: Home
                     <p class="text-gray-600 mb-6 leading-relaxed">Frescura y naturalidad en cada mordisco. Hechas con frutas seleccionadas y sin químicos artificiales.</p>
                     <div class="flex items-center justify-between">
                         <span class="text-dt-pink font-bold text-lg">Desde $3</span>
-                        <a href="/products/" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
+                        <a href="{{ '/products/' | relative_url }}" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
                             Ordenar <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -131,8 +131,8 @@ title: Home
     </div>
 </section>
 
-<!-- SUBSCRIPTION SECTION -->
-<section id="suscripcion" class="py-24 bg-gradient-to-br from-rose-50 via-white to-rose-50">
+<!-- SUBSCRIPTION SECTION - DESKTOP -->
+<section id="suscripcion" class="hidden md:block py-24 bg-gradient-to-br from-rose-50 via-white to-rose-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
             <div class="mb-4 inline-block bg-dt-pink/10 backdrop-blur-sm px-6 py-2 rounded-full text-dt-pink text-sm font-semibold tracking-widest uppercase border border-dt-pink/20">
@@ -289,6 +289,17 @@ title: Home
     </div>
 </section>
 
+<!-- SUBSCRIPTION SECTION - MOBILE -->
+<section class="md:hidden py-12 bg-gradient-to-br from-dt-pink to-rose-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-heading font-bold text-white mb-3">Donuts Todos Los Días</h2>
+        <p class="text-white/90 mb-6">Suscribete a nuestro Plan Diario y disfruta de donuts frescos con café</p>
+        <a href="/suscripcion/" class="inline-block glow-button bg-white text-dt-pink font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300">
+            Ver Planes
+        </a>
+    </div>
+</section>
+
 <!-- TESTIMONIALS SECTION -->
 <section class="py-24 bg-gradient-to-b from-dt-cream to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -364,6 +375,8 @@ title: Home
         </div>
     </div>
 </section>
+
+<!-- TESTIMONIALS SECTION (Removed - was duplicate) -->
 
 <!-- VALENTINE'S DAY PROMOTION -->
 <section id="valentin" class="py-24 bg-white">

@@ -14,20 +14,23 @@
                 <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Inicio
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="{{ '/about/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Sobre Nosotros
+                <a href="{{ '/suscripcion/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Suscripciones
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="{{ '/stores/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Sucursales
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                <a href="{{ '/san-valentin/' | relative_url }}" class="text-white bg-rose-500 hover:bg-rose-600 px-4 py-2 rounded-full font-semibold transition-colors duration-200">
+                    ❤️ Especial
                 </a>
                 <a href="{{ '/adquiere-una-franquicia/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Franquicia
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="{{ '/products/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Menú
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
                 </a>
             </div>
 
             <!-- CTA Button -->
             <div class="hidden md:flex items-center">
-                <a href="{{ '/products/' | relative_url }}" target="_blank" class="glow-button bg-dt-pink text-white px-7 py-3 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+                <a href="{{ '/products/' | relative_url }}" class="glow-button bg-dt-pink text-white px-7 py-3 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
                     <i data-lucide="shopping-bag" class="w-5 h-5"></i>
                     Comprar Ya
                 </a>
@@ -46,11 +49,11 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
         <div class="px-4 pt-2 pb-6 space-y-2">
             <a href="{{ '/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Inicio</a>
-            <a href="{{ '/about/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Sobre Nosotros</a>
             <a href="{{ '/products/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Menú</a>
-            <a href="{{ '/stores/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Sucursales</a>
+            <a href="{{ '/suscripcion/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Suscripciones</a>
+            <a href="{{ '/san-valentin/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-white bg-rose-500 hover:bg-rose-600 rounded-md font-bold">❤️ Especial San Valentín</a>
             <a href="{{ '/adquiere-una-franquicia/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Franquicia</a>
-            <a href="https://linktr.ee/donutterapia" target="_blank" class="block mt-4 text-center bg-dt-pink text-white px-4 py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors">Comprar Online</a>
+            <a href="{{ '/products/' | relative_url }}" class="block mt-4 text-center bg-dt-pink text-white px-4 py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors">Comprar Online</a>
         </div>
     </div>
 </nav>
