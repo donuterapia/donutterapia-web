@@ -1,0 +1,479 @@
+---
+layout: default
+---
+
+<section class="yellow-gradient py-16 relative overflow-hidden">
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <h2 class="font-konigsberg text-5xl md:text-7xl text-dt-letter-outline mb-6">
+            Encuentra Tu <span class="text-dt-glacing">Donut Terapia</span>
+        </h2>
+        <p class="text-dt-letter-outline text-xl max-w-3xl mx-auto mb-8">
+            Visita una de nuestras panaderías artesanales y experimenta la magia en persona. ¡Donas frescas, sonrisas cálidas y sabores inolvidables te esperan!
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <span class="bg-dt-glacing text-white px-4 py-2 rounded-full text-sm font-semibold">Múltiples Sucursales</span>
+            <span class="bg-dt-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Wi-Fi Gratis</span>
+            <span class="bg-dt-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Drive-Thru Disponible</span>
+            <span class="bg-dt-yellow-900 text-white px-4 py-2 rounded-full text-sm font-semibold">Estacionamiento Amplio</span>
+        </div>
+    </div>
+    
+    <!-- Map decoration -->
+    <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-gradient-to-br from-dt-donut to-dt-donut-shadow rounded-full opacity-10"></div>
+    <div class="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-br from-dt-glacing to-pink-600 rounded-full opacity-10"></div>
+</section>
+
+<!-- Interactive Map Section -->
+<section class="dark-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Map Container -->
+            <div class="lg:col-span-2">
+                <div class="map-container h-96 lg:h-[600px] relative">
+                    <!-- Fallback static map with markers -->
+                    <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                            <div class="text-center">
+                            <div class="text-6xl mb-4">🗺️</div>
+                            <p class="text-dt-yellow-400 mb-2">Cargando mapa interactivo...</p>
+                            <p class="text-dt-yellow-400/70 text-sm">(El mapa interactivo mostrá todas las sucursales)</p>
+                        </div>
+                        
+                        <!-- Static markers for demo -->
+                        <div class="location-marker" style="top: 40%; left: 30%;" data-location="1"></div>
+                        <div class="location-marker active" style="top: 55%; left: 60%;" data-location="2"></div>
+                        <div class="location-marker" style="top: 70%; left: 45%;" data-location="3"></div>
+                    </div>
+                </div>
+                
+                <!-- Map Legend -->
+                <div class="mt-6 bg-black/50 rounded-xl p-6">
+                    <h4 class="font-konigsberg text-xl text-dt-donut mb-4">Leyenda</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-dt-glacing rounded-full mr-3"></div>
+                            <span class="text-dt-yellow-400 text-sm">Tienda Donut Terapia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-dt-blue-500 rounded-full mr-3"></div>
+                            <span class="text-dt-yellow-400 text-sm">Próximamente</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-dt-donut rounded-full mr-3"></div>
+                            <span class="text-dt-yellow-400 text-sm">Drive-Thru Disponible</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-dt-purple-500 rounded-full mr-3"></div>
+                            <span class="text-dt-yellow-400 text-sm">Área de Asientos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location Selector -->
+            <div>
+                <div class="bg-black/50 rounded-xl p-8 mb-8">
+                    <h3 class="font-konigsberg text-2xl text-dt-donut mb-6">Selecciona una Sucursal</h3>
+                    <div class="space-y-4">
+                        <button class="location-selector w-full text-left bg-dt-glacing/20 text-dt-yellow-400 p-4 rounded-xl hover:bg-dt-glacing/30 transition-colors" data-location="1">
+                            <div class="font-semibold mb-1">Donut Terapia Principal</div>
+                            <div class="text-sm opacity-80">Calle Dulce 123</div>
+                        </button>
+                        <button class="location-selector w-full text-left bg-dt-blue-900/30 text-dt-yellow-400 p-4 rounded-xl hover:bg-dt-blue-900/40 transition-colors active" data-location="2">
+                            <div class="font-semibold mb-1">Donut Terapia Centro</div>
+                            <div class="text-sm opacity-80">Avenida Glaseado 456</div>
+                        </button>
+                        <button class="location-selector w-full text-left bg-dt-purple-900/30 text-dt-yellow-400 p-4 rounded-xl hover:bg-dt-purple-900/40 transition-colors" data-location="3">
+                            <div class="font-semibold mb-1">Donut Terapia Colinas</div>
+                            <div class="text-sm opacity-80">Bulevar Glaseado 789</div>
+                        </button>
+                    </div>
+                    
+                    <!-- Coming Soon -->
+                    <div class="mt-8 pt-6 border-t border-dt-donut/20">
+                        <h4 class="font-konigsberg text-lg text-dt-donut mb-4">Próximamente</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="font-erita text-dt-blue-400">Ciudad Crema</div>
+                                    <div class="text-dt-yellow-400/70 text-sm">Invierno 2024</div>
+                                </div>
+                                <span class="bg-dt-blue-500/30 text-dt-blue-400 px-3 py-1 rounded-full text-xs">Próximamente</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="font-erita text-dt-purple-400">Bahía de Sprinkles</div>
+                                    <div class="text-dt-yellow-400/70 text-sm">Primavera 2025</div>
+                                </div>
+                                <span class="bg-dt-purple-500/30 text-dt-purple-400 px-3 py-1 rounded-full text-xs">Planeado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="bg-gradient-to-br from-dt-donut/20 to-dt-donut-shadow/20 rounded-xl p-6">
+                    <h4 class="font-konigsberg text-lg text-dt-donut mb-4">Vís­anos Hoy</h4>
+                    <div class="space-y-3 text-dt-yellow-400 text-sm">
+                        <div class="flex justify-between">
+                            <span>Sucursales Totales:</span>
+                            <span class="font-bold">3</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Horas Esta Semana:</span>
+                            <span class="font-bold">168</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Tiempo Promedio de Espera:</span>
+                            <span class="font-bold">3-5 min</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Espacios de Estacionamiento:</span>
+                            <span class="font-bold">120+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- All Locations Grid -->
+<section class="bg-black py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-blue-400 font-semibold">Nuestras Tiendas</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-donut mt-2 mb-4">Todas las Sucursales</h3>
+            <p class="text-dt-yellow-400 max-w-2xl mx-auto">
+                Cada sucursal de Donut Terapia tiene su propio encanto único manteniendo la misma calidad y servicio que amas.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Location 1 - Flagship -->
+            <div class="location-card bg-gradient-to-br from-dt-yellow-900/20 to-dt-yellow-700/10 rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Donut Terapia Principal</h4>
+                        <span class="bg-dt-glacing text-white px-3 py-1 rounded-full text-xs font-semibold">Tienda Original</span>
+                    </div>
+                    <div class="text-4xl">🏆</div>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-blue-900/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-blue-400">📍</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Dirección</div>
+                            <div class="text-dt-yellow-400/80 text-sm">Calle Dulce 123, Donuttown, DV 12345</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-purple-900/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-purple-400">⏰</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Horarios</div>
+                            <div class="text-dt-yellow-400/80 text-sm">Lun-Vie: 6am-8pm<br>Sáb: 7am-9pm<br>Dom: 7am-6pm</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-glacing/20 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-glacing">📞</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Contacto</div>
+                            <div class="text-dt-yellow-400/80 text-sm">(555) 123-DONA<br>principal@donutterapia.com</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-dt-blue-500/20 text-dt-blue-400 px-3 py-1 rounded-full text-xs">Drive-Thru</span>
+                    <span class="bg-dt-purple-500/20 text-dt-purple-400 px-3 py-1 rounded-full text-xs">Asientos Interiores</span>
+                    <span class="bg-dt-yellow-500/20 text-dt-yellow-700 px-3 py-1 rounded-full text-xs">Wi-Fi Gratis</span>
+                    <span class="bg-dt-glacing/20 text-dt-glacing px-3 py-1 rounded-full text-xs">Catering</span>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button class="flex-1 bg-dt-blue-500 text-white py-3 rounded-full font-bold hover:bg-dt-blue-700 transition-colors">
+                        Obtener Dirección
+                    </button>
+                    <button class="flex-1 bg-dt-glacing text-white py-3 rounded-full font-bold hover:bg-red-600 transition-colors">
+                        Ordenar Anticipadamente
+                    </button>
+                </div>
+            </div>
+
+            <!-- Location 2 - Central -->
+            <div class="location-card bg-gradient-to-br from-dt-blue-900/20 to-dt-blue-700/10 rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Donut Terapia Centro</h4>
+                        <span class="bg-dt-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">La Más Popular</span>
+                    </div>
+                    <div class="text-4xl">⭐</div>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-blue-900/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-blue-400">📍</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Dirección</div>
+                            <div class="text-dt-yellow-400/80 text-sm">Avenida Glaseado 456, Panadería, BF 67890</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-purple-900/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-purple-400">⏰</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Horarios</div>
+                            <div class="text-dt-yellow-400/80 text-sm">Lun-Vie: 5:30am-9pm<br>Sáb: 6am-10pm<br>Dom: 6am-7pm</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-glacing/20 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-glacing">📞</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Contacto</div>
+                            <div class="text-dt-yellow-400/80 text-sm">(555) 456-DONA<br>centro@donutterapia.com</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-dt-blue-500/20 text-dt-blue-400 px-3 py-1 rounded-full text-xs">Drive-Thru 24/7</span>
+                    <span class="bg-dt-purple-500/20 text-dt-purple-400 px-3 py-1 rounded-full text-xs">Patio Exterior</span>
+                    <span class="bg-dt-yellow-500/20 text-dt-yellow-700 px-3 py-1 rounded-full text-xs">Estaciones de Carga</span>
+                    <span class="bg-dt-glacing/20 text-dt-glacing px-3 py-1 rounded-full text-xs">Sala de Fiesta</span>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button class="flex-1 bg-dt-blue-500 text-white py-3 rounded-full font-bold hover:bg-dt-blue-700 transition-colors">
+                        Obtener Dirección
+                    </button>
+                    <button class="flex-1 bg-dt-glacing text-white py-3 rounded-full font-bold hover:bg-red-600 transition-colors">
+                        Ordenar Anticipadamente
+                    </button>
+                </div>
+            </div>
+
+            <!-- Location 3 - Colinas -->
+            <div class="location-card bg-gradient-to-br from-dt-purple-900/20 to-dt-purple-700/10 rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Donut Terapia Colinas</h4>
+                        <span class="bg-dt-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">Vistas Escénicas</span>
+                    </div>
+                    <div class="text-4xl">🏞️</div>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-blue-900/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-blue-400">📍</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Dirección</div>
+                            <div class="text-dt-yellow-400/80 text-sm">Bulevar Glaseado 789, Colinas de Azúcar, SH 45678</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-purple-900/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-purple-400">⏰</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Horarios</div>
+                            <div class="text-dt-yellow-400/80 text-sm">Lun-Vie: 7am-7pm<br>Sáb-Dom: 8am-6pm</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-dt-glacing/20 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dt-glacing">📞</span>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Contacto</div>
+                            <div class="text-dt-yellow-400/80 text-sm">(555) 789-DONA<br>colinas@donutterapia.com</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-dt-blue-500/20 text-dt-blue-400 px-3 py-1 rounded-full text-xs">Vista de Montañas</span>
+                    <span class="bg-dt-purple-500/20 text-dt-purple-400 px-3 py-1 rounded-full text-xs">Sala Junto a Chimenea</span>
+                    <span class="bg-dt-yellow-500/20 text-dt-yellow-700 px-3 py-1 rounded-full text-xs">Arte Local</span>
+                    <span class="bg-dt-glacing/20 text-dt-glacing px-3 py-1 rounded-full text-xs">Especiales de Temporada</span>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button class="flex-1 bg-dt-blue-500 text-white py-3 rounded-full font-bold hover:bg-dt-blue-700 transition-colors">
+                        Obtener Dirección
+                    </button>
+                    <button class="flex-1 bg-dt-glacing text-white py-3 rounded-full font-bold hover:bg-red-600 transition-colors">
+                        Ordenar Anticipadamente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features & Amenities -->
+<section class="yellow-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-letter-outline font-semibold">En Cada Sucursal</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-letter-outline mt-2 mb-4">Características de la Tienda</h3>
+            <p class="text-dt-letter-outline/80 max-w-2xl mx-auto">
+                Cada sucursal de Donut Terapia está diseñada pensando en tu comodidad y conveniencia.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-black rounded-2xl p-6 text-center">
+                <div class="text-4xl mb-4">🚗</div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Drive-Thru</h4>
+                <p class="text-dt-yellow-400 text-sm">Recogida rápida sin salir de tu auto</p>
+            </div>
+            
+            <div class="bg-black rounded-2xl p-6 text-center">
+                <div class="text-4xl mb-4">🛋️</div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Asientos Cómodos</h4>
+                <p class="text-dt-yellow-400 text-sm">Espacios confortables para relajarse y disfrutar</p>
+            </div>
+            
+            <div class="bg-black rounded-2xl p-6 text-center">
+                <div class="text-4xl mb-4">🔌</div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Wi-Fi Gratis</h4>
+                <p class="text-dt-yellow-400 text-sm">Internet de alta velocidad para trabajo o diversión</p>
+            </div>
+            
+            <div class="bg-black rounded-2xl p-6 text-center">
+                <div class="text-4xl mb-4">🎉</div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Sala de Fiesta</h4>
+                <p class="text-dt-yellow-400 text-sm">Perfecta para celebraciones y eventos</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visit Planning -->
+<section class="dark-gradient py-16" id="contact">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="font-erita text-dt-blue-400 font-semibold">Planifica Tu Visita</span>
+                <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-donut mt-2 mb-4">Consejos para la Mejor Experiencia</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black/50 rounded-2xl p-8">
+                    <h4 class="font-konigsberg text-2xl text-dt-donut mb-6">Mejores Horas para Visitar</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-dt-donut rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-black text-sm">🌅</span>
+                                </div>
+                                <div class="text-dt-yellow-400 font-semibold">Madrugada (6am-8am)</div>
+                            </div>
+                            <p class="text-dt-yellow-400/80 text-sm">Donas recién hornadas, las colas más cortas, atmósfera tranquila</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-dt-blue-500 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-sm">☕</span>
+                                </div>
+                                <div class="text-dt-yellow-400 font-semibold">Media Mañana (10am-12pm)</div>
+                            </div>
+                            <p class="text-dt-yellow-400/80 text-sm">Selección completa disponible, perfecto para un descanso con café</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-dt-purple-500 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-sm">🍩</span>
+                                </div>
+                                <div class="text-dt-yellow-400 font-semibold">Tarde (2pm-4pm)</div>
+                            </div>
+                            <p class="text-dt-yellow-400/80 text-sm">Donas recién hechas de la tarde, excelente para antojos de postre</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-black/50 rounded-2xl p-8">
+                    <h4 class="font-konigsberg text-2xl text-dt-donut mb-6">Consejos Rápidos</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-dt-glacing mr-3 mt-1">✓</span>
+                            <div>
+                                <div class="text-dt-yellow-400 font-semibold">Ordena en Línea Anticipadamente</div>
+                                <p class="text-dt-yellow-400/80 text-sm">Salta la fila con nuestro sistema de pedidos móvil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <span class="text-dt-glacing mr-3 mt-1">✓</span>
+                            <div>
+                                <div class="text-dt-yellow-400 font-semibold">Revisa Nuestras Especialidades Diarias</div>
+                                <p class="text-dt-yellow-400/80 text-sm">Cada sucursal ofrece creaciones únicas diarias</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <span class="text-dt-glacing mr-3 mt-1">✓</span>
+                            <div>
+                                <div class="text-dt-yellow-400 font-semibold">Apúntate a Nuestras Recompensas</div>
+                                <p class="text-dt-yellow-400/80 text-sm">Gana donas gratis con cada compra</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <span class="text-dt-glacing mr-3 mt-1">✓</span>
+                            <div>
+                                <div class="text-dt-yellow-400 font-semibold">Consejos de Estacionamiento</div>
+                                <p class="text-dt-yellow-400/80 text-sm">Amplio estacionamiento disponible detrás de cada sucursal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <span class="text-dt-glacing mr-3 mt-1">✓</span>
+                            <div>
+                                <div class="text-dt-yellow-400 font-semibold">Visitas en Grupo</div>
+                                <p class="text-dt-yellow-400/80 text-sm">Llama con anticipación para grupos de 8+ para mejor servicio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="mt-12 text-center">
+                <h4 class="font-konigsberg text-3xl text-dt-donut mb-6">¿Listo para Visitarnos?</h4>
+                <p class="text-dt-yellow-400 mb-8 max-w-2xl mx-auto">
+                    Descarga nuestra app para ordenar anticipadamente, ver los tiempos de espera en tiempo real y gana recompensas con cada compra.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-dt-glacing text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                        Descargar Nuestra App
+                    </button>
+                    <button class="bg-dt-blue-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-dt-blue-700 transition-colors">
+                        Ordena en Línea Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
