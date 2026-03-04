@@ -1,0 +1,301 @@
+---
+layout: default
+---
+
+<section class="yellow-gradient py-16 relative overflow-hidden">
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <h2 class="font-konigsberg text-5xl md:text-7xl text-dt-letter-outline mb-6">
+            Get in <span class="text-dt-glacing">Touch</span>
+        </h2>
+        <p class="text-dt-letter-outline text-xl max-w-3xl mx-auto mb-8">
+            We'd love to hear from you! Whether you have questions, feedback, or want to plan an event, our team is here to help make your donut dreams come true.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <span class="bg-dt-glacing text-white px-4 py-2 rounded-full text-sm font-semibold">24/7 Support</span>
+            <span class="bg-dt-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Quick Response</span>
+            <span class="bg-dt-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Catering Inquiries</span>
+            <span class="bg-dt-yellow-900 text-white px-4 py-2 rounded-full text-sm font-semibold">Careers</span>
+        </div>
+    </div>
+    
+    <!-- Floating donuts -->
+    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-dt-donut to-dt-donut-shadow rounded-full opacity-20 float-animation"></div>
+    <div class="absolute -top-10 -left-10 w-24 h-24 bg-gradient-to-br from-dt-glacing to-pink-600 rounded-full opacity-20 float-animation animation-delay-2000"></div>
+</section>
+
+<!-- Contact Form & Info -->
+<section class="dark-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Contact Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-black/50 rounded-2xl p-8 mb-8">
+                    <h3 class="font-konigsberg text-3xl text-dt-donut mb-6">Send Us a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-dt-yellow-400 mb-2">Your Name *</label>
+                                <input type="text" id="name" required 
+                                        class="form-input w-full bg-black/30 border border-dt-donut/30 rounded-xl px-4 py-3 text-dt-yellow-400 focus:border-dt-donut">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-dt-yellow-400 mb-2">Email Address *</label>
+                                <input type="email" id="email" required 
+                                        class="form-input w-full bg-black/30 border border-dt-donut/30 rounded-xl px-4 py-3 text-dt-yellow-400 focus:border-dt-donut">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-dt-yellow-400 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" 
+                                    class="form-input w-full bg-black/30 border border-dt-donut/30 rounded-xl px-4 py-3 text-dt-yellow-400 focus:border-dt-donut">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-dt-yellow-400 mb-2">What can we help you with? *</label>
+                            <select id="subject" required 
+                                    class="form-input w-full bg-black/30 border border-dt-donut/30 rounded-xl px-4 py-3 text-dt-yellow-400 focus:border-dt-donut">
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="catering">Catering & Events</option>
+                                <option value="feedback">Feedback & Suggestions</option>
+                                <option value="careers">Career Opportunities</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="allergy">Allergy Information</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-dt-yellow-400 mb-2">Your Message *</label>
+                            <textarea id="message" rows="6" required 
+                                        class="form-input w-full bg-black/30 border border-dt-donut/30 rounded-xl px-4 py-3 text-dt-yellow-400 focus:border-dt-donut resize-none"></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="newsletter" class="mr-3 w-5 h-5">
+                            <label for="newsletter" class="text-dt-yellow-400">
+                                Yes, I'd like to receive special offers and donut news via email
+                            </label>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-dt-glacing to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-red-600 hover:to-pink-700 transition-all duration-300">
+                            Send Message
+                            <span class="ml-2">🍩</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Response Time Info -->
+                <div class="bg-gradient-to-br from-dt-blue-900/30 to-dt-blue-700/20 rounded-2xl p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-konigsberg text-xl text-dt-blue-200 mb-2">Typical Response Time</h4>
+                            <p class="text-dt-yellow-400 text-sm">We aim to respond within 2-4 business hours</p>
+                        </div>
+                        <div class="text-3xl">⏰</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="space-y-8">
+                <!-- Contact Cards -->
+                <div class="contact-card bg-gradient-to-br from-dt-yellow-900/20 to-dt-yellow-700/10 rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4">📞</div>
+                        <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Call Us</h4>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">General Inquiries</div>
+                            <div class="text-dt-yellow-400/80">(555) 123-DONUT</div>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Catering Orders</div>
+                            <div class="text-dt-yellow-400/80">(555) 456-CATER</div>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Customer Support</div>
+                            <div class="text-dt-yellow-400/80">(555) 789-HELP</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-gradient-to-br from-dt-purple-900/20 to-dt-purple-700/10 rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4">📧</div>
+                        <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Email Us</h4>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">General</div>
+                            <div class="text-dt-yellow-400/80 text-sm">hello@doughlicious.com</div>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Catering</div>
+                            <div class="text-dt-yellow-400/80 text-sm">events@doughlicious.com</div>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Careers</div>
+                            <div class="text-dt-yellow-400/80 text-sm">careers@doughlicious.com</div>
+                        </div>
+                        <div>
+                            <div class="text-dt-yellow-400 font-semibold">Feedback</div>
+                            <div class="text-dt-yellow-400/80 text-sm">feedback@doughlicious.com</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Business Hours -->
+                <div class="bg-black/50 rounded-2xl p-8">
+                    <h4 class="font-konigsberg text-2xl text-dt-donut mb-6">Business Hours</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <span class="text-dt-yellow-400">Monday - Friday</span>
+                            <span class="text-dt-yellow-400 font-semibold">6:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-dt-yellow-400">Saturday</span>
+                            <span class="text-dt-yellow-400 font-semibold">7:00 AM - 9:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-dt-yellow-400">Sunday</span>
+                            <span class="text-dt-yellow-400 font-semibold">7:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-dt-donut/20">
+                        <div class="flex items-center justify-between">
+                            <span class="text-dt-yellow-400">Current Status:</span>
+                            <span id="businessStatus" class="px-3 py-1 rounded-full text-sm font-semibold"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="bg-black py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-blue-400 font-semibold">Common Questions</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-donut mt-2 mb-4">Frequently Asked Questions</h3>
+            <p class="text-dt-yellow-400 max-w-2xl mx-auto">
+                Find quick answers to common questions about our donuts, ordering, and services.
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+            <!-- FAQ Items -->
+            <div class="faq-item">
+                <button class="faq-question w-full text-left py-6 flex justify-between items-center">
+                    <span class="font-konigsberg text-xl text-dt-donut">Do you offer gluten-free donuts?</span>
+                    <span class="text-dt-glacing text-2xl">+</span>
+                </button>
+                <div class="faq-answer pb-6">
+                    <p class="text-dt-yellow-400">
+                        Yes! We offer a selection of delicious gluten-free donuts made with premium gluten-free flour. These are prepared in a dedicated area to prevent cross-contamination. Please inform our staff about any allergies when ordering.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question w-full text-left py-6 flex justify-between items-center">
+                    <span class="font-konigsberg text-xl text-dt-donut">How far in advance should I order for catering?</span>
+                    <span class="text-dt-glacing text-2xl">+</span>
+                </button>
+                <div class="faq-answer pb-6">
+                    <p class="text-dt-yellow-400">
+                        For large orders and catering, we recommend ordering at least 48 hours in advance. For weddings or large events (100+ donuts), we suggest placing your order 1-2 weeks ahead to ensure availability. Rush orders may be available with an additional fee.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question w-full text-left py-6 flex justify-between items-center">
+                    <span class="font-konigsberg text-xl text-dt-donut">Do you deliver?</span>
+                    <span class="text-dt-glacing text-2xl">+</span>
+                </button>
+                <div class="faq-answer pb-6">
+                    <p class="text-dt-yellow-400">
+                        We offer delivery within a 10-mile radius of each location through our online ordering system. Minimum order amount is $25 for delivery. For catering deliveries outside this radius, please contact our catering department for special arrangements.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question w-full text-left py-6 flex justify-between items-center">
+                    <span class="font-konigsberg text-xl text-dt-donut">Are your donuts vegan?</span>
+                    <span class="text-dt-glacing text-2xl">+</span>
+                </button>
+                <div class="faq-answer pb-6">
+                    <p class="text-dt-yellow-400">
+                        We offer 6 vegan donut varieties that are completely plant-based. These donuts are made without any animal products and are clearly marked on our menu. They're prepared in a separate area from our traditional donuts.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question w-full text-left py-6 flex justify-between items-center">
+                    <span class="font-konigsberg text-xl text-dt-donut">Can I customize a donut order for a special event?</span>
+                    <span class="text-dt-glacing text-2xl">+</span>
+                </button>
+                <div class="faq-answer pb-6">
+                    <p class="text-dt-yellow-400">
+                        Absolutely! We love creating custom donuts for special events. From personalized messages to specific color schemes and unique flavors, our team can work with you to create something special. Contact our catering department to discuss your ideas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Contact Options -->
+<section class="yellow-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-letter-outline font-semibold">Other Ways to Connect</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-letter-outline mt-2 mb-4">Quick Contact Options</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Catering -->
+            <div class="bg-black rounded-2xl p-8 text-center">
+                <div class="text-5xl mb-6">🎉</div>
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-4">Event Catering</h4>
+                <p class="text-dt-yellow-400 mb-6">
+                    Planning a party, wedding, or corporate event? Let us sweeten it up!
+                </p>
+                <button class="bg-dt-glacing text-white px-8 py-3 rounded-full font-bold hover:bg-red-600 transition-colors">
+                    Request Catering Info
+                </button>
+            </div>
+            
+            <!-- Careers -->
+            <div class="bg-black rounded-2xl p-8 text-center">
+                <div class="text-5xl mb-6">👨‍🍳</div>
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-4">Join Our Team</h4>
+                <p class="text-dt-yellow-400 mb-6">
+                    Love donuts? Join our passionate team of bakers and customer service stars!
+                </p>
+                <button class="bg-dt-blue-500 text-white px-8 py-3 rounded-full font-bold hover:bg-dt-blue-700 transition-colors">
+                    View Open Positions
+                </button>
+            </div>
+            
+            <!-- Feedback -->
+            <div class="bg-black rounded-2xl p-8 text-center">
+                <div class="text-5xl mb-6">💬</div>
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-4">Share Feedback</h4>
+                <p class="text-dt-yellow-400 mb-6">
+                    Your feedback helps us improve and create even better donut experiences.
+                </p>
+                <button class="bg-dt-purple-500 text-white px-8 py-3 rounded-full font-bold hover:bg-dt-purple-700 transition-colors">
+                    Submit Feedback
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
