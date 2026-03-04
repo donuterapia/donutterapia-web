@@ -1,59 +1,44 @@
-<!-- NAVBAR -->
-<nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
+<!-- Header & Navigation -->
+<header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-dt-donut/20">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
             <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center">
-                <a href="{{ '/' | relative_url }}" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Donut Terapia Logo" class="h-12 w-auto object-contain">
-                </a>
+            <a href="{{ '/' | relative_url }}" class="flex items-center hover:opacity-80 transition-opacity">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Donut Terapia Logo" class="h-16 w-auto object-contain">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Inicio</a>
+                <a href="#menu" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Menú</a>
+                <a href="#about" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Acerca de</a>
+                <a href="#locations" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Ubicaciones</a>
+                <a href="#contact" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Contacto</a>
+                <button onclick="alert('🍩 Redirigiendo a nuestro sistema de pedidos en línea... ¡Gracias por elegir Donut Terapia!')" class="bg-dt-glacing text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors">
+                    Ordenar Ahora
+                </button>
             </div>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Inicio
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="{{ '/suscripcion/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Suscripciones
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="{{ '/san-valentin/' | relative_url }}" class="text-white bg-rose-500 hover:bg-rose-600 px-4 py-2 rounded-full font-semibold transition-colors duration-200">
-                    ❤️ Especial
-                </a>
-                <a href="{{ '/adquiere-una-franquicia/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Franquicia
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="{{ '/products/' | relative_url }}" class="text-gray-700 hover:text-dt-pink font-semibold transition-colors duration-200 relative group">Menú
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-dt-pink group-hover:w-full transition-all duration-300"></span>
-                </a>
-            </div>
-
-            <!-- CTA Button -->
-            <div class="hidden md:flex items-center">
-                <a href="{{ '/products/' | relative_url }}" class="glow-button bg-dt-pink text-white px-7 py-3 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
-                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-                    Comprar Ya
-                </a>
-            </div>
-
+            
             <!-- Mobile Menu Button -->
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-gray-700 hover:text-dt-pink focus:outline-none">
-                    <i data-lucide="menu" class="w-8 h-8"></i>
+            <button id="mobileMenuButton" class="md:hidden text-dt-donut">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Inicio</a>
+                <a href="#menu" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Menú</a>
+                <a href="#about" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Acerca de</a>
+                <a href="#locations" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Ubicaciones</a>
+                <a href="#contact" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Contacto</a>
+                <button onclick="alert('🍩 Redirigiendo a nuestro sistema de pedidos en línea... ¡Gracias por elegir Donut Terapia!')" class="bg-dt-glacing text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors w-full">
+                    Ordenar Ahora
                 </button>
             </div>
         </div>
-    </div>
-
-    <!-- Mobile Menu Panel -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
-        <div class="px-4 pt-2 pb-6 space-y-2">
-            <a href="{{ '/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Inicio</a>
-            <a href="{{ '/products/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Menú</a>
-            <a href="{{ '/suscripcion/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Suscripciones</a>
-            <a href="{{ '/san-valentin/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-white bg-rose-500 hover:bg-rose-600 rounded-md font-bold">❤️ Especial San Valentín</a>
-            <a href="{{ '/adquiere-una-franquicia/' | relative_url }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-dt-pink hover:bg-gray-50 rounded-md">Franquicia</a>
-            <a href="{{ '/products/' | relative_url }}" class="block mt-4 text-center bg-dt-pink text-white px-4 py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors">Comprar Online</a>
-        </div>
-    </div>
-</nav>
+    </nav>
+</header>

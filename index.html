@@ -3,589 +3,196 @@ layout: default
 title: Home
 ---
 
-<!-- HERO SECTION -->
-<section id="inicio" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0">
-        <img src="{{ '/assets/images/donutterapia-hero-cajas-donas.jpg' | relative_url }}" alt="Donut Background" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
-    </div>
-
-    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto fade-in-up">
-        <div class="mb-6 inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full text-white text-sm font-semibold tracking-widest uppercase border border-white/30 hover:bg-white/30 transition-all duration-300">
-            ✨ Desde 2019 en Quito • 9 Sucursales
-        </div>
-        <h1 class="text-6xl md:text-8xl font-heading font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
-            Delicia <br>
-            <span class="bg-gradient-to-r from-rose-300 via-pink-300 to-rose-300 bg-clip-text text-transparent">Artesanal</span>
-        </h1>
-        <p class="text-2xl md:text-3xl text-gray-100 mb-12 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-lg">
-            No son simples donuts. Son una <span class="font-bold text-rose-300">terapia de felicidad</span> horneada con los mejores ingredientes y frutas naturales.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ '/products/' | relative_url }}" class="glow-button bg-dt-pink text-white text-lg font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-rose-600 hover:scale-110 transition-all duration-300 flex items-center justify-center gap-2 group">
-                <i data-lucide="zap" class="fill-current group-hover:animate-spin"></i>
-                ¡Ordenar Ahora!
-            </a>
-            <a href="#productos" class="bg-white text-dt-dark text-lg font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-gray-100 hover:scale-105 transition-all duration-300">
-                Explorar Menú
-            </a>
-        </div>
-    </div>
-    
-    <!-- Scroll Down Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
-        <i data-lucide="chevron-down" class="w-8 h-8 opacity-80"></i>
-    </div>
-</section>
-
-<!-- PROMO BANNER -->
-<section class="bg-rose-50 py-4 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-center gap-4 flex-wrap text-center">
-        <span class="font-heading font-bold text-rose-500 text-lg animate-pulse">❤️ Especial San Valentín disponible</span>
-        <a href="{{ '/san-valentin/' | relative_url }}" class="text-sm font-bold underline text-rose-600 hover:text-rose-800">Ver Caja Romántica</a>
-    </div>
-</section>
-
-<!-- FEATURED PRODUCTS -->
-<section id="productos" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-20">
-            <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">Nuestro Menú Estrella</h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink mx-auto rounded-full mb-6"></div>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Cada dona es una obra maestra. Explora nuestras creaciones exclusivas o crea la tuya propia.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Card 1: Natural -->
-            <div class="product-card group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
-                <div class="relative h-72 overflow-hidden bg-gray-100">
-                    <img src="{{ '/assets/images/gallery-8-types-donuts.jpg' | relative_url }}" alt="Donas de Fruta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
-                        <i data-lucide="leaf" class="w-3 h-3"></i> 100% Natural
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Donas de Frutas</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Frescura y naturalidad en cada mordisco. Hechas con frutas seleccionadas y sin químicos artificiales.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-dt-pink font-bold text-lg">Desde $3</span>
-                        <a href="{{ '/products/' | relative_url }}" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
-                            Ordenar <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2: Birthday -->
-            <div class="product-card group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3" style="animation-delay: 0.1s">
-                <div class="relative h-72 overflow-hidden bg-gray-100">
-                    <img src="{{ '/assets/images/gallery-birthday-donut.jpg' | relative_url }}" alt="Cajas de Cumpleaños" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
-                        <i data-lucide="gift" class="w-3 h-3"></i> Celebra
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Cajas de Cumpleaños</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">La fiesta llega a tu puerta. Cajas decoradas con variedad de sabores para sorprender a tus invitados.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-dt-pink font-bold text-lg">Desde $28</span>
-                        <a href="{{ '/products/' | relative_url }}" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
-                            Ver Boxes <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3: Custom -->
-            <div class="product-card group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3" style="animation-delay: 0.2s">
-                <div class="relative h-72 overflow-hidden bg-gray-100">
-                    <img src="{{ '/assets/images/gallery-donuts-on-rack.jpg' | relative_url }}" alt="Donas al Gusto" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
-                        <i data-lucide="sparkles" class="w-3 h-3"></i> Personaliza
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Donas al Gusto</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Tú decides cada detalle. Elige tus sabores y toppings favoritos para tu dona perfecta.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-dt-pink font-bold text-lg">Desde $5</span>
-                        <a href="{{ '/products/' | relative_url }}" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
-                            Crear <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="text-center mt-16">
-            <a href="{{ '/products/' | relative_url }}" class="inline-block glow-button bg-dt-pink text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-rose-600 hover:shadow-2xl transition-all duration-300">
-                Ver Todo el Menú
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- SUBSCRIPTION SECTION - DESKTOP -->
-<section id="suscripcion" class="hidden md:block py-24 bg-gradient-to-br from-rose-50 via-white to-rose-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-20">
-            <div class="mb-4 inline-block bg-dt-pink/10 backdrop-blur-sm px-6 py-2 rounded-full text-dt-pink text-sm font-semibold tracking-widest uppercase border border-dt-pink/20">
-                ☕ Plan Diario
-            </div>
-            <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">Donuts Todos Los Días</h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink mx-auto rounded-full mb-6"></div>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Suscribete a nuestro Plan Diario y disfruta de donuts frescos con café, todos los días de la semana.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            
-            <!-- Plan 1: Starter -->
-            <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-8 text-center border-b-4 border-blue-400">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-2">Plan Starter</h3>
-                    <p class="text-sm text-gray-600 mb-4">Perfecto para empezar el día</p>
-                    <div class="flex items-baseline justify-center gap-2">
-                        <span class="text-5xl font-bold text-blue-600">$20</span>
-                        <span class="text-gray-600">/mes</span>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700"><strong>1 dona</strong> + café todos los días</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Acceso lunes a viernes</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">10% descuento en compras adicionales</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Carnet de suscriptor exclusivo</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="block w-full text-center bg-blue-500 text-white py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">
-                        Comenzar Ahora
-                    </a>
-                </div>
-            </div>
-
-            <!-- Plan 2: Premium (Featured) -->
-            <div class="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 relative md:scale-105">
-                <div class="absolute top-0 right-0 bg-gradient-to-r from-dt-pink to-rose-500 text-white px-6 py-2 rounded-bl-2xl font-bold text-sm flex items-center gap-1">
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i> Más Popular
-                </div>
-                <div class="bg-gradient-to-r from-dt-pink to-rose-400 p-8 text-center border-b-4 border-dt-pink pt-12">
-                    <h3 class="text-2xl font-heading font-bold text-white mb-2">Plan Premium</h3>
-                    <p class="text-sm text-rose-100 mb-4">El favorito de nuestros clientes</p>
-                    <div class="flex items-baseline justify-center gap-2">
-                        <span class="text-5xl font-bold text-white">$30</span>
-                        <span class="text-rose-100">/mes</span>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-dt-pink flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700"><strong>2 donas</strong> + café todos los días</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-dt-pink flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Acceso lunes a domingo (7 días)</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-dt-pink flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">15% descuento en compras adicionales</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-dt-pink flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Acceso a menú exclusivo para suscriptores</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-dt-pink flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Prioritario en pedidos especiales</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="block w-full text-center bg-dt-pink text-white py-3 rounded-lg font-bold hover:bg-rose-600 transition-colors glow-button">
-                        Suscribirse Ahora
-                    </a>
-                </div>
-            </div>
-
-            <!-- Plan 3: VIP -->
-            <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div class="bg-gradient-to-r from-amber-50 to-orange-100 p-8 text-center border-b-4 border-amber-400">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-2">Plan VIP</h3>
-                    <p class="text-sm text-gray-600 mb-4">Para los verdaderos amantes</p>
-                    <div class="flex items-baseline justify-center gap-2">
-                        <span class="text-5xl font-bold text-amber-600">$50</span>
-                        <span class="text-gray-600">/mes</span>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700"><strong>3 donas + café + snack</strong> diario</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Acceso 7 días + entrega a domicilio</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">20% descuento en todas las compras</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Donuts personalizadas cada semana</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-gray-700">Evento VIP mensual exclusivo</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="block w-full text-center bg-amber-500 text-white py-3 rounded-lg font-bold hover:bg-amber-600 transition-colors">
-                        Convertirme en VIP
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Testimonial Subscriber -->
-        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg border-l-4 border-dt-pink max-w-3xl mx-auto">
-            <div class="flex items-start gap-4">
-                <div class="w-16 h-16 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                    LG
-                </div>
-                <div>
-                    <div class="flex gap-1 mb-3">
-                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700 mb-4 leading-relaxed italic">"He sido suscriptor del Plan Premium por 6 meses y ha sido la mejor decisión. Tengo mis donitas fresquitas todos los días, empiezo mi mañana feliz. El descuento ya se ha pagado solo. ¡10/10!"</p>
-                    <div>
-                        <p class="font-bold text-gray-900">Luis García</p>
-                        <p class="text-sm text-gray-500">Suscriptor Premium • 6 meses</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- SUBSCRIPTION SECTION - MOBILE -->
-<section class="md:hidden py-12 bg-gradient-to-br from-dt-pink to-rose-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-heading font-bold text-white mb-3">Donuts Todos Los Días</h2>
-        <p class="text-white/90 mb-6">Suscribete a nuestro Plan Diario y disfruta de donuts frescos con café</p>
-        <a href="/suscripcion/" class="inline-block glow-button bg-white text-dt-pink font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300">
-            Ver Planes
-        </a>
-    </div>
-</section>
-
-<!-- TESTIMONIALS SECTION -->
-<section class="py-24 bg-gradient-to-b from-dt-cream to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-20">
-            <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">Amado por Quito</h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink mx-auto rounded-full"></div>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-6">Lo que nuestros clientes dicen sobre su experiencia Donut Terapia.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-dt-pink">
-                <div class="flex gap-1 mb-4">
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                </div>
-                <p class="text-gray-700 mb-4 leading-relaxed italic">"Las mejores donas que he probado en Quito. Cada una es hecha con amor y los ingredientes son de primera calidad. ¡No puedo dejar de volver!"</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-dt-pink to-rose-500 rounded-full flex items-center justify-center text-white font-bold">
-                        MC
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">María Chen</p>
-                        <p class="text-sm text-gray-500">Cliente Frecuente</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-dt-pink">
-                <div class="flex gap-1 mb-4">
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                </div>
-                <p class="text-gray-700 mb-4 leading-relaxed italic">"Pedí una caja para el cumpleaños de mi hija y fue todo un éxito. La presentación fue hermosa y las donas... ¡increíbles! Gracias Donut Terapia."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
-                        AC
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Ana Carrillo</p>
-                        <p class="text-sm text-gray-500">Eventos</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-dt-pink">
-                <div class="flex gap-1 mb-4">
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
-                </div>
-                <p class="text-gray-700 mb-4 leading-relaxed italic">"Mi favorita son las donas de frutas. Sanas, deliciosas y sin culpa. El servicio es excelente y siempre están fresquitas. ¡Recomendado 100%!"</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white font-bold">
-                        JS
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Juan Sarmiento</p>
-                        <p class="text-sm text-gray-500">Empresario</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIALS SECTION (Removed - was duplicate) -->
-
-<!-- VALENTINE'S DAY PROMOTION -->
-<section id="valentin" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <div class="mb-4 inline-block bg-rose-100 px-6 py-2 rounded-full text-dt-pink text-sm font-semibold tracking-widest uppercase border border-dt-pink/30">
-                💕 Colección Especial
-            </div>
-            <h2 class="text-5xl font-heading font-bold text-gray-900 mb-4">Amor en Cada Mordisco</h2>
-            <div class="w-24 h-1.5 bg-gradient-to-r from-dt-pink via-rose-400 to-dt-pink mx-auto rounded-full mb-6"></div>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Nuestra colección exclusiva de San Valentín. Donas de amor, decoradas con detalle y hechas para celebrar tu conexión especial.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <!-- Valentines Product 1 -->
-            <div class="group bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
-                <div class="relative h-72 overflow-hidden bg-white">
-                    <img src="{{ '/assets/images/dt-valentin-1.avif' | relative_url }}" alt="Caja Corazón" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute top-4 right-4 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
-                        <i data-lucide="heart" class="w-3 h-3 fill-current"></i> Para Dos
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Caja Corazón</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">6 donas en forma de corazón, empaquetadas en caja romántica roja con decoración de pétalos de rosa.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-dt-pink font-bold text-lg">$45</span>
-                        <a href="https://wa.me/593985438479?text=Hola,%20me%20interesa%20la%20Caja%20Corazón%20de%20San%20Valentín" target="_blank" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
-                            Ordenar <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Valentines Product 2 -->
-            <div class="group bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
-                <div class="relative h-72 overflow-hidden bg-white">
-                    <img src="{{ '/assets/images/dt-valentin-2.avif' | relative_url }}" alt="Caja Deluxe" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute top-4 right-4 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
-                        <i data-lucide="sparkles" class="w-3 h-3"></i> Premium
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Caja Deluxe Romance</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">12 donas premium con coberturas de chocolate, fruta y glaseados especiales. Incluye tarjeta personalizada.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-dt-pink font-bold text-lg">$75</span>
-                        <a href="https://wa.me/593985438479?text=Hola,%20me%20interesa%20la%20Caja%20Deluxe%20Romance%20de%20San%20Valentín" target="_blank" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
-                            Ordenar <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Valentines Product 3 -->
-            <div class="group bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
-                <div class="relative h-72 overflow-hidden bg-white">
-                    <img src="{{ '/assets/images/dt-valentin-3.avif' | relative_url }}" alt="Pack Parejas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute top-4 right-4 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
-                        <i data-lucide="users" class="w-3 h-3"></i> Amor True
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-3">Pack Parejas</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Dos cajas personalizadas con los sabores favoritos de cada uno. Perfectas para compartir el amor.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-dt-pink font-bold text-lg">$60</span>
-                        <a href="https://wa.me/593985438479?text=Hola,%20me%20interesa%20el%20Pack%20Parejas%20de%20San%20Valentín" target="_blank" class="text-dt-pink font-bold hover:text-rose-600 flex items-center gap-1 group">
-                            Crear <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Valentine's Banner -->
-        <div class="bg-gradient-to-r from-dt-pink to-rose-500 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl">
-            <h3 class="text-3xl font-heading font-bold mb-3">¡Hoy es el Día de los Enamorados!</h3>
-            <p class="text-rose-100 mb-6 text-lg">Disponible hasta el 14 de febrero. Entrega incluida en Quito.</p>
-            <a href="{{ '/san-valentin' | relative_url }}" class="inline-block bg-white text-dt-pink font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
-                Ver Toda la Colección
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- GALLERY SECTION -->
-<section class="py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <i data-lucide="sparkles" class="w-12 h-12 text-dt-pink mx-auto mb-4"></i>
-            <h2 class="text-4xl font-heading font-bold text-gray-900">Hacemos Arte Comestible</h2>
-            <p class="mt-4 text-gray-600">Una pequeña muestra de lo que our equipo crea cada día en Donut Terapia.</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[300px]">
-            <div class="relative group rounded-2xl overflow-hidden row-span-2 hover-zoom cursor-pointer">
-                <img src="{{ '/assets/images/gallery-pink-donuts.jpg' | relative_url }}" class="w-full h-full object-cover" alt="Galeria 1">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-            </div>
-            <div class="relative group rounded-2xl overflow-hidden hover-zoom cursor-pointer">
-                <img src="{{ '/assets/images/gallery-donut-chocolate-filling.jpg' | relative_url }}" class="w-full h-full object-cover" alt="Galeria 2">
-            </div>
-            <div class="relative group rounded-2xl overflow-hidden hover-zoom cursor-pointer">
-                <img src="{{ '/assets/images/gallery-donut-box-ready-to-go.jpg' | relative_url }}" class="w-full h-full object-cover" alt="Galeria 3">
-            </div>
-            <div class="relative group rounded-2xl overflow-hidden row-span-2 hover-zoom cursor-pointer">
-                <img src="{{ '/assets/images/gallery-te-amo-box.jpg' | relative_url }}" class="w-full h-full object-cover" alt="Galeria 4">
-            </div>
-            <div class="relative group rounded-2xl overflow-hidden md:col-span-2 hover-zoom cursor-pointer">
-                <img src="{{ '/assets/images/gallery-valentin-donuts.jpeg' | relative_url }}" class="w-full h-full object-cover" alt="San Valentin">
-                <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <span class="text-white font-bold text-xl border-2 border-white px-4 py-2 rounded-full">Ver Ofertas</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FRANCHISE SECTION (Secondary Focus) -->
-<section id="franquicia" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-            <div class="md:w-1/2 relative min-h-[300px]">
-                <img src="{{ '/assets/images/donut-terapia-store-001.jpg' | relative_url }}" class="absolute inset-0 w-full h-full object-cover opacity-80" alt="Franquicia">
-            </div>
-            <div class="md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Únete a la Familia Donut Terapia</h2>
-                <p class="text-gray-300 mb-8 text-lg">
-                    Desde 2019 hemos construido una marca amada en Quito. Ahora, con 9 locales y creciendo, buscamos socios para expandir esta locura deliciosa por todo el país.
+<!-- Hero Section -->
+<section id="home" class="dark-gradient min-h-[90vh] flex items-center">
+    <div class="container mx-auto px-4 py-16 md:py-24">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <span class="font-erita text-dt-blue-400 font-semibold">Fresco Diariamente • Hecho a Mano</span>
+                <h2 class="font-konigsberg text-5xl md:text-7xl text-dt-donut mt-4 mb-6">
+                    Irresistible<br><span class="text-dt-glacing">Dicha</span> de Dona
+                </h2>
+                <p class="text-dt-yellow-400 text-lg mb-8 max-w-xl">
+                    Experimenta la combinación perfecta de masa esponjosa, ingredientes premium y glasas creativas que harán bailar tus papilas gustativas de alegría!
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="{{ '/adquiere-una-franquicia/' | relative_url }}" class="text-center bg-white text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                        Info de Franquicias
-                    </a>
+                    <button onclick="alert('🍩 Redirigiendo a nuestro sistema de pedidos en línea... ¡Gracias por elegir Donut Terapia!')" class="bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                        Ordenar para Recoger
+                        <span class="ml-2">→</span>
+                    </button>
+                    <button onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });" class="bg-dt-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-dt-blue-700 transition-colors">
+                        Ver Nuestro Menú
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="yellow-gradient rounded-full w-64 h-64 md:w-80 md:h-80 mx-auto float-animation relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="bg-dt-donut w-48 h-48 md:w-60 md:h-60 rounded-full relative">
+                            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-dt-donut to-dt-donut-shadow"></div>
+                            <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-32 h-32 md:w-40 md:h-40 rounded-full bg-dt-glacing/20"></div>
+                            <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 rounded-full bg-dt-glacing/40"></div>
+                            <div class="absolute top-12 left-1/2 transform -translate-x-1/2 w-16 h-16 md:w-24 md:h-24 rounded-full bg-dt-glacing/60"></div>
+                            <div class="absolute top-16 left-1/2 transform -translate-x-1/2 w-8 h-8 md:w-12 md:h-12 rounded-full bg-dt-glacing"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -top-4 -right-4 md:-top-8 md:-right-8 bg-dt-purple-500 w-24 h-24 rounded-full opacity-50 blur-lg"></div>
+                <div class="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 bg-dt-blue-500 w-24 h-24 rounded-full opacity-50 blur-lg"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Donuts Section -->
+<section id="menu" class="yellow-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-letter-outline font-semibold">Las Especialidades de Hoy</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-letter-outline mt-2 mb-4">Donas Destacadas</h3>
+            <p class="text-dt-letter-outline/80 max-w-2xl mx-auto">
+                Nuestros maestros pasteleros crean nuevas delicias todos los días. ¡Aquí están las creaciones destacadas de hoy!
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Donut Card 1 -->
+            <div class="bg-black rounded-2xl p-6 shadow-2xl donut-hover">
+                <div class="bg-dt-purple-200 h-48 rounded-xl mb-4 flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-dt-purple-400 to-dt-purple-700 relative">
+                        <div class="absolute top-2 w-24 h-24 rounded-full bg-dt-glacing/30 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-6 w-16 h-16 rounded-full bg-dt-glacing/60 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-10 w-8 h-8 rounded-full bg-dt-glacing left-1/2 transform -translate-x-1/2"></div>
+                    </div>
+                </div>
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Explosión de Fruta</h4>
+                <p class="text-dt-yellow-400 mb-4">Glasa de bayas mixtas con drizzle de frambuesa fresca</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-dt-glacing text-xl">$4.50</span>
+                    <button onclick="alert('¡Agregado Explosión de Fruta al carrito!')" class="bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Donut Card 2 -->
+            <div class="bg-black rounded-2xl p-6 shadow-2xl donut-hover">
+                <div class="bg-dt-blue-200 h-48 rounded-xl mb-4 flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-dt-blue-400 to-dt-blue-700 relative">
+                        <div class="absolute top-2 w-24 h-24 rounded-full bg-dt-yellow-400/30 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-6 w-16 h-16 rounded-full bg-dt-yellow-500/60 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-10 w-8 h-8 rounded-full bg-dt-secondary-base left-1/2 transform -translate-x-1/2"></div>
+                    </div>
+                </div>
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Glasa Dorada</h4>
+                <p class="text-dt-yellow-400 mb-4">Glasa de vainilla clásica con polvo de oro comestible</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-dt-glacing text-xl">$4.00</span>
+                    <button onclick="alert('¡Agregado Glasa Dorada al carrito!')" class="bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Donut Card 3 -->
+            <div class="bg-black rounded-2xl p-6 shadow-2xl donut-hover">
+                <div class="bg-dt-yellow-200 h-48 rounded-xl mb-4 flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-dt-yellow-400 to-dt-yellow-700 relative">
+                        <div class="absolute top-2 w-24 h-24 rounded-full bg-dt-purple-400/30 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-6 w-16 h-16 rounded-full bg-dt-purple-500/60 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-10 w-8 h-8 rounded-full bg-dt-purple-700 left-1/2 transform -translate-x-1/2"></div>
+                    </div>
+                </div>
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Remolino de Chocolate</h4>
+                <p class="text-dt-yellow-400 mb-4">Chocolate oscuro con drizzle de caramelo salado</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-dt-glacing text-xl">$4.50</span>
+                    <button onclick="alert('¡Agregado Remolino de Chocolate al carrito!')" class="bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors">
+                        Agregar al Carrito
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- INFO / LOCATIONS -->
-<section id="ubicaciones" class="py-16 bg-rose-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="flex items-start gap-4">
-                    <div class="bg-white p-3 rounded-full shadow-sm text-dt-pink">
-                        <i data-lucide="clock-3" class="w-6 h-6"></i>
+<!-- About Section -->
+<section id="about" class="bg-black py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="font-erita text-dt-blue-400 font-semibold">Nuestra Historia</span>
+                <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-donut mt-2 mb-6">
+                    Hecho con <span class="text-dt-glacing">Amor</span> y Pasión
+                </h3>
+                <p class="text-dt-yellow-400 mb-6">
+                    Desde 2010, Donut Terapia ha estado sirviendo a la comunidad con donas artesanales hechas desde cero todos los días. ¿Nuestro secreto? Una receta familiar transmitida por generaciones y una pasión por crear momentos de alegría.
+                </p>
+                <p class="text-dt-yellow-400 mb-8">
+                    Seleccionamos solo los mejores ingredientes, desde harina orgánica hasta chocolates premium y frutas frescas. Cada dona se elabora con cuidado, asegurando la textura perfecta, sabor e inconfundible frescura.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-dt-letter-outline/20 p-4 rounded-xl">
+                        <div class="text-dt-glacing font-bold text-3xl">10K+</div>
+                        <div class="text-dt-yellow-400">Clientes Felices</div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">Horarios de Apertura</h3>
-                        <p class="text-gray-600">Lunes a Domingo: 9:00 a.m. - 7:30 p.m.</p>
-                        <p class="text-sm text-gray-500 mt-1">¡Abrimos todos los días para tu antojo!</p>
+                    <div class="bg-dt-letter-outline/20 p-4 rounded-xl">
+                        <div class="text-dt-glacing font-bold text-3xl">50+</div>
+                        <div class="text-dt-yellow-400">Variedades de Donas</div>
                     </div>
-                </div>
-
-                <div class="flex items-start gap-4">
-                    <div class="bg-white p-3 rounded-full shadow-sm text-dt-pink">
-                        <i data-lucide="map-pin" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">Nuestra Sede Principal</h3>
-                        <p class="text-gray-600">Quito, Tumbaco</p>
-                        <a href="https://maps.google.com/?cid=5376542302261925253" target="_blank" class="text-sm text-dt-pink font-semibold hover:underline mt-1 inline-block">Ver en Google Maps</a>
-                    </div>
-                </div>
-
-                <div class="flex items-start gap-4">
-                    <div class="bg-white p-3 rounded-full shadow-sm text-dt-pink">
-                        <i data-lucide="phone" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">Contáctanos</h3>
-                        <p class="text-gray-600">098 543 8479</p>
-                        <p class="text-gray-600">ventas@donutterapia.com</p>
-                    </div>
-                </div>
-                
-                <!-- Socials -->
-                <div class="pt-4 flex gap-4">
-                        <a href="https://www.instagram.com/donuterapia/?hl=es-la" class="bg-white p-2 rounded-full hover:bg-dt-pink hover:text-white transition-colors shadow-sm text-gray-600">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://www.facebook.com/donuterapia/?ref=bookmarks" class="bg-white p-2 rounded-full hover:bg-blue-600 hover:text-white transition-colors shadow-sm text-gray-600">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@donutterapia" class="bg-white p-2 rounded-full hover:bg-black hover:text-white transition-colors shadow-sm text-gray-600">
-                        <i data-lucide="video" class="w-5 h-5"></i>
-                    </a>
                 </div>
             </div>
-
-            <div class="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-                    <img src="{{ '/assets/images/gallery-donut-closeup.jpg' | relative_url }}" class="w-full h-full object-cover" alt="Chocolate Donuts">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-center justify-center">
-                    <div class="text-center p-6">
-                        <h3 class="text-white text-2xl font-bold mb-2">¿Listo para probar?</h3>
-                        <a href="{{ '/products/' | relative_url }}" class="inline-block bg-dt-pink text-white px-6 py-3 rounded-full font-bold hover:bg-rose-600 transition-transform hover:scale-105">
-                            Comprar Ahora
-                        </a>
+            <div class="relative">
+                <div class="yellow-gradient rounded-2xl p-1">
+                    <div class="bg-black rounded-xl p-8">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-dt-purple-900/30 p-4 rounded-lg">
+                                <div class="text-dt-blue-400 font-bold text-lg mb-2">Fresco Diariamente</div>
+                                <p class="text-dt-yellow-400 text-sm">Hecho fresco cada mañana, nunca congelado</p>
+                            </div>
+                            <div class="bg-dt-blue-900/30 p-4 rounded-lg">
+                                <div class="text-dt-purple-400 font-bold text-lg mb-2">Sourcing Local</div>
+                                <p class="text-dt-yellow-400 text-sm">Ingredientes de granjas locales</p>
+                            </div>
+                            <div class="bg-dt-glacing/20 p-4 rounded-lg">
+                                <div class="text-dt-glacing font-bold text-lg mb-2">Pedidos Personalizados</div>
+                                <p class="text-dt-yellow-400 text-sm">Donas para eventos especiales y personalizadas</p>
+                            </div>
+                            <div class="bg-dt-yellow-900/30 p-4 rounded-lg">
+                                <div class="text-dt-donut font-bold text-lg mb-2">Opciones Veganas</div>
+                                <p class="text-dt-yellow-400 text-sm">Opciones deliciosas a base de plantas</p>
+                            </div>
+                        </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- CTA Section -->
+<section class="relative overflow-hidden py-20">
+    <div class="absolute inset-0 dark-gradient"></div>
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-dt-glacing/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-dt-blue-500/10 rounded-full blur-3xl"></div>
     
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-donut mb-6">
+                ¿Listo para tu <span class="text-dt-glacing">Aventura de Donas</span>?
+            </h3>
+            <p class="text-dt-yellow-400 text-xl mb-8">
+                Úmate con miles de clientes felices que comienzan su día con nuestras deliciosas creaciones. ¡Ordena en línea para recoger o visítanos hoy!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="alert('🍩 Redirigiendo al sistema de pedidos en línea... ¡Gracias por elegir Donut Terapia!')" class="bg-dt-glacing text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                    Ordenar Ahora en Línea
+                </button>
+                <button onclick="alert('🍩 ¡Encontrar una Ubicación!')" class="bg-transparent border-2 border-dt-donut text-dt-donut px-10 py-4 rounded-full font-bold text-lg hover:bg-dt-donut hover:text-black transition-colors">
+                    Encuentra una Ubicación
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+            </div>
