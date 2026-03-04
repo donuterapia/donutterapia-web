@@ -1,6 +1,6 @@
 // Typography Styles
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', sans-serif; // Corporate font
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -8,8 +8,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Konigsberg', sans-serif; // Primary font
   font-weight: 600;
+}
+
+// Secondary font for accents
+.secondary-font {
+  font-family: 'Erita', sans-serif;
 }
 
 h1 {

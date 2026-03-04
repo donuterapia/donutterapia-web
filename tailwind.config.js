@@ -12,13 +12,38 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dt-pink': '#FF69B4',
-        'dt-dark': '#2D2D2D',
-        'dt-cream': '#FFF5E6',
+        // Primary & Logo Colors
+        'dt-letter-outline': '#5b3429',
+        'dt-donut-shadow': '#cfa45a',
+        'dt-donut': '#ffcf64',
+        'dt-glacing': '#ea1947',
+        
+        // Secondary Yellow Palette
+        'dt-secondary-base': '#fddb00',
+        'dt-yellow-900': '#f1da2e',
+        'dt-yellow-700': '#f3e23e',
+        'dt-yellow-500': '#f3e758',
+        'dt-yellow-400': '#f8f3a1',
+        'dt-yellow-200': '#f8f3a1',
+        
+        // Complementary Blue Palette
+        'dt-blue-900': '#0098d6',
+        'dt-blue-700': '#2db4e7',
+        'dt-blue-500': '#36c1f0',
+        'dt-blue-400': '#63cdf5',
+        'dt-blue-200': '#99dbf8',
+        
+        // Complementary Purple Palette
+        'dt-purple-900': '#6e4d9f',
+        'dt-purple-700': '#7b69af',
+        'dt-purple-500': '#917cb9',
+        'dt-purple-400': '#a790c4',
+        'dt-purple-200': '#cfbfde',
       },
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif'],
+        sans: ['Rubik', 'sans-serif'], // Corporate font
+        heading: ['Konigsberg', 'sans-serif'], // Primary font
+        secondary: ['Erita', 'sans-serif'], // Secondary font
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
