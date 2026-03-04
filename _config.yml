@@ -21,8 +21,8 @@
 title: Donut Terapia
 email: hola@donutterapia.com
 description: A blog about donuts and therapy.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://itusebastian.com/donutterapia-web" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/donutterapia-web" # the subpath of your site, e.g. /blog
+url: "http://itusebastian.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 sass:
