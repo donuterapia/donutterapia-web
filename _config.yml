@@ -20,9 +20,9 @@
 
 title: Donut Terapia
 email: hola@donutterapia.com
-description: A blog about donuts and therapy.
+description: Las Mejores Donuts Artesanales en Quito
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://donutterapia.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://donutterapia.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 sass:
