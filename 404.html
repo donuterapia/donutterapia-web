@@ -1,25 +1,513 @@
 ---
+layout: default
 permalink: /404.html
-layout: page
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+<style>
+    /* Custom fonts fallback */
+    @font-face {
+        font-family: 'Konigsberg';
+        src: url('https://fonts.cdnfonts.com/s/25992/Konigsberg.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Erita';
+        src: url('https://fonts.cdnfonts.com/s/25992/Erita.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .font-konigsberg {
+        font-family: 'Konigsberg', 'Montserrat', sans-serif;
+    }
+    
+    .font-erita {
+        font-family: 'Erita', 'Poppins', sans-serif;
+    }
+    
+    /* Custom animations */
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+    }
+    
+    .float-animation {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-30px); }
+        60% { transform: translateY(-15px); }
+    }
+    
+    .animate-bounce {
+        animation: bounce 2s infinite;
+    }
+    
+    /* Custom gradient backgrounds */
+    .yellow-gradient {
+        background: linear-gradient(135deg, #fddb00 0%, #ffcf64 100%);
+    }
+    
+    .dark-gradient {
+        background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    }
+    
+    /* Donut spinning animation */
+    @keyframes donut-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .donut-spin {
+        animation: donut-spin 20s linear infinite;
+    }
+    
+    /* Error page styling */
+    .error-donut {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    /* 404 number animation */
+    .error-number {
+        font-size: 120px;
+        line-height: 1;
+        position: relative;
+    }
+    
+    /* Search box animation */
+    .search-box {
+        transition: all 0.3s ease;
+    }
+    
+    .search-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Tips cards */
+    .tip-card {
+        transition: all 0.3s ease;
+    }
+    
+    .tip-card:hover {
+        transform: translateY(-5px);
+    }
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<!-- 404 Hero Section -->
+<section class="dark-gradient py-16 min-h-[70vh] flex items-center">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <!-- Error Number -->
+            <div class="error-number mb-8">
+                <div class="font-konigsberg text-dt-glacing animate-bounce">4</div>
+                <div class="font-konigsberg text-dt-donut float-animation">0</div>
+                <div class="font-konigsberg text-dt-glacing animate-bounce animation-delay-1000">4</div>
+            </div>
+            
+            <!-- Error Donut -->
+            <div class="error-donut mb-12">
+                <div class="donut-spin w-full h-full rounded-full bg-gradient-to-br from-dt-donut to-dt-donut-shadow relative">
+                    <div class="absolute top-10 w-120 h-120 rounded-full bg-dt-glacing/30 left-1/2 transform -translate-x-1/2"></div>
+                    <div class="absolute top-30 w-80 h-80 rounded-full bg-dt-glacing/60 left-1/2 transform -translate-x-1/2"></div>
+                    <div class="absolute top-50 w-40 h-40 rounded-full bg-dt-glacing left-1/2 transform -translate-x-1/2"></div>
+                </div>
+            </div>
+            
+            <!-- Error Message -->
+            <h2 class="font-konigsberg text-4xl md:text-6xl text-dt-donut mb-6">
+                Donut Found <span class="text-dt-glacing">404</span>
+            </h2>
+            <p class="text-dt-yellow-400 text-xl max-w-2xl mx-auto mb-8">
+                Oops! The page you're looking for seems to have vanished like a donut that's been eaten. But don't worry - we've got plenty of other sweet treats waiting for you!
+            </p>
+            
+            <!-- Action Button -->
+            <a href="index.html" class="inline-block bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors mb-12">
+                Return to Home
+                <span class="ml-2">🏠</span>
+            </a>
+        </div>
+    </div>
+</section>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<!-- What Went Wrong -->
+<section class="yellow-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-letter-outline font-semibold">Possible Reasons</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-letter-outline mt-2 mb-4">What Might Have Happened?</h3>
+            <p class="text-dt-letter-outline/80 max-w-2xl mx-auto">
+                Here are some common reasons why you might have encountered this error page.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Reason 1 -->
+            <div class="tip-card bg-black rounded-2xl p-8">
+                <div class="text-4xl mb-4">🔗</div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-4">Broken Link</h4>
+                <p class="text-dt-yellow-400">
+                    The link you clicked might be outdated or incorrect. Our website has recently been updated.
+                </p>
+            </div>
+            
+            <!-- Reason 2 -->
+            <div class="tip-card bg-black rounded-2xl p-8">
+                <div class="text-4xl mb-4">🗺️</div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-4">Page Moved</h4>
+                <p class="text-dt-yellow-400">
+                    We might have moved or renamed the page you're looking for. Try searching instead.
+                </p>
+            </div>
+            
+            <!-- Reason 3 -->
+            <div class="tip-card bg-black rounded-2xl p-8">
+                <div class="text-4xl mb-4">📝</div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-4">Typing Error</h4>
+                <p class="text-dt-yellow-400">
+                    You might have typed the URL incorrectly. Check your spelling or use our search feature.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Solutions -->
+<section class="bg-black py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-purple-400 font-semibold">Quick Solutions</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-donut mt-2 mb-4">Here's How to Fix It</h3>
+            <p class="text-dt-yellow-400 max-w-2xl mx-auto">
+                Try these quick solutions to find what you're looking for or get back on track.
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+            <!-- Search Box -->
+            <div class="search-box bg-gradient-to-br from-dt-blue-900/30 to-dt-blue-700/20 rounded-2xl p-8 mb-8">
+                <h4 class="font-konigsberg text-2xl text-dt-blue-200 mb-6">Search Our Site</h4>
+                <div class="flex">
+                    <input type="text" id="errorSearch" placeholder="What are you looking for?" class="flex-1 bg-black/30 border border-dt-donut/30 rounded-l-xl px-4 py-3 text-dt-yellow-400 focus:outline-none focus:border-dt-donut">
+                    <button id="searchButton" class="bg-dt-blue-500 text-white px-6 py-3 rounded-r-xl hover:bg-dt-blue-700 transition-colors">
+                        Search
+                    </button>
+                </div>
+                <div id="searchResults" class="mt-4 hidden">
+                    <div class="text-dt-yellow-400 text-sm">Try searching for: "menu", "locations", "contact", or "donuts"</small>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-dt-purple-900/20 to-dt-purple-700/10 rounded-2xl p-8">
+                    <h4 class="font-konigsberg text-xl text-dt-purple-200 mb-6">Popular Pages</h4>
+                    <div class="space-y-4">
+                        <a href="menu.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                            <span class="mr-3">🍩</span>
+                            <span>Menu & Donuts</span>
+                        </a>
+                        <a href="locations.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                            <span class="mr-3">📍</span>
+                            <span>Store Locations</span>
+                        </a>
+                        <a href="contact.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                            <span class="mr-3">📞</span>
+                            <span>Contact Us</span>
+                        </a>
+                        <a href="cart.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                            <span class="mr-3">🛒</span>
+                            <span>Your Cart</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-dt-yellow-900/20 to-dt-yellow-700/10 rounded-2xl p-8">
+                    <h4 class="font-konigsberg text-xl text-dt-yellow-400 mb-6">Quick Actions</h4>
+                    <div class="space-y-4">
+                        <button onclick="window.history.back()" class="w-full text-left bg-dt-yellow-900/30 text-dt-yellow-700 px-4 py-3 rounded-xl hover:bg-dt-yellow-900/50 transition-colors">
+                            ← Go Back
+                        </button>
+                        <button onclick="window.location.reload()" class="w-full text-left bg-dt-blue-900/30 text-dt-blue-400 px-4 py-3 rounded-xl hover:bg-dt-blue-900/50 transition-colors">
+                            ↻ Refresh Page
+                        </button>
+                        <a href="index.html" class="block w-full text-left bg-dt-glacing/20 text-dt-glacing px-4 py-3 rounded-xl hover:bg-dt-glacing/30 transition-colors">
+                            🏠 Return Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Help -->
+<section class="dark-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="bg-black/50 rounded-2xl p-8">
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-6">Still Can't Find It?</h4>
+                <p class="text-dt-yellow-400 mb-8">
+                    If you're having trouble finding what you need, our team is here to help. Contact us directly and we'll guide you to the right page.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-dt-blue-900/30 rounded-xl p-6">
+                        <div class="text-dt-blue-400 font-bold text-lg mb-2">Call Us</div>
+                        <div class="text-dt-yellow-400">(555) 123-DONUT</div>
+                        <div class="text-dt-yellow-400/70 text-sm">Mon-Fri, 9am-5pm</div>
+                    </div>
+                    <div class="bg-dt-glacing/20 rounded-xl p-6">
+                        <div class="text-dt-glacing font-bold text-lg mb-2">Email Us</div>
+                        <div class="text-dt-yellow-400">support@doughlicious.com</div>
+                        <div class="text-dt-yellow-400/70 text-sm">24/7 response</div>
+                    </div>
+                </div>
+                <a href="contact.html" class="inline-block bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                    Contact Support Team
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fun Facts -->
+<section class="yellow-gradient py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="font-erita text-dt-letter-outline font-semibold">While You're Here...</span>
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-letter-outline mt-2 mb-4">Donut Fun Facts</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-black rounded-xl p-6 text-center">
+                <div class="text-3xl mb-4">🍩</div>
+                <div class="text-dt-yellow-400 font-bold mb-2">10+ Billion</div>
+                <div class="text-dt-letter-outline text-sm">Donuts consumed annually worldwide</div>
+            </div>
+            <div class="bg-black rounded-xl p-6 text-center">
+                <div class="text-3xl mb-4">⏰</div>
+                <div class="text-dt-yellow-400 font-bold mb-2">1930s</div>
+                <div class="text-dt-letter-outline text-sm">First donut machine invented</div>
+            </div>
+            <div class="bg-black rounded-xl p-6 text-center">
+                <div class="text-3xl mb-4">🏆</div>
+                <div class="text-dt-yellow-400 font-bold mb-2">National Day</div>
+                <div class="text-dt-letter-outline text-sm">June 5th is National Donut Day</div>
+            </div>
+            <div class="bg-black rounded-xl p-6 text-center">
+                <div class="text-3xl mb-4">🎉</div>
+                <div class="text-dt-yellow-400 font-bold mb-2">24 Varieties</div>
+                <div class="text-dt-letter-outline text-sm">Different donuts we offer daily</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuButton').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add animation delays
+        const style = document.createElement('style');
+        style.textContent = `
+            .animation-delay-1000 { animation-delay: 1s; }
+            .animation-delay-2000 { animation-delay: 2s; }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-15px); }
+            }
+            
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+                40% { transform: translateY(-30px); }
+                60% { transform: translateY(-15px); }
+            }
+            
+            @keyframes donut-spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            .float-animation {
+                animation: float 3s ease-in-out infinite;
+            }
+            
+            .animate-bounce {
+                animation: bounce 2s infinite;
+            }
+            
+            .donut-spin {
+                animation: donut-spin 20s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Search functionality
+        const searchInput = document.getElementById('errorSearch');
+        const searchButton = document.getElementById('searchButton');
+        const searchResults = document.getElementById('searchResults');
+
+        searchButton.addEventListener('click', function() {
+            const query = searchInput.value.toLowerCase();
+            
+            if (query.trim() === '') {
+                searchResults.classList.remove('hidden');
+                searchResults.innerHTML = `
+                    <div class="text-dt-yellow-400 text-sm">
+                        Try searching for: "menu", "locations", "contact", "donuts", "order", "franchise"
+                    </div>
+                `;
+            } else {
+                // Simulate search results
+                searchResults.classList.remove('hidden');
+                
+                const suggestions = [];
+                
+                if (query.includes('menu') || query.includes('donut')) {
+                    suggestions.push('<a href="menu.html" class="text-dt-blue-400 hover:underline">Menu Page</a>');
+                }
+                
+                if (query.includes('location') || query.includes('store')) {
+                    suggestions.push('<a href="locations.html" class="text-dt-blue-400 hover:underline">Locations Page</a>');
+                }
+                
+                if (query.includes('contact') || query.includes('help')) {
+                    suggestions.push('<a href="contact.html" class="text-dt-blue-400 hover:underline">Contact Page</a>');
+                }
+                
+                if (query.includes('order') || query.includes('cart')) {
+                    suggestions.push('<a href="cart.html" class="text-dt-blue-400 hover:underline">Cart Page</a>');
+                }
+                
+                if (query.includes('franchise') || query.includes('business')) {
+                    suggestions.push('<a href="franchise.html" class="text-dt-blue-400 hover:underline">Franchise Page</a>');
+                }
+                
+                if (query.includes('policy') || query.includes('terms')) {
+                    suggestions.push('<a href="policies.html" class="text-dt-blue-400 hover:underline">Policies Page</a>');
+                }
+                
+                if (suggestions.length > 0) {
+                    searchResults.innerHTML = `
+                        <div class="text-dt-yellow-400 mb-2">Suggested pages:</div>
+                        <div class="space-y-2">${suggestions.join('')}</div>
+                    `;
+                } else {
+                    searchResults.innerHTML = `
+                        <div class="text-dt-yellow-400 text-sm">
+                            No specific matches found. Try our main pages:
+                            <a href="menu.html" class="text-dt-blue-400 hover:underline">Menu</a>,
+                            <a href="locations.html" class="text-dt-blue-400 hover:underline">Locations</a>,
+                            <a href="contact.html" class="text-dt-blue-400 hover:underline">Contact</a>
+                        </div>
+                    `;
+                }
+            }
+        });
+
+        // Enter key for search
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+
+        // Order button functionality
+        document.querySelectorAll('button:contains("Order Now")').forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = 'menu.html';
+            });
+        });
+
+        // Load cart from localStorage
+        const cart = JSON.parse(localStorage.getItem('doughliciousCart')) || [];
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        
+        // Update cart badge on Order Now buttons if any
+        const orderButtons = document.querySelectorAll('button:contains("Order Now")');
+        orderButtons.forEach(button => {
+            const badge = button.querySelector('.cart-badge');
+            if (badge && totalItems > 0) {
+                badge.textContent = totalItems;
+                badge.classList.remove('hidden');
+            }
+        });
+    });
+
+    // Show notification for actions
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'fixed top-4 right-4 bg-gradient-to-r from-dt-glacing to-pink-600 text-white px-6 py-3 rounded-lg shadow-2xl z-50 animate-slideIn';
+        notification.innerHTML = `
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl">🍩</span>
+                <div class="font-bold">${message}</div>
+            </div>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            .animate-slideIn {
+                animation: slideIn 0.3s ease-out;
+            }
+            .animate-slideOut {
+                animation: slideOut 0.3s ease-in;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.classList.remove('animate-slideIn');
+            notification.classList.add('animate-slideOut');
+            setTimeout(() => {
+                notification.remove();
+                style.remove();
+            }, 300);
+        }, 3000);
+    }
+
+    // Handle back and refresh buttons
+    document.querySelectorAll('button[onclick*="history.back"]').forEach(button => {
+        button.addEventListener('click', function() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                showNotification('No previous page to go back to');
+            }
+        });
+    });
+
+    document.querySelectorAll('button[onclick*="location.reload"]').forEach(button => {
+        button.addEventListener('click', function() {
+            window.location.reload();
+            showNotification('Page refreshed');
+        });
+    });
+</script>

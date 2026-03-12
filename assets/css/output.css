@@ -686,6 +686,10 @@ button:focus,
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -774,6 +778,10 @@ button:focus,
   right: 2.5rem;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -788,6 +796,10 @@ button:focus,
 
 .top-32 {
   top: 8rem;
+}
+
+.top-4 {
+  top: 1rem;
 }
 
 .top-6 {
@@ -891,6 +903,10 @@ button:focus,
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -905,6 +921,10 @@ button:focus,
 
 .grid {
   display: grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {
@@ -937,6 +957,10 @@ button:focus,
 
 .h-4 {
   height: 1rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .h-48 {
@@ -975,6 +999,10 @@ button:focus,
   height: 100%;
 }
 
+.min-h-\[70vh\] {
+  min-height: 70vh;
+}
+
 .min-h-\[90vh\] {
   min-height: 90vh;
 }
@@ -1005,6 +1033,10 @@ button:focus,
 
 .w-4 {
   width: 1rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .w-48 {
@@ -1087,6 +1119,22 @@ button:focus,
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
 @keyframes pulse {
@@ -1967,6 +2015,10 @@ button:focus,
   font-weight: 600;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -2301,6 +2353,10 @@ button:focus,
   transform: scale(1.05) rotate(5deg);
 }
 
+.donut-spin {
+  animation: donut-spin 20s linear infinite;
+}
+
 .yellow-gradient {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
   --tw-gradient-from: #fddb00 var(--tw-gradient-from-position);
@@ -2557,6 +2613,11 @@ button:focus,
 
   .md\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
