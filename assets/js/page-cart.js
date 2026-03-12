@@ -277,61 +277,72 @@ class CartManager {
         
         if (cart.length === 0) return;
         
-        // Create confirmation modal
-        const modal = document.createElement('div');
-        modal.className = 'fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4';
-        modal.innerHTML = `
-            <div class="bg-gradient-to-br from-dt-donut to-dt-donut-shadow rounded-2xl p-8 max-w-md w-full animate-scaleIn">
-                <div class="text-center">
-                    <div class="text-6xl mb-4">🎉</div>
-                    <h3 class="font-konigsberg text-3xl text-dt-letter-outline mb-4">¡Listo para Pagar!</h3>
-                    <p class="text-dt-letter-outline mb-6">
-                        Tienes ${cart.length} item${cart.length !== 1 ? 's' : ''} en tu carrito. 
-                        Total: <span class="font-bold">${document.getElementById('total').textContent}</span>
-                    </p>
-                    <div class="bg-black/20 rounded-xl p-4 mb-6">
-                        <p class="text-dt-letter-outline text-sm">
-                            En una implementación real, esto te redirige a nuestro procesador de pagos seguro.
-                        </p>
-                    </div>
-                    <div class="flex space-x-4">
-                        <button class="modal-cancel flex-1 bg-gray-300 text-gray-800 py-3 rounded-full font-bold">
-                            Seguir Comprando
-                        </button>
-                        <button class="modal-confirm flex-1 bg-dt-glacing text-white py-3 rounded-full font-bold hover:bg-red-600 transition-colors">
-                            Proceder al Pago
-                        </button>
-                    </div>
-                </div>
-            </div>
-        `;
+        // Build WhatsApp message with cart items
+        let message = '*HOLA! QUIERO HACER UN PEDIDO DE DONAS*\n\n';
         
-        document.body.appendChild(modal);
-        
-        // Handle modal buttons
-        modal.querySelector('.modal-cancel').addEventListener('click', () => {
-            modal.remove();
+        // Add cart items
+        message += 'ITEMS SOLICITADOS:\n';
+        message += '─────────────────\n';
+        cart.forEach(item => {
+            message += `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}\n`;
         });
         
-        modal.querySelector('.modal-confirm').addEventListener('click', () => {
-            const btn = modal.querySelector('.modal-confirm');
-            btn.textContent = 'Procesando...';
-            btn.disabled = true;
-            
+        // Add pricing summary
+        const subtotal = window.shoppingCart.getTotalPrice();
+        const deliveryOption = document.querySelector('input[name="delivery"]:checked');
+        const deliveryValue = deliveryOption ? deliveryOption.value : 'standard';
+        
+        let deliveryFee = this.deliveryFee;
+        let deliveryText = 'Envío Estándar (30-60 min)';
+        
+        if (deliveryValue === 'express') {
+            deliveryFee += this.expressDeliveryUpcharge;
+            deliveryText = 'Envío Expresó (15-30 min)';
+        } else if (deliveryValue === 'pickup') {
+            deliveryFee = 0;
+            deliveryText = 'Retirar en Tienda';
+        }
+        
+        const tax = subtotal * this.taxRate;
+        let total = subtotal + deliveryFee + tax;
+        
+        // Apply promo code discount if any
+        if (this.appliedPromo) {
+            const discount = subtotal * this.appliedPromo.discount;
+            total -= discount;
+            message += `\nCODIGO PROMOCIONAL: ${this.appliedPromo.code}\n`;
+            message += `Descuento: -$${discount.toFixed(2)}\n`;
+        }
+        
+        message += '\n═════════════════\n';
+        message += 'RESUMEN DEL PEDIDO:\n';
+        message += '═════════════════\n';
+        message += `Subtotal: $${subtotal.toFixed(2)}\n`;
+        message += `Opcion de entrega: ${deliveryText}\n`;
+        message += `Costo de envio: $${deliveryFee.toFixed(2)}\n`;
+        message += `Impuestos (8%): $${tax.toFixed(2)}\n`;
+        message += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*\n`;
+        message += '\nPor favor confirma este pedido para continuar.';
+        
+        // WhatsApp number (Ecuador format)
+        const phoneNumber = '593991412403';
+        
+        // Create WhatsApp link
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        
+        // Show notification
+        this.showNotification('Redirigiendo a WhatsApp...');
+        
+        // Redirect to WhatsApp
+        setTimeout(() => {
+            window.open(whatsappUrl, '_blank');
+            // Clear cart after opening WhatsApp
             setTimeout(() => {
-                modal.remove();
                 window.shoppingCart.clearCart();
                 this.renderCart();
-                this.showNotification('¡Pedido realizado exitosamente! Gracias 🍩');
-            }, 1500);
-        });
-        
-        // Close modal when clicking outside
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.remove();
-            }
-        });
+                this.showNotification('Carrito vaciado. Gracias por tu pedido!');
+            }, 500);
+        }, 500);
     }
     
     updateUI() {
