@@ -554,6 +554,38 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: 'Konigsberg';
+
+  src: url('https://fonts.cdnfonts.com/s/25992/Konigsberg.woff') format('woff');
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Erita';
+
+  src: url('https://fonts.cdnfonts.com/s/25992/Erita.woff') format('woff');
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+.font-konigsberg {
+  font-family: 'Konigsberg', 'Montserrat', sans-serif;
+}
+
+.font-erita {
+  font-family: 'Erita', 'Poppins', sans-serif;
+}
+
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -673,6 +705,62 @@ h2 {
   background-color: rgb(234 25 71 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+/* Additional animations for 404 and other pages */
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* 404 Error Page Styles */
+
+.error-donut {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.error-number {
+  font-size: 120px;
+  line-height: 1;
+  position: relative;
+}
+
+/* Search box animation */
+
+.search-box {
+  transition: all 0.3s ease;
+}
+
+.search-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Tips cards */
+
+.tip-card {
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
 }
 
 button:focus,
@@ -2482,6 +2570,8 @@ button:focus,
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Custom Fonts */
 
 /* Base Typography Styles */
 
