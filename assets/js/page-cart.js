@@ -279,13 +279,13 @@ class CartManager {
         if (cart.length === 0) return;
         
         // Build WhatsApp message with cart items
-        let message = '*HOLA! QUIERO HACER UN PEDIDO DE DONAS*\n\n';
+        let message = '*¡Hola! Me gustaría hacer un pedido por favor*\n\n';
         
         // Add cart items
-        message += 'ITEMS SOLICITADOS:\n';
+        message += 'Me gustaría lo siguiente:\n';
         message += '─────────────────\n';
         cart.forEach(item => {
-            message += `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}\n`;
+            message += `• ${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}\n`;
         });
         
         // Add pricing summary
@@ -316,14 +316,14 @@ class CartManager {
         }
         
         message += '\n═════════════════\n';
-        message += 'RESUMEN DEL PEDIDO:\n';
+        message += 'TOTAL A PAGAR:\n';
         message += '═════════════════\n';
         message += `Subtotal: $${subtotal.toFixed(2)}\n`;
-        message += `Opcion de entrega: ${deliveryText}\n`;
-        message += `Costo de envio: $${deliveryFee.toFixed(2)}\n`;
+        message += `Opción de entrega: ${deliveryText}\n`;
+        message += `Costo de envío: $${deliveryFee.toFixed(2)}\n`;
         message += `Impuestos (8%): $${tax.toFixed(2)}\n`;
-        message += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*\n`;
-        message += '\nPor favor confirma este pedido para continuar.';
+        message += `\n*TOTAL: $${total.toFixed(2)}*\n`;
+        message += '\n¿Puedes ayudarme a completar este pedido?';
         
         // WhatsApp number (Ecuador format)
         const phoneNumber = '593991412403';
