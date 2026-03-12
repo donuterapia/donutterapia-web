@@ -38,7 +38,6 @@ promociones:
     price: 11.99
     original_price: 12.30
     description: "1 docena donuts de avellana o nutela"
-    discount: 3
     emoji: "🍩"
   - id: 2
     name: "Promo - 3 Berlines"
@@ -46,7 +45,6 @@ promociones:
     price: 2.99
     original_price: 3.30
     description: "3 berlines con relleno de tu elección"
-    discount: 9
     emoji: "🍩"
   - id: 3
     name: "Promo - Sábados y Domingos"
@@ -54,7 +52,6 @@ promociones:
     price: 12.99
     original_price: 15.99
     description: "1 docena donuts + 3 GRATIS. Fin de semana"
-    discount: 19
     emoji: "🍩"
 
 personalizadas:
@@ -82,7 +79,6 @@ personalizadas:
     price: 12.50
     original_price: 14.99
     description: "Caja 6 donuts con relleno y mensaje escrito"
-    discount: 17
     emoji: "💝"
   - id: 8
     name: "Mega Donut"
@@ -96,7 +92,6 @@ personalizadas:
     price: 3.50
     original_price: 4.50
     description: "Donut con mensaje y dibujito personalizado"
-    discount: 22
     emoji: "😊"
   - id: 10
     name: "Ramo Donuts - 6 Minis + 3 Flores"
@@ -159,7 +154,6 @@ combos:
     price: 3.70
     original_price: 3.99
     description: "1 vaso 14oz capuchino iced + 1 donut anillo"
-    discount: 7
     emoji: "⚡"
   - id: 19
     name: "Combo Pa Todos - 4 Bebidas + 12 Anillos"
@@ -167,7 +161,6 @@ combos:
     price: 17.99
     original_price: 29.99
     description: "4 vasos 14oz capuchino iced + 1 docena anillos"
-    discount: 40
     emoji: "🎉"
   - id: 20
     name: "Combo Pa 1 - 3 Minis + 1 Bebida"
@@ -235,7 +228,6 @@ bebidas:
     price: 1.99
     original_price: 2.99
     description: "Vaso con café con burbujas"
-    discount: 33
     emoji: "☕"
   - id: 30
     name: "Bubble Tea"
@@ -267,7 +259,6 @@ bebidas:
     price: 1.50
     original_price: 2.50
     description: "Vaso de leche con hielos"
-    discount: 40
     emoji: "🥛"
   - id: 35
     name: "Iced Tea"
@@ -287,7 +278,6 @@ bebidas:
     price: 1.79
     original_price: 2.99
     description: "Un expreso + 4oz de agua"
-    discount: 40
     emoji: "☕"
   - id: 38
     name: "Capuchino"
@@ -295,7 +285,6 @@ bebidas:
     price: 1.79
     original_price: 2.99
     description: "Clásico: 1 expreso + 4oz de leche"
-    discount: 40
     emoji: "🤎"
   - id: 39
     name: "Chocolate Caliente"
@@ -303,7 +292,6 @@ bebidas:
     price: 1.79
     original_price: 2.99
     description: "Leche y chocolate caliente"
-    discount: 40
     emoji: "🍫"
   - id: 40
     name: "Vaso Leche Caliente"
@@ -311,7 +299,6 @@ bebidas:
     price: 1.79
     original_price: 2.99
     description: "Vaso de leche caliente"
-    discount: 40
     emoji: "🥣"
 
 mercaderia:
@@ -345,7 +332,6 @@ mercaderia:
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    discount: 40
     emoji: "☕"
   - id: 45
     name: "Jarro Café 2"
@@ -353,7 +339,6 @@ mercaderia:
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    discount: 40
     emoji: "☕"
   - id: 46
     name: "Jarro Café 3"
@@ -361,7 +346,6 @@ mercaderia:
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    discount: 40
     emoji: "☕"
   - id: 47
     name: "Jarro Café 4"
@@ -369,7 +353,6 @@ mercaderia:
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    discount: 40
     emoji: "☕"
   - id: 48
     name: "Pin 1"
@@ -377,7 +360,6 @@ mercaderia:
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    discount: 40
     emoji: "📍"
   - id: 49
     name: "Pin 2"
@@ -385,7 +367,6 @@ mercaderia:
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    discount: 40
     emoji: "📍"
   - id: 50
     name: "Pin 3"
@@ -393,7 +374,6 @@ mercaderia:
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    discount: 40
     emoji: "📍"
   - id: 51
     name: "Pin 4"
@@ -401,5 +381,4 @@ mercaderia:
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    discount: 40
     emoji: "📍"

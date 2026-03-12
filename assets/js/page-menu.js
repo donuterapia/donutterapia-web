@@ -241,6 +241,9 @@ class MenuPage {
             const gradientClass = this.colorMap[productColor] || 'from-dt-donut to-dt-donut-shadow';
             const bgClass = this.categoryBgMap[donut.category] || 'bg-dt-yellow-200';
             
+            // Auto-calculate discount percentage from original_price and price
+            const discount = donut.original_price ? Math.round(((donut.original_price - donut.price) / donut.original_price) * 100) : null;
+            
             card.innerHTML = `
                 ${donut.bestseller ? '<span class="category-badge bg-dt-glacing text-white">⭐ Favorita</span>' : ''}
                 <div class="h-48 rounded-xl mb-4 flex items-center justify-center ${bgClass}">
@@ -254,8 +257,12 @@ class MenuPage {
                 <p class="text-dt-yellow-400 text-sm mb-4">${donut.description}</p>
                 <div class="flex justify-between items-center">
                     <div>
-                        <span class="font-bold text-dt-glacing text-xl">$${donut.price.toFixed(2)}</span>
-                        <span class="text-dt-yellow-400 text-sm ml-2">${this.categoryNameMap[donut.category] || donut.category}</span>
+                        ${donut.original_price ? `<div class="line-through text-dt-yellow-400/50 text-sm">$${donut.original_price.toFixed(2)}</div>` : ''}
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-dt-glacing text-xl">$${donut.price.toFixed(2)}</span>
+                            ${discount ? `<span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">-${discount}%</span>` : ''}
+                        </div>
+                        <span class="text-dt-yellow-400 text-sm">${this.categoryNameMap[donut.category] || donut.category}</span>
                     </div>
                     <button class="add-menu-item bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors" 
                             data-id="${donut.id}" 
