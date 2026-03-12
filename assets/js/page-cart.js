@@ -33,6 +33,9 @@ class CartManager {
     
     renderCart() {
         const container = document.getElementById('cartItemsContainer');
+        // Exit early if cart elements don't exist (not on cart page)
+        if (!container) return;
+        
         const emptyCart = document.getElementById('emptyCart');
         const continueShopping = document.getElementById('continueShopping');
         const cart = window.shoppingCart.getCart();
@@ -101,6 +104,10 @@ class CartManager {
     }
     
     updateSummary() {
+        // Exit early if summary elements don't exist (not on cart page)
+        const subtotalEl = document.getElementById('subtotal');
+        if (!subtotalEl) return;
+        
         const cart = window.shoppingCart.getCart();
         const subtotal = window.shoppingCart.getTotalPrice();
         let deliveryFee = this.deliveryFee;
@@ -123,7 +130,7 @@ class CartManager {
         }
         
         // Update DOM elements
-        document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+        subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
         document.getElementById('deliveryFee').textContent = `$${deliveryFee.toFixed(2)}`;
         document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
         document.getElementById('total').textContent = `$${total.toFixed(2)}`;
@@ -138,6 +145,10 @@ class CartManager {
     }
     
     setupEventListeners() {
+        // Exit early if not on cart page
+        const applyPromoBtn = document.getElementById('applyPromo');
+        if (!applyPromoBtn) return;
+        
         // Quantity controls
         document.addEventListener('click', (e) => {
             if (e.target.closest('.quantity-btn')) {
@@ -191,7 +202,6 @@ class CartManager {
         });
         
         // Promo code
-        const applyPromoBtn = document.getElementById('applyPromo');
         const promoInput = document.getElementById('promoCode');
         const promoMessage = document.getElementById('promoMessage');
         
@@ -238,6 +248,9 @@ class CartManager {
     
     loadSuggestedItems() {
         const container = document.getElementById('suggestedItemsContainer');
+        // Exit early if suggested items container doesn't exist
+        if (!container) return;
+        
         const cart = window.shoppingCart.getCart();
         
         // Get random products not in cart
