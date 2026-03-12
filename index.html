@@ -46,62 +46,34 @@ description: "Donuts artesanales hechas a mano. Tu dosis diaria de felicidad. Sa
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Donut Card 1 -->
-            <div class="bg-black rounded-2xl p-6 shadow-2xl donut-hover">
-                <div class="bg-dt-purple-200 h-48 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-dt-purple-400 to-dt-purple-700 relative">
-                        <div class="absolute top-2 w-24 h-24 rounded-full bg-dt-glacing/30 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-6 w-16 h-16 rounded-full bg-dt-glacing/60 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-10 w-8 h-8 rounded-full bg-dt-glacing left-1/2 transform -translate-x-1/2"></div>
-                    </div>
-                </div>
-                <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Explosión de Fruta</h4>
-                <p class="text-dt-yellow-400 mb-4">Glasa de bayas mixtas con drizzle de frambuesa fresca</p>
-                <div class="flex justify-between items-center">
-                    <span class="font-bold text-dt-glacing text-xl">$4.50</span>
-                    <button onclick="alert('¡Agregado Explosión de Fruta al carrito!')" class="bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors">
-                        Agregar al Carrito
-                    </button>
-                </div>
-            </div>
+            {% assign colorMap = "yellow|blue|purple|red|brown|amber|green|black|orange|white" | split: "|" %}
+            {% assign bgColorMap = "bg-dt-yellow-200|bg-dt-blue-200|bg-dt-purple-200|bg-dt-glacing/20|bg-dt-yellow-200|bg-dt-purple-200|bg-green-200|bg-gray-200|bg-orange-200|bg-gray-100" | split: "|" %}
+            {% assign gradientMap = "from-dt-yellow-400 to-dt-yellow-700|from-dt-blue-400 to-dt-blue-700|from-dt-purple-400 to-dt-purple-700|from-dt-glacing to-pink-600|from-dt-letter-outline to-yellow-800|from-yellow-600 to-orange-600|from-green-400 to-green-600|from-gray-800 to-black|from-orange-400 to-orange-600|from-gray-200 to-gray-400" | split: "|" %}
             
-            <!-- Donut Card 2 -->
+            {% for category in site.data.products %}
+                {% for product in category[1] %}
+                    {% if product.featured == true %}
+            <!-- Donut Card - {{ product.name }} -->
             <div class="bg-black rounded-2xl p-6 shadow-2xl donut-hover">
-                <div class="bg-dt-blue-200 h-48 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-dt-blue-400 to-dt-blue-700 relative">
-                        <div class="absolute top-2 w-24 h-24 rounded-full bg-dt-yellow-400/30 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-6 w-16 h-16 rounded-full bg-dt-yellow-500/60 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-10 w-8 h-8 rounded-full bg-dt-secondary-base left-1/2 transform -translate-x-1/2"></div>
+                <div class="{% cycle 'bg-dt-yellow-200', 'bg-dt-blue-200', 'bg-dt-purple-200' %} h-48 rounded-xl mb-4 flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br {% cycle 'from-dt-yellow-400 to-dt-yellow-700', 'from-dt-blue-400 to-dt-blue-700', 'from-dt-purple-400 to-dt-purple-700' %} relative">
+                        <div class="absolute top-2 w-24 h-24 rounded-full {% cycle 'bg-dt-purple-400/30', 'bg-dt-yellow-400/30', 'bg-dt-glacing/30' %} left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-6 w-16 h-16 rounded-full {% cycle 'bg-dt-purple-500/60', 'bg-dt-yellow-500/60', 'bg-dt-glacing/60' %} left-1/2 transform -translate-x-1/2"></div>
+                        <div class="absolute top-10 w-8 h-8 rounded-full {% cycle 'bg-dt-purple-700', 'bg-dt-secondary-base', 'bg-dt-glacing' %} left-1/2 transform -translate-x-1/2"></div>
                     </div>
                 </div>
-                <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Glasa Dorada</h4>
-                <p class="text-dt-yellow-400 mb-4">Glasa de vainilla clásica con polvo de oro comestible</p>
+                <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">{{ product.name }}</h4>
+                <p class="text-dt-yellow-400 mb-4">{{ product.description }}</p>
                 <div class="flex justify-between items-center">
-                    <span class="font-bold text-dt-glacing text-xl">$4.00</span>
-                    <button onclick="alert('¡Agregado Glasa Dorada al carrito!')" class="bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors">
+                    <span class="font-bold text-dt-glacing text-xl">${{ product.price }}</span>
+                    <button onclick="shoppingCart.addToCart('{{ product.name }}', {{ product.price }}, this)" class="bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors">
                         Agregar al Carrito
                     </button>
                 </div>
             </div>
-            
-            <!-- Donut Card 3 -->
-            <div class="bg-black rounded-2xl p-6 shadow-2xl donut-hover">
-                <div class="bg-dt-yellow-200 h-48 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-dt-yellow-400 to-dt-yellow-700 relative">
-                        <div class="absolute top-2 w-24 h-24 rounded-full bg-dt-purple-400/30 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-6 w-16 h-16 rounded-full bg-dt-purple-500/60 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-10 w-8 h-8 rounded-full bg-dt-purple-700 left-1/2 transform -translate-x-1/2"></div>
-                    </div>
-                </div>
-                <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">Remolino de Chocolate</h4>
-                <p class="text-dt-yellow-400 mb-4">Chocolate oscuro con drizzle de caramelo salado</p>
-                <div class="flex justify-between items-center">
-                    <span class="font-bold text-dt-glacing text-xl">$4.50</span>
-                    <button onclick="alert('¡Agregado Remolino de Chocolate al carrito!')" class="bg-dt-blue-500 text-white px-6 py-2 rounded-full hover:bg-dt-blue-700 transition-colors">
-                        Agregar al Carrito
-                    </button>
-                </div>
-            </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -175,11 +147,11 @@ description: "Donuts artesanales hechas a mano. Tu dosis diaria de felicidad. Sa
                 No dejes para mañana la donut que te hará feliz hoy. Elige tu local, personaliza tu caja o visítanos para descubrir el arte de la frescura en Ecuador"
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="alert('🍩 Redirigiendo al sistema de pedidos en línea... ¡Gracias por elegir Donut Terapia!')" class="bg-dt-glacing text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
-                    Ordenar Ahora en Línea
+                <button onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });" class="bg-dt-glacing text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                    Ordenar Ahora
                 </button>
-                <button onclick="alert('🍩 ¡Encontrar una Ubicación!')" class="bg-transparent border-2 border-dt-donut text-dt-donut px-10 py-4 rounded-full font-bold text-lg hover:bg-dt-donut hover:text-black transition-colors">
-                    Encuentra una Ubicación
+                <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });" class="bg-transparent border-2 border-dt-donut text-dt-donut px-10 py-4 rounded-full font-bold text-lg hover:bg-dt-donut hover:text-black transition-colors">
+                    Más Detalles
                 </button>
             </div>
         </div>

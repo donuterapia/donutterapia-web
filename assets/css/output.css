@@ -1804,6 +1804,10 @@ button:focus,
   --tw-gradient-to: rgb(190 18 60 / 0.1) var(--tw-gradient-to-position);
 }
 
+.to-gray-400 {
+  --tw-gradient-to: #9ca3af var(--tw-gradient-to-position);
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;

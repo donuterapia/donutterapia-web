@@ -89,17 +89,20 @@ docenas:
     price: 18.00
     description: "2 docenas de mini donita 7cm de tamaño"
     emoji: "🍩"
+    featured: true
   - id: 13
     name: "Docena Donuts"
     category: "docenas"
     price: 12.90
     description: "1 docena variada 11cm tamaño regular"
     emoji: "👟"
+    featured: true
   - id: 14
     name: "Docena Glaseadas"
     category: "docenas"
     price: 12.90
     description: "1 docena donuts glaseada 11cm"
+    featured: true
     emoji: "✨"
   - id: 15
     name: "Docena Premium"
