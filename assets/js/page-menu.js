@@ -99,10 +99,93 @@ class MenuPage {
     init() {
         // Check if menu grid exists (only init if on menu page)
         if (document.getElementById('donutGrid')) {
+            this.generateFilterButtons();
             this.renderDonutGrid();
             this.setupFilterListeners();
             this.setupAddToCartListeners();
         }
+    }
+
+    /**
+     * Dynamically generate filter buttons from product categories
+     */
+    generateFilterButtons() {
+        const filterContainer = document.querySelector('.sticky-header .flex');
+        if (!filterContainer || !window.productCategories) return;
+
+        // Clear existing buttons except we need to keep structure
+        const existingButtons = filterContainer.querySelectorAll('.filter-item');
+        existingButtons.forEach(btn => btn.remove());
+
+        // Create "Todas las Donas" (All) button
+        const allButton = document.createElement('button');
+        allButton.className = 'filter-item active px-6 py-2 rounded-full bg-dt-glacing text-white font-medium';
+        allButton.dataset.filter = 'all';
+        allButton.textContent = 'Todas las Donas';
+        filterContainer.appendChild(allButton);
+
+        // Create a button for each category
+        window.productCategories.forEach(category => {
+            const button = document.createElement('button');
+            button.className = 'filter-item px-6 py-2 rounded-full font-medium';
+            button.dataset.filter = category.id;
+
+            // Get display name from category object or categoryNameMap, fallback to category name
+            const displayName = category.display_name || this.categoryNameMap[category.id] || category.name;
+
+            // Assign colors based on category
+            const colorClass = this.getCategoryColorClass(category.id);
+            const textClass = this.getCategoryTextClass(category.id);
+
+            button.className += ` ${colorClass} text-${textClass} hover:opacity-80 font-medium`;
+            button.innerHTML = `<span class="category-label">${displayName}</span>`;
+            
+            filterContainer.appendChild(button);
+        });
+    }
+
+    /**
+     * Get background and text color classes for a category
+     */
+    getCategoryColorClass(category) {
+        const colorMap = {
+            promociones: 'bg-dt-glacing/20',
+            personalizadas: 'bg-dt-purple-900/30',
+            docenas: 'bg-dt-yellow-900/30',
+            combos: 'bg-dt-blue-900/30',
+            'media-docena': 'bg-yellow-900/30',
+            'pa-tres': 'bg-yellow-900/30',
+            bebidas: 'bg-blue-900/30',
+            mercaderia: 'bg-gray-900/30',
+            classic: 'bg-dt-yellow-900/30',
+            filled: 'bg-dt-purple-900/30',
+            specialty: 'bg-dt-yellow-900/30',
+            seasonal: 'bg-dt-glacing/20',
+            vegan: 'bg-green-900/30'
+        };
+        return colorMap[category] || 'bg-gray-900/30';
+    }
+
+    /**
+     * Get text color class for a category
+     */
+    getCategoryTextClass(category) {
+        const textMap = {
+            promociones: 'dt-glacing',
+            personalizadas: 'dt-purple-400',
+            docenas: 'dt-yellow-700',
+            combos: 'dt-blue-400',
+            'media-docena': 'dt-yellow-700',
+            'pa-tres': 'dt-yellow-700',
+            bebidas: 'dt-blue-700',
+            mercaderia: 'dt-yellow-700',
+            classic: 'dt-yellow-700',
+            filled: 'dt-purple-400',
+            specialty: 'dt-yellow-700',
+            seasonal: 'dt-glacing',
+            vegan: 'dt-blue-700'
+        };
+        return textMap[category] || 'dt-yellow-700';
     }
 
     /**

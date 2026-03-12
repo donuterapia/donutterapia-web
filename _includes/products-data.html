@@ -2,6 +2,7 @@
 <script>
 window.productsData = {
   {% for category in site.data.products %}
+    {% if category[0] != 'categories' %}
     "{{ category[0] }}": [
     {% for product in category[1] %}
       {
@@ -16,6 +17,7 @@ window.productsData = {
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
     ]{% unless forloop.last %},{% endunless %}
+    {% endif %}
   {% endfor %}
 };
 
@@ -25,5 +27,26 @@ Object.values(window.productsData).forEach(category => {
   window.allProducts = window.allProducts.concat(category);
 });
 
+// Extract categories from products data or from explicit categories section
+window.productCategories = [];
+{% if site.data.products.categories %}
+  {% for cat in site.data.products.categories %}
+    window.productCategories.push({
+      id: "{{ cat.id }}",
+      name: "{{ cat.name }}",
+      display_name: "{{ cat.display_name }}"
+    });
+  {% endfor %}
+{% else %}
+  Object.keys(window.productsData).forEach(key => {
+    window.productCategories.push({
+      id: key,
+      name: key.charAt(0).toUpperCase() + key.slice(1).replace('-', ' '),
+      display_name: key.charAt(0).toUpperCase() + key.slice(1).replace('-', ' ')
+    });
+  });
+{% endif %}
+
 console.log('Products loaded from Jekyll data:', window.allProducts.length, 'items');
+console.log('Categories loaded:', window.productCategories.length, 'categories');
 </script>

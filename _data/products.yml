@@ -1,7 +1,36 @@
 ---
 # Donut Terapia Products Database
-# Used across the site via Jekyll data files
+# Complete product catalog with categories
+# Can be exported to CSV/Excel format for sharing with clients
 
+# Category Definitions
+categories:
+  - id: "promociones"
+    name: "Promociones"
+    display_name: "Promoción"
+  - id: "personalizadas"
+    name: "Personalizadas"
+    display_name: "Personalizada"
+  - id: "docenas"
+    name: "Docenas"
+    display_name: "Docena"
+  - id: "combos"
+    name: "Combos"
+    display_name: "Combo"
+  - id: "media-docena"
+    name: "Media Docena"
+    display_name: "Media Docena"
+  - id: "pa-tres"
+    name: "Pa Tres"
+    display_name: "Pa Tres"
+  - id: "bebidas"
+    name: "Bebidas"
+    display_name: "Bebida"
+  - id: "mercaderia"
+    name: "Mercadería"
+    display_name: "Mercadería"
+
+# All Products Organized by Category
 promociones:
   - id: 1
     name: "Promo Quincena - 1 Docena Avellana"

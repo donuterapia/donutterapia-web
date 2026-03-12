@@ -13,12 +13,6 @@ description: "Explora nuestra colección de donuts artesanales. Clásicas, vegan
         <p class="text-dt-letter-outline text-xl max-w-3xl mx-auto mb-8">
             Cada dona se elabora diariamente a mano con ingredientes premium y creatividad. Explora nuestra colección de clásicos favoritos y especialidades de temporada.
         </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-4">
-            <span class="bg-dt-glacing text-white px-4 py-2 rounded-full text-sm font-semibold">Fresco Diariamente</span>
-            <span class="bg-dt-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Ingredientes Locales</span>
-            <span class="bg-dt-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Opciones Veganas</span>
-            <span class="bg-dt-yellow-900 text-white px-4 py-2 rounded-full text-sm font-semibold">Sin Gluten</span>
-        </div>
     </div>
 </section>
 
@@ -51,8 +45,21 @@ description: "Explora nuestra colección de donuts artesanales. Clásicas, vegan
 <!-- Menu Grid -->
 <section class="dark-gradient py-16">
     <div class="container mx-auto px-4">
+        <!-- Donut Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="donutGrid">
+            <!-- Donut items will be populated by JavaScript -->
+        </div>
+
+        <!-- Load More -->
+        <div class="text-center mt-12">
+            <button id="loadMore" class="bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                Cargar Más Donas
+                <span class="ml-2">↓</span>
+            </button>
+        </div>
+
         <!-- Menu Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
             <div class="bg-black/50 rounded-xl p-6 text-center">
                 <div class="text-dt-glacing font-konigsberg text-3xl font-bold">24+</div>
                 <div class="text-dt-yellow-400 font-erita">Sabores Regulares</div>
@@ -69,19 +76,6 @@ description: "Explora nuestra colección de donuts artesanales. Clásicas, vegan
                 <div class="text-dt-donut font-konigsberg text-3xl font-bold">⭐4.9</div>
                 <div class="text-dt-yellow-400 font-erita">Calificación</div>
             </div>
-        </div>
-
-        <!-- Donut Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="donutGrid">
-            <!-- Donut items will be populated by JavaScript -->
-        </div>
-
-        <!-- Load More -->
-        <div class="text-center mt-12">
-            <button id="loadMore" class="bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
-                Cargar Más Donas
-                <span class="ml-2">↓</span>
-            </button>
         </div>
     </div>
 </section>
