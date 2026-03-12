@@ -40,15 +40,15 @@
                     <li>Lunes-Domingo: 9am - 7:30pm</li>
                 </ul>
                 <div class="mt-4 flex space-x-4">
-                    <div class="w-10 h-10 bg-dt-blue-900/30 rounded-full flex items-center justify-center">
-                        <span class="text-dt-blue-400">FB</span>
-                    </div>
-                    <div class="w-10 h-10 bg-dt-purple-900/30 rounded-full flex items-center justify-center">
-                        <span class="text-dt-purple-400">IG</span>
-                    </div>
-                    <div class="w-10 h-10 bg-dt-glacing/20 rounded-full flex items-center justify-center">
-                        <span class="text-dt-glacing">TT</span>
-                    </div>
+                    <a href="https://www.facebook.com/donuterapia/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-dt-blue-900/30 rounded-full flex items-center justify-center hover:bg-dt-blue-900/50 transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5 text-dt-blue-400"></i>
+                    </a>
+                    <a href="https://www.instagram.com/donuterapia/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-dt-purple-900/30 rounded-full flex items-center justify-center hover:bg-dt-purple-900/50 transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5 text-dt-purple-400"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@donutterapia" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-dt-glacing/20 rounded-full flex items-center justify-center hover:bg-dt-glacing/30 transition-colors">
+                        <i data-lucide="music" class="w-5 h-5 text-dt-glacing"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -73,3 +73,10 @@
 <script src="{{ '/assets/js/page-menu.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/page-cart.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/init.js' | relative_url }}"></script>
+
+<!-- Initialize Lucide Icons -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+  });
+</script>
