@@ -20,51 +20,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Primary & Logo Colors
-                        'dt-letter-outline': '#5b3429',
-                        'dt-donut-shadow': '#cfa45a',
-                        'dt-donut': '#ffcf64',
-                        'dt-glacing': '#ea1947',
-                        
-                        // Secondary Yellow Palette
-                        'dt-secondary-base': '#fddb00',
-                        'dt-yellow-900': '#f1da2e',
-                        'dt-yellow-700': '#f3e23e',
-                        'dt-yellow-500': '#f3e758',
-                        'dt-yellow-400': '#f8f3a1',
-                        'dt-yellow-200': '#f8f3a1',
-                        
-                        // Secondary Blue Palette
-                        'dt-blue-900': '#0098d6',
-                        'dt-blue-700': '#2db4e7',
-                        'dt-blue-500': '#36c1f0',
-                        'dt-blue-400': '#63cdf5',
-                        'dt-blue-200': '#99dbf8',
-                        
-                        // Secondary Purple Palette
-                        'dt-purple-900': '#6e4d9f',
-                        'dt-purple-700': '#7b69af',
-                        'dt-purple-500': '#917cb9',
-                        'dt-purple-400': '#a790c4',
-                        'dt-purple-200': '#cfbfde',
-                    },
-                    fontFamily: {
-                        sans: ['Rubik', 'sans-serif'],
-                        heading: ['Konigsberg', 'sans-serif'],
-                        secondary: ['Erita', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,93 +50,10 @@
         .font-erita {
             font-family: 'Erita', 'Poppins', sans-serif;
         }
-        
-        /* Custom animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .donut-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .donut-hover:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
-        
-        /* Custom gradient backgrounds */
-        .yellow-gradient {
-            background: linear-gradient(135deg, #fddb00 0%, #ffcf64 100%);
-        }
-        
-        .dark-gradient {
-            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
-        }
-
-        /* Shimmer effect for cards and CTAs */
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-
-        .shimmer-effect {
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            background-size: 1000px 100%;
-            animation: shimmer 2s infinite;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #111827;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #fddb00;
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #ffcf64;
-        }
-
-        /* Selection color */
-        ::selection {
-            background-color: #ea1947;
-            color: white;
-        }
-
-        /* Focus styles for accessibility */
-        button:focus, a:focus {
-            outline: 2px solid #36c1f0;
-            outline-offset: 2px;
-        }
-
-        /* Loading animation for donuts */
-        @keyframes donut-spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .donut-spin {
-            animation: donut-spin 20s linear infinite;
-        }
     </style>
 
-    <!-- Google Fonts: Rubik (corporate), Konigsberg (primary), Erita (secondary) -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Erita:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Note: Konigsberg may need to be hosted separately if not available on Google Fonts -->
-
-    <!-- Compiled CSS from SCSS (for production) -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <!-- Compiled CSS from Tailwind (includes typography base, animations, and utilities) -->
+    <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
