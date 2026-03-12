@@ -55,12 +55,16 @@ description: "Donuts artesanales hechas a mano. Tu dosis diaria de felicidad. Sa
                     {% if product.featured == true %}
             <!-- Donut Card - {{ product.name }} -->
             <div class="bg-black rounded-2xl p-6 shadow-2xl donut-hover">
-                <div class="{% cycle 'bg-dt-yellow-200', 'bg-dt-blue-200', 'bg-dt-purple-200' %} h-48 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="w-32 h-32 rounded-full bg-gradient-to-br {% cycle 'from-dt-yellow-400 to-dt-yellow-700', 'from-dt-blue-400 to-dt-blue-700', 'from-dt-purple-400 to-dt-purple-700' %} relative">
-                        <div class="absolute top-2 w-24 h-24 rounded-full {% cycle 'bg-dt-purple-400/30', 'bg-dt-yellow-400/30', 'bg-dt-glacing/30' %} left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-6 w-16 h-16 rounded-full {% cycle 'bg-dt-purple-500/60', 'bg-dt-yellow-500/60', 'bg-dt-glacing/60' %} left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-10 w-8 h-8 rounded-full {% cycle 'bg-dt-purple-700', 'bg-dt-secondary-base', 'bg-dt-glacing' %} left-1/2 transform -translate-x-1/2"></div>
-                    </div>
+                <div class="{% cycle 'bg-dt-yellow-200', 'bg-dt-blue-200', 'bg-dt-purple-200' %} h-48 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                    {% if product.image %}
+                        <img src="{{ product.image }}" alt="{{ product.name }}" class="h-full w-full object-cover">
+                    {% else %}
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br {% cycle 'from-dt-yellow-400 to-dt-yellow-700', 'from-dt-blue-400 to-dt-blue-700', 'from-dt-purple-400 to-dt-purple-700' %} relative">
+                            <div class="absolute top-2 w-24 h-24 rounded-full {% cycle 'bg-dt-purple-400/30', 'bg-dt-yellow-400/30', 'bg-dt-glacing/30' %} left-1/2 transform -translate-x-1/2"></div>
+                            <div class="absolute top-6 w-16 h-16 rounded-full {% cycle 'bg-dt-purple-500/60', 'bg-dt-yellow-500/60', 'bg-dt-glacing/60' %} left-1/2 transform -translate-x-1/2"></div>
+                            <div class="absolute top-10 w-8 h-8 rounded-full {% cycle 'bg-dt-purple-700', 'bg-dt-secondary-base', 'bg-dt-glacing' %} left-1/2 transform -translate-x-1/2"></div>
+                        </div>
+                    {% endif %}
                 </div>
                 <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">{{ product.name }}</h4>
                 <p class="text-dt-yellow-400 mb-4">{{ product.description }}</p>

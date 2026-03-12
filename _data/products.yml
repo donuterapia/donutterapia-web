@@ -38,21 +38,23 @@ promociones:
     price: 11.99
     original_price: 12.30
     description: "1 docena donuts de avellana o nutela"
-    emoji: "🍩"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 2
     name: "Promo - 3 Berlines"
     category: "promociones"
     price: 2.99
     original_price: 3.30
     description: "3 berlines con relleno de tu elección"
-    emoji: "🍩"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 3
     name: "Promo - Sábados y Domingos"
     category: "promociones"
     price: 12.99
     original_price: 15.99
     description: "1 docena donuts + 3 GRATIS. Fin de semana"
-    emoji: "🍩"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
 
 personalizadas:
   - id: 4
@@ -60,51 +62,53 @@ personalizadas:
     category: "personalizadas"
     price: 15.00
     description: "12 mini donuts con mensaje personalizado"
-    emoji: "💌"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 5
     name: "3 Donuts 1 Personalizada"
     category: "personalizadas"
     price: 9.97
     description: "1 personalizada con relleno + 2 anillos"
-    emoji: "✨"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 6
     name: "6 Donuts 1 Personalizada"
     category: "personalizadas"
     price: 15.99
     description: "1 personalizada con relleno + 5 anillos"
-    emoji: "🎨"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
   - id: 7
     name: "6 Donuts Mensaje"
     category: "personalizadas"
     price: 12.50
     original_price: 14.99
     description: "Caja 6 donuts con relleno y mensaje escrito"
-    emoji: "💝"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
   - id: 8
     name: "Mega Donut"
     category: "personalizadas"
     price: 19.99
     description: "1 donut gigante para 14 personas aprox"
-    emoji: "🏆"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
   - id: 9
     name: "Mood Donut"
     category: "personalizadas"
     price: 3.50
     original_price: 4.50
     description: "Donut con mensaje y dibujito personalizado"
-    emoji: "😊"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
   - id: 10
     name: "Ramo Donuts - 6 Minis + 3 Flores"
     category: "personalizadas"
     price: 14.00
     description: "Ramo personalizado perfecto para regalo"
-    emoji: "🌹"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
   - id: 11
     name: "Mega Mood"
     category: "personalizadas"
     price: 19.99
     description: "Mega donut personalizada"
-    emoji: "👑"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
 
 docenas:
   - id: 12
@@ -112,34 +116,38 @@ docenas:
     category: "docenas"
     price: 18.00
     description: "2 docenas de mini donita 7cm de tamaño"
-    emoji: "🍩"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
     featured: true
   - id: 13
     name: "Docena Donuts"
     category: "docenas"
     price: 12.90
     description: "1 docena variada 11cm tamaño regular"
-    emoji: "👟"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
     featured: true
   - id: 14
     name: "Docena Glaseadas"
     category: "docenas"
     price: 12.90
     description: "1 docena donuts glaseada 11cm"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
     featured: true
-    emoji: "✨"
   - id: 15
     name: "Docena Premium"
     category: "docenas"
     price: 15.99
     description: "1 docena Boston cream rellenas de pastelera"
-    emoji: "🌟"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 16
     name: "Docena Donitas"
     category: "docenas"
     price: 9.00
     description: "1 docena donitas pequeñas"
-    emoji: "🐣"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
 
 combos:
   - id: 17
@@ -147,27 +155,30 @@ combos:
     category: "combos"
     price: 5.75
     description: "2 vasos 14oz capuchino iced + 3 donuts anillo"
-    emoji: "☕"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 18
     name: "Combo Pa 1 - Donut + Bebida"
     category: "combos"
     price: 3.70
     original_price: 3.99
     description: "1 vaso 14oz capuchino iced + 1 donut anillo"
-    emoji: "⚡"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 19
     name: "Combo Pa Todos - 4 Bebidas + 12 Anillos"
     category: "combos"
     price: 17.99
     original_price: 29.99
     description: "4 vasos 14oz capuchino iced + 1 docena anillos"
-    emoji: "🎉"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 20
     name: "Combo Pa 1 - 3 Minis + 1 Bebida"
     category: "combos"
     price: 4.99
     description: "3 mini donuts + 1 bebida de tu elección"
-    emoji: "🍴"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
 
 media_docena:
   - id: 21
@@ -175,25 +186,28 @@ media_docena:
     category: "media-docena"
     price: 6.60
     description: "6 donuts variada 11cm tamaño regular"
-    emoji: "⚖️"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 22
     name: "6 Berlines"
     category: "media-docena"
     price: 6.60
     description: "6 berlines con relleno variado"
-    emoji: "🍪"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 23
     name: "6 Mini Donitas"
     category: "media-docena"
     price: 4.50
     description: "6 donitas pequeñas 7cm de tamaño"
-    emoji: "🎈"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 24
     name: "6 Premium"
     category: "media-docena"
     price: 7.99
     description: "6 donuts con relleno, cobertura y toping"
-    emoji: "💎"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
 
 pa_tres:
   - id: 25
@@ -201,25 +215,28 @@ pa_tres:
     category: "pa-tres"
     price: 3.30
     description: "3 donuts 11cm tamaño regular"
-    emoji: "🔢"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 26
     name: "3 Berlines"
     category: "pa-tres"
     price: 3.30
     description: "3 berlines con relleno"
-    emoji: "🎯"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 27
     name: "3 Mini Donitas"
     category: "pa-tres"
     price: 2.50
     description: "3 donitas pequeñas - la dosis perfecta"
-    emoji: "💫"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 28
     name: "3 Premium"
     category: "pa-tres"
     price: 3.99
     description: "3 donuts con glaseado, relleno y toping"
-    emoji: "👌"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
 
 bebidas:
   - id: 29
@@ -228,78 +245,89 @@ bebidas:
     price: 1.99
     original_price: 2.99
     description: "Vaso con café con burbujas"
-    emoji: "☕"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 30
     name: "Bubble Tea"
     category: "bebidas"
     price: 2.99
     description: "Delicioso té frío con burbujas"
-    emoji: "🧋"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 31
     name: "Frapuchino"
     category: "bebidas"
     price: 2.99
     description: "Delicioso batido con hielo de café"
-    emoji: "🧊"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 32
     name: "Iced Capuchino"
     category: "bebidas"
     price: 2.50
     description: "Vaso de capuchino en dos sabores y tamaños"
-    emoji: "❄️"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 33
     name: "Iced Coffee"
     category: "bebidas"
     price: 2.99
     description: "Vaso de café con hielos"
-    emoji: "🍶"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 34
     name: "Iced Leche"
     category: "bebidas"
     price: 1.50
     original_price: 2.50
     description: "Vaso de leche con hielos"
-    emoji: "🥛"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 35
     name: "Iced Tea"
     category: "bebidas"
     price: 2.50
     description: "Vaso de té helado en dos sabores"
-    emoji: "🍵"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 36
     name: "Smoothie"
     category: "bebidas"
     price: 4.50
     description: "Vaso mezclado con frutas"
-    emoji: "🍓"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 37
     name: "Americano"
     category: "bebidas"
     price: 1.79
     original_price: 2.99
     description: "Un expreso + 4oz de agua"
-    emoji: "☕"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 38
     name: "Capuchino"
     category: "bebidas"
     price: 1.79
     original_price: 2.99
     description: "Clásico: 1 expreso + 4oz de leche"
-    emoji: "🤎"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 39
     name: "Chocolate Caliente"
     category: "bebidas"
     price: 1.79
     original_price: 2.99
     description: "Leche y chocolate caliente"
-    emoji: "🍫"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 40
     name: "Vaso Leche Caliente"
     category: "bebidas"
     price: 1.79
     original_price: 2.99
     description: "Vaso de leche caliente"
-    emoji: "🥣"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
 
 mercaderia:
   - id: 41
@@ -308,77 +336,85 @@ mercaderia:
     price: 7.50
     original_price: 12.50
     description: "Gorra diseño limitado exclusivo"
-    discount: 40
-    emoji: "🧢"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 42
     name: "Gorra Diseño 2"
     category: "mercaderia"
     price: 7.50
     original_price: 12.50
     description: "Gorra diseño limitado exclusivo"
-    discount: 40
-    emoji: "🧢"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 43
     name: "Gorra Diseño 3"
     category: "mercaderia"
     price: 7.50
     original_price: 12.50
     description: "Gorra diseño limitado exclusivo"
-    discount: 40
-    emoji: "🧢"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 44
     name: "Jarro Café 1"
     category: "mercaderia"
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    emoji: "☕"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 45
     name: "Jarro Café 2"
     category: "mercaderia"
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    emoji: "☕"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 46
     name: "Jarro Café 3"
     category: "mercaderia"
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    emoji: "☕"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 47
     name: "Jarro Café 4"
     category: "mercaderia"
     price: 5.39
     original_price: 8.99
     description: "Jarro especial para café"
-    emoji: "☕"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 48
     name: "Pin 1"
     category: "mercaderia"
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    emoji: "📍"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 49
     name: "Pin 2"
     category: "mercaderia"
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    emoji: "📍"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 50
     name: "Pin 3"
     category: "mercaderia"
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    emoji: "📍"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+
   - id: 51
     name: "Pin 4"
     category: "mercaderia"
     price: 1.19
     original_price: 1.99
     description: "Pin para colocar en maletas"
-    emoji: "📍"
+    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+

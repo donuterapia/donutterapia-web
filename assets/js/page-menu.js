@@ -246,12 +246,15 @@ class MenuPage {
             
             card.innerHTML = `
                 ${donut.bestseller ? '<span class="category-badge bg-dt-glacing text-white">⭐ Favorita</span>' : ''}
-                <div class="h-48 rounded-xl mb-4 flex items-center justify-center ${bgClass}">
-                    <div class="w-32 h-32 rounded-full bg-gradient-to-br ${gradientClass} relative donut-spin">
-                        <div class="absolute top-4 w-24 h-24 rounded-full bg-white/20 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-8 w-16 h-16 rounded-full bg-white/40 left-1/2 transform -translate-x-1/2"></div>
-                        <div class="absolute top-12 w-8 h-8 rounded-full bg-white/60 left-1/2 transform -translate-x-1/2"></div>
-                    </div>
+                <div class="h-48 rounded-xl mb-4 flex items-center justify-center ${donut.image ? 'bg-gray-200' : bgClass}">
+                    ${donut.image 
+                        ? `<img src="${donut.image}" alt="${donut.name}" class="h-full w-full object-cover rounded-xl">`
+                        : `<div class="w-32 h-32 rounded-full bg-gradient-to-br ${gradientClass} relative donut-spin">
+                            <div class="absolute top-4 w-24 h-24 rounded-full bg-white/20 left-1/2 transform -translate-x-1/2"></div>
+                            <div class="absolute top-8 w-16 h-16 rounded-full bg-white/40 left-1/2 transform -translate-x-1/2"></div>
+                            <div class="absolute top-12 w-8 h-8 rounded-full bg-white/60 left-1/2 transform -translate-x-1/2"></div>
+                        </div>`
+                    }
                 </div>
                 <h4 class="font-konigsberg text-2xl text-dt-donut mb-2">${donut.name}</h4>
                 <p class="text-dt-yellow-400 text-sm mb-4">${donut.description}</p>

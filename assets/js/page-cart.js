@@ -250,22 +250,23 @@ class CartManager {
         
         suggestions.forEach(product => {
             const item = document.createElement('div');
-            item.className = 'bg-gradient-to-br from-dt-purple-900/20 to-dt-purple-700/10 rounded-2xl p-6';
+            item.className = 'bg-black rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow';
             
             item.innerHTML = `
-                <div class="flex items-center mb-4">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-dt-donut to-dt-donut-shadow flex items-center justify-center mr-4">
-                        <div class="text-2xl">${product.emoji || '🍩'}</div>
-                    </div>
-                    <div>
-                        <h4 class="font-konigsberg text-xl text-dt-donut">${product.name}</h4>
-                        <div class="text-dt-yellow-400 font-bold">$${product.price.toFixed(2)}</div>
-                    </div>
+                <div class="h-48 rounded-xl mb-4 flex items-center justify-center bg-gray-200 overflow-hidden">
+                    ${product.image 
+                        ? `<img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover">` 
+                        : `<div class="w-32 h-32 rounded-full bg-gradient-to-br from-dt-donut to-dt-donut-shadow flex items-center justify-center text-4xl">🍩</div>`
+                    }
                 </div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">${product.name}</h4>
                 <p class="text-dt-yellow-400 text-sm mb-4">${product.description}</p>
-                <button class="w-full bg-dt-blue-500 text-white py-2 rounded-full font-bold hover:bg-dt-blue-700 transition-colors add-suggested-item" data-name="${product.name}" data-price="${product.price}">
-                    Agregar al Carrito
-                </button>
+                <div class="flex justify-between items-center">
+                    <div class="text-dt-glacing font-bold text-lg">$${product.price.toFixed(2)}</div>
+                    <button class="bg-dt-blue-500 text-white px-4 py-2 rounded-full font-bold hover:bg-dt-blue-700 transition-colors add-suggested-item" data-name="${product.name}" data-price="${product.price}">
+                        Agregar
+                    </button>
+                </div>
             `;
             
             container.appendChild(item);

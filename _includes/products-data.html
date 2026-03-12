@@ -11,8 +11,8 @@ window.productsData = {
         "description": "{{ product.description }}",
         "price": {{ product.price }},
         {% if product.original_price %}"original_price": {{ product.original_price }},{% endif %}
-        "category": "{{ product.category }}",
-        "emoji": "{{ product.emoji }}"
+        {% if product.image %}"image": "{{ product.image }}",{% endif %}
+        "category": "{{ product.category }}"
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
     ]{% unless forloop.last %},{% endunless %}
