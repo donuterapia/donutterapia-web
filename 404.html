@@ -130,7 +130,7 @@ permalink: /404.html
             </p>
             
             <!-- Action Button -->
-            <a href="index.html" class="inline-block bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors mb-12">
+            <a href="/" class="inline-block bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors mb-12">
                 Return to Home
                 <span class="ml-2">🏠</span>
             </a>
@@ -211,19 +211,19 @@ permalink: /404.html
                 <div class="bg-gradient-to-br from-dt-purple-900/20 to-dt-purple-700/10 rounded-2xl p-8">
                     <h4 class="font-konigsberg text-xl text-dt-purple-200 mb-6">Popular Pages</h4>
                     <div class="space-y-4">
-                        <a href="menu.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                        <a href="/menu/" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
                             <span class="mr-3">🍩</span>
                             <span>Menu & Donuts</span>
                         </a>
-                        <a href="locations.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                        <a href="/locales/" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
                             <span class="mr-3">📍</span>
                             <span>Store Locations</span>
                         </a>
-                        <a href="contact.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                        <a href="/contacto/" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
                             <span class="mr-3">📞</span>
                             <span>Contact Us</span>
                         </a>
-                        <a href="cart.html" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
+                        <a href="/carrito/" class="flex items-center text-dt-yellow-400 hover:text-dt-donut transition-colors">
                             <span class="mr-3">🛒</span>
                             <span>Your Cart</span>
                         </a>
@@ -239,7 +239,7 @@ permalink: /404.html
                         <button onclick="window.location.reload()" class="w-full text-left bg-dt-blue-900/30 text-dt-blue-400 px-4 py-3 rounded-xl hover:bg-dt-blue-900/50 transition-colors">
                             ↻ Refresh Page
                         </button>
-                        <a href="index.html" class="block w-full text-left bg-dt-glacing/20 text-dt-glacing px-4 py-3 rounded-xl hover:bg-dt-glacing/30 transition-colors">
+                        <a href="/" class="block w-full text-left bg-dt-glacing/20 text-dt-glacing px-4 py-3 rounded-xl hover:bg-dt-glacing/30 transition-colors">
                             🏠 Return Home
                         </a>
                     </div>
@@ -270,7 +270,7 @@ permalink: /404.html
                         <div class="text-dt-yellow-400/70 text-sm">24/7 response</div>
                     </div>
                 </div>
-                <a href="contact.html" class="inline-block bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                <a href="/contacto/" class="inline-block bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
                     Contact Support Team
                 </a>
             </div>
@@ -379,27 +379,27 @@ permalink: /404.html
                 const suggestions = [];
                 
                 if (query.includes('menu') || query.includes('donut')) {
-                    suggestions.push('<a href="menu.html" class="text-dt-blue-400 hover:underline">Menu Page</a>');
+                    suggestions.push('<a href="/menu/" class="text-dt-blue-400 hover:underline">Menu Page</a>');
                 }
                 
                 if (query.includes('location') || query.includes('store')) {
-                    suggestions.push('<a href="locations.html" class="text-dt-blue-400 hover:underline">Locations Page</a>');
+                    suggestions.push('<a href="/locales/" class="text-dt-blue-400 hover:underline">Locations Page</a>');
                 }
                 
                 if (query.includes('contact') || query.includes('help')) {
-                    suggestions.push('<a href="contact.html" class="text-dt-blue-400 hover:underline">Contact Page</a>');
+                    suggestions.push('<a href="/contacto/" class="text-dt-blue-400 hover:underline">Contact Page</a>');
                 }
                 
                 if (query.includes('order') || query.includes('cart')) {
-                    suggestions.push('<a href="cart.html" class="text-dt-blue-400 hover:underline">Cart Page</a>');
+                    suggestions.push('<a href="/carrito/" class="text-dt-blue-400 hover:underline">Cart Page</a>');
                 }
                 
                 if (query.includes('franchise') || query.includes('business')) {
-                    suggestions.push('<a href="franchise.html" class="text-dt-blue-400 hover:underline">Franchise Page</a>');
+                    suggestions.push('<a href="/franquicia/" class="text-dt-blue-400 hover:underline">Franchise Page</a>');
                 }
                 
                 if (query.includes('policy') || query.includes('terms')) {
-                    suggestions.push('<a href="policies.html" class="text-dt-blue-400 hover:underline">Policies Page</a>');
+                    suggestions.push('<a href="/politicas/" class="text-dt-blue-400 hover:underline">Policies Page</a>');
                 }
                 
                 if (suggestions.length > 0) {
@@ -411,9 +411,9 @@ permalink: /404.html
                     searchResults.innerHTML = `
                         <div class="text-dt-yellow-400 text-sm">
                             No specific matches found. Try our main pages:
-                            <a href="menu.html" class="text-dt-blue-400 hover:underline">Menu</a>,
-                            <a href="locations.html" class="text-dt-blue-400 hover:underline">Locations</a>,
-                            <a href="contact.html" class="text-dt-blue-400 hover:underline">Contact</a>
+                            <a href="/menu/" class="text-dt-blue-400 hover:underline">Menu</a>,
+                            <a href="/locales/" class="text-dt-blue-400 hover:underline">Locations</a>,
+                            <a href="/contacto/" class="text-dt-blue-400 hover:underline">Contact</a>
                         </div>
                     `;
                 }
@@ -430,7 +430,7 @@ permalink: /404.html
         // Order button functionality
         document.querySelectorAll('button:contains("Order Now")').forEach(button => {
             button.addEventListener('click', function() {
-                window.location.href = 'menu.html';
+                window.location.href = '/menu/';
             });
         });
 
