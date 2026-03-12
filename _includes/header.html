@@ -15,9 +15,9 @@
                 <a href="{{ '/about.html' | relative_url }}" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Acerca de</a>
                 <a href="{{ '/locations.html' | relative_url }}" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Ubicaciones</a>
                 <a href="{{ '/contact.html' | relative_url }}" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Contacto</a>
-                <button onclick="alert('🍩 Redirigiendo a nuestro sistema de pedidos en línea... ¡Gracias por elegir Donut Terapia!')" class="bg-dt-glacing text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors">
+                <a data-cart-button href="{{ '/cart.html' | relative_url }}" class="bg-dt-glacing text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors inline-block">
                     Ordenar Ahora
-                </button>
+                </a>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -36,9 +36,9 @@
                 <a href="{{ '/about.html' | relative_url }}" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Acerca de</a>
                 <a href="{{ '/locations.html' | relative_url }}" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Ubicaciones</a>
                 <a href="{{ '/contact.html' | relative_url }}" class="text-dt-yellow-400 hover:text-dt-donut font-medium transition-colors">Contacto</a>
-                <button onclick="alert('🍩 Redirigiendo a nuestro sistema de pedidos en línea... ¡Gracias por elegir Donut Terapia!')" class="bg-dt-glacing text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors w-full">
+                <a data-cart-button href="{{ '/cart.html' | relative_url }}" class="bg-dt-glacing text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors block text-center">
                     Ordenar Ahora
-                </button>
+                </a>
             </div>
         </div>
     </nav>

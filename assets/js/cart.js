@@ -1,6 +1,6 @@
 /**
  * Shopping Cart Module
- * Handles: Add to cart, cart notifications, cart persistence
+ * Handles: Cart persistence, CRUD operations, header button display
  */
 
 class ShoppingCart {
@@ -12,8 +12,7 @@ class ShoppingCart {
     }
 
     init() {
-        this.setupCartButtons();
-        this.updateCartBadge();
+        this.updateCartDisplay();
     }
 
     /**
@@ -32,41 +31,25 @@ class ShoppingCart {
     }
 
     /**
-     * Setup event listeners for "Add to Cart" buttons
-     */
-    setupCartButtons() {
-        document.addEventListener('click', (e) => {
-            const button = e.target.closest('button');
-            if (button && button.textContent.includes('Agregar al Carrito')) {
-                e.preventDefault();
-                
-                const card = button.closest('.bg-black');
-                if (card) {
-                    const donutName = card.querySelector('h4')?.textContent || 'Dona';
-                    const priceText = card.querySelector('.text-dt-glacing')?.textContent || '$4.00';
-                    const price = parseFloat(priceText.replace('$', ''));
-
-                    this.addToCart(donutName, price, button);
-                }
-            }
-        });
-    }
-
-    /**
      * Add item to cart
      */
-    addToCart(name, price, button) {
-        const donut = {
-            name,
-            price,
-            id: Date.now(),
-            quantity: 1
-        };
+    addToCart(name, price, button = null) {
+        // Check if item already exists
+        const existingItem = this.cart.find(item => item.name === name && item.price === price);
+        
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            this.cart.push({
+                name,
+                price,
+                id: Date.now(),
+                quantity: 1
+            });
+        }
 
-        this.cart.push(donut);
         this.saveCart();
-        this.showCartNotification(name, button);
-        this.updateCartBadge();
+        this.updateCartDisplay();
     }
 
     /**
@@ -75,7 +58,23 @@ class ShoppingCart {
     removeFromCart(itemId) {
         this.cart = this.cart.filter(item => item.id !== itemId);
         this.saveCart();
-        this.updateCartBadge();
+        this.updateCartDisplay();
+    }
+
+    /**
+     * Update quantity of item in cart
+     */
+    updateQuantity(itemId, quantity) {
+        const item = this.cart.find(item => item.id === itemId);
+        if (item) {
+            item.quantity = Math.max(1, quantity);
+            if (item.quantity === 0) {
+                this.removeFromCart(itemId);
+            } else {
+                this.saveCart();
+                this.updateCartDisplay();
+            }
+        }
     }
 
     /**
@@ -84,7 +83,7 @@ class ShoppingCart {
     clearCart() {
         this.cart = [];
         this.saveCart();
-        this.updateCartBadge();
+        this.updateCartDisplay();
     }
 
     /**
@@ -102,38 +101,21 @@ class ShoppingCart {
     }
 
     /**
-     * Show visual feedback notification
+     * Update header button display and navigate to cart page when clicked
      */
-    showCartNotification(donutName, button) {
-        const originalText = button.textContent;
-        const originalBg = button.className;
-
-        button.textContent = '✅ Agregado!';
-        button.classList.add('bg-green-500');
-        button.classList.remove('bg-dt-pink');
-        button.disabled = true;
-
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.className = originalBg;
-            button.disabled = false;
-        }, 2000);
-    }
-
-    /**
-     * Update cart badge count
-     */
-    updateCartBadge() {
-        const badge = document.getElementById('cartBadge');
-        if (!badge) return;
-
+    updateCartDisplay() {
         const total = this.getCartTotal();
-        if (total > 0) {
-            badge.textContent = total;
-            badge.classList.remove('hidden');
-        } else {
-            badge.classList.add('hidden');
-        }
+        
+        // Update "Ordenar Ahora" button in header and add click handler
+        const orderButtons = document.querySelectorAll('[data-cart-button]');
+        orderButtons.forEach(btn => {
+            // Update button text with cart count
+            if (total > 0) {
+                btn.textContent = `Ordenar Ahora (${total})`;
+            } else {
+                btn.textContent = 'Ordenar Ahora';
+            }
+        });
     }
 
     /**

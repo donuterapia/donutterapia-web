@@ -1,0 +1,29 @@
+<!-- Products Data - Exposed to JavaScript from Jekyll data -->
+<script>
+window.productsData = {
+  {% for category in site.data.products %}
+    "{{ category[0] }}": [
+    {% for product in category[1] %}
+      {
+        "id": {{ product.id }},
+        "name": "{{ product.name }}",
+        "description": "{{ product.description }}",
+        "price": {{ product.price }},
+        {% if product.original_price %}"original_price": {{ product.original_price }},{% endif %}
+        {% if product.discount %}"discount": {{ product.discount }},{% endif %}
+        "category": "{{ product.category }}",
+        "emoji": "{{ product.emoji }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ]{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+};
+
+// Flatten products into a single array for easier access
+window.allProducts = [];
+Object.values(window.productsData).forEach(category => {
+  window.allProducts = window.allProducts.concat(category);
+});
+
+console.log('Products loaded from Jekyll data:', window.allProducts.length, 'items');
+</script>

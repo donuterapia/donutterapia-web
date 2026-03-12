@@ -1,0 +1,257 @@
+---
+layout: default
+---
+
+<style>
+    /* Custom animations */
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    .float-animation {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    /* Cart specific animations */
+    @keyframes slideIn {
+        from { transform: translateX(-20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    .animate-slideIn {
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    
+    .animate-pulse {
+        animation: pulse 0.5s ease-in-out;
+    }
+
+    @keyframes scaleIn {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    
+    .animate-scaleIn {
+        animation: scaleIn 0.3s ease-out;
+    }
+
+    @keyframes slideInRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+
+    .animate-slideInRight {
+        animation: slideInRight 0.3s ease-out;
+    }
+
+    @keyframes slideOutRight {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+    }
+
+    .animate-slideOutRight {
+        animation: slideOutRight 0.3s ease-in;
+    }
+    
+    /* Custom gradient backgrounds */
+    .yellow-gradient {
+        background: linear-gradient(135deg, #fddb00 0%, #ffcf64 100%);
+    }
+    
+    .dark-gradient {
+        background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    }
+    
+    /* Cart item hover */
+    .cart-item {
+        transition: all 0.3s ease;
+    }
+    
+    .cart-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Quantity controls */
+    .quantity-btn {
+        transition: all 0.2s ease;
+    }
+    
+    .quantity-btn:hover {
+        background-color: #ffcf64 !important;
+        color: #5b3429;
+    }
+    
+    /* Empty cart animation */
+    .empty-cart-animation {
+        animation: float 4s ease-in-out infinite;
+    }
+    
+    /* Sticky summary */
+    .sticky-summary {
+        position: sticky;
+        top: 120px;
+    }
+</style>
+
+<!-- Cart Hero -->
+<section class="yellow-gradient py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h2 class="font-konigsberg text-4xl md:text-5xl text-dt-letter-outline mb-4">
+                    Tu <span class="text-dt-glacing">Carrito</span> de Donas
+                </h2>
+                <p class="text-dt-letter-outline">
+                    Revisa tus deliciosas selecciones antes de confirmar tu pedido
+                </p>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <div class="flex items-center space-x-2">
+                    <div class="text-4xl">🛒</div>
+                    <div>
+                        <div class="text-dt-letter-outline font-bold text-xl" id="cartTotalItems">0 items</div>
+                        <div class="text-dt-letter-outline/70 text-sm">en tu carrito</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Cart Content -->
+<section class="dark-gradient py-12 min-h-screen">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Cart Items -->
+            <div class="lg:col-span-2">
+                <!-- Empty Cart State -->
+                <div id="emptyCart" class="hidden text-center py-16">
+                    <div class="empty-cart-animation text-8xl mb-6">🍩</div>
+                    <h3 class="font-konigsberg text-3xl text-dt-donut mb-4">Tu carrito está vacío</h3>
+                    <p class="text-dt-yellow-400 mb-8 max-w-md mx-auto">
+                        Parece que aún no has agregado ninguna dona deliciosa a tu carrito. ¡Explora nuestro menú para encontrar tus favoritas!
+                    </p>
+                    <a href="{{ '/menu.html' | relative_url }}" class="inline-block bg-dt-glacing text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-600 transition-colors">
+                        Explorar Menú
+                    </a>
+                </div>
+                
+                <!-- Cart Items Container -->
+                <div id="cartItemsContainer" class="space-y-6">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                
+                <!-- Continue Shopping -->
+                <div id="continueShopping" class="mt-8 hidden">
+                    <a href="{{ '/menu.html' | relative_url }}" class="inline-flex items-center text-dt-blue-400 hover:text-dt-blue-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                        Continuar Comprando
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Order Summary -->
+            <div class="lg:col-span-1">
+                <div class="sticky-summary bg-black/50 rounded-2xl p-6">
+                    <h3 class="font-konigsberg text-2xl text-dt-donut mb-6">Resumen del Pedido</h3>
+                    
+                    <!-- Summary Details -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-dt-yellow-400">Subtotal</span>
+                            <span class="text-dt-yellow-400 font-bold" id="subtotal">$0.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-dt-yellow-400">Envío</span>
+                            <span class="text-dt-yellow-400 font-bold" id="deliveryFee">$3.99</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-dt-yellow-400">Impuestos</span>
+                            <span class="text-dt-yellow-400 font-bold" id="tax">$0.00</span>
+                        </div>
+                        <div class="border-t border-dt-donut/20 pt-4">
+                            <div class="flex justify-between">
+                                <span class="text-dt-donut font-bold text-lg">Total</span>
+                                <span class="text-dt-donut font-bold text-2xl" id="total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Delivery Options -->
+                    <div class="mb-6">
+                        <h4 class="font-konigsberg text-lg text-dt-donut mb-4">Opciones de Envío</h4>
+                        <div class="space-y-3">
+                            <label class="flex items-center">
+                                <input type="radio" name="delivery" value="standard" checked class="mr-3 text-dt-glacing">
+                                <span class="text-dt-yellow-400">Envío Estándar (30-60 min)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="delivery" value="express" class="mr-3 text-dt-glacing">
+                                <span class="text-dt-yellow-400">Envío Expresó (15-30 min) +$2.99</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="delivery" value="pickup" class="mr-3 text-dt-glacing">
+                                <span class="text-dt-yellow-400">Retirar en la Tienda</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Promo Code -->
+                    <div class="mb-6">
+                        <div class="flex mb-2">
+                            <input type="text" placeholder="Código promocional" id="promoCode" class="flex-1 bg-black/30 border border-dt-donut/30 rounded-l-xl px-4 py-3 text-dt-yellow-400 focus:outline-none focus:border-dt-donut">
+                            <button id="applyPromo" class="bg-dt-blue-500 text-white px-4 rounded-r-xl hover:bg-dt-blue-700 transition-colors">
+                                Aplicar
+                            </button>
+                        </div>
+                        <div id="promoMessage" class="text-xs text-dt-yellow-400/70 hidden"></div>
+                    </div>
+                    
+                    <!-- Checkout Button -->
+                    <button id="checkoutBtn" class="w-full bg-gradient-to-r from-dt-glacing to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-red-600 hover:to-pink-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Proceder al Pago
+                    </button>
+                    
+                    <!-- Secure Payment -->
+                    <div class="mt-6 pt-6 border-t border-dt-donut/20 text-center">
+                        <div class="flex justify-center space-x-4 mb-2">
+                            <span class="text-dt-yellow-400">🔒</span>
+                            <span class="text-dt-yellow-400">💳</span>
+                            <span class="text-dt-yellow-400">🛡️</span>
+                        </div>
+                        <p class="text-dt-yellow-400 text-xs">
+                            Pago Seguro • Todos los datos encriptados
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- You Might Also Like -->
+<section class="bg-black py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h3 class="font-konigsberg text-4xl md:text-5xl text-dt-donut mb-4">
+                También Te Podría <span class="text-dt-glacing">Gustar</span>
+            </h3>
+            <p class="text-dt-yellow-400 max-w-2xl mx-auto">
+                Agrega estos artículos populares para completar tu pedido
+            </p>
+        </div>
+        
+        <div id="suggestedItemsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Suggested items will be loaded here -->
+        </div>
+    </div>
+</section>

@@ -31,9 +31,15 @@ class AppInit {
         if (window.animations) modules.push('Animations');
         if (window.policyAccordion) modules.push('PolicyAccordion');
         if (window.franchiseForm) modules.push('FranchiseForm');
+        if (window.menuPage) modules.push('MenuPage');
 
         if (modules.length > 0) {
             console.log('Loaded modules:', modules.join(', '));
+        }
+        
+        // Log cart state
+        if (window.shoppingCart) {
+            console.log('Cart items:', window.shoppingCart.getCartTotal());
         }
     }
 }
