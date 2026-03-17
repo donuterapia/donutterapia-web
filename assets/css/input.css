@@ -188,8 +188,8 @@
   }
 
   .donut-hover:hover {
-    @apply scale-105;
-    transform: scale(1.05) rotate(5deg);
+    @apply -translate-y-2;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   }
 
   .glow-button {
