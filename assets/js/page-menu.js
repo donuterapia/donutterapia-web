@@ -104,6 +104,14 @@ class MenuPage {
             this.setupFilterListeners();
             this.setupAddToCartListeners();
         }
+
+        // Render collections and beverages if their grids exist
+        if (document.getElementById('collectionsGrid')) {
+            this.renderCollectionsGrid();
+        }
+        if (document.getElementById('beveragesGrid')) {
+            this.renderBeveragesGrid();
+        }
     }
 
     /**
@@ -289,6 +297,95 @@ class MenuPage {
             
             loadMoreBtn.style.display = this.visibleDonuts >= totalFiltered ? 'none' : 'block';
         }
+    }
+
+    /**
+     * Render collections grid from cajas, docenas, torres, ramos, combos
+     */
+    renderCollectionsGrid() {
+        const grid = document.getElementById('collectionsGrid');
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        // Get collection products from specific categories
+        const collectionCategories = ['cajas', 'docenas', 'torres', 'ramos', 'combos'];
+        const collections = this.donutMenu.filter(product => 
+            collectionCategories.includes(product.category)
+        ).slice(0, 6); // Limit to 6 collections
+        
+        collections.forEach(collection => {
+            const colorOptions = ['from-dt-purple-900/30 to-dt-purple-700/20', 'from-dt-blue-900/30 to-dt-blue-700/20', 'from-dt-glacing/20 to-pink-600/20'];
+            const colorIndex = collections.indexOf(collection) % colorOptions.length;
+            const textColorOptions = ['text-dt-purple-200', 'text-dt-blue-200', 'text-dt-glacing'];
+            const textColor = textColorOptions[colorIndex];
+            const emojis = ['🍩🍩🍩', '🎉🍩🎂', '❤️🍩💝', '🌹🍩✨', '🎁🍩🎊', '⭐🍩✨'];
+            
+            const card = document.createElement('div');
+            card.className = `bg-gradient-to-br ${colorOptions[colorIndex]} rounded-2xl p-8 collection-card cursor-pointer hover:opacity-90 transition-opacity`;
+            
+            card.innerHTML = `
+                <div class="text-center mb-6">
+                    <div class="text-5xl mb-4">${emojis[collections.indexOf(collection)] || '🍩'}</div>
+                    <h4 class="font-konigsberg text-2xl ${textColor} mb-2">${collection.name}</h4>
+                    <p class="text-dt-yellow-400 text-sm">${collection.description}</p>
+                </div>
+                <div class="text-center mb-6">
+                    <div class="text-dt-glacing font-bold text-3xl">$${collection.price.toFixed(2)}</div>
+                    <p class="text-dt-yellow-400 text-sm mt-2">${this.categoryNameMap[collection.category] || collection.category}</p>
+                </div>
+                <button class="w-full bg-dt-glacing text-white py-3 rounded-full font-bold hover:bg-red-600 transition-colors add-menu-item" 
+                        data-id="${collection.id}" 
+                        data-name="${collection.name}" 
+                        data-price="${collection.price}">
+                    Agregar al Carrito
+                </button>
+            `;
+            
+            grid.appendChild(card);
+        });
+    }
+
+    /**
+     * Render beverages grid from bebidas category
+     */
+    renderBeveragesGrid() {
+        const grid = document.getElementById('beveragesGrid');
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        // Get beverages from bebidas category
+        const beverages = this.donutMenu.filter(product => 
+            product.category === 'bebidas'
+        ).slice(0, 4); // Limit to 4 beverages
+        
+        const beverageEmojis = ['☕', '🍵', '🥤', '🍫'];
+        const beverageBgColors = ['bg-dt-blue-200', 'bg-dt-purple-200', 'bg-dt-yellow-200', 'bg-dt-glacing/20'];
+        
+        beverages.forEach((beverage, index) => {
+            const card = document.createElement('div');
+            card.className = 'bg-black rounded-2xl p-6 donut-hover';
+            
+            card.innerHTML = `
+                <div class="${beverageBgColors[index]} h-32 rounded-xl mb-4 flex items-center justify-center">
+                    <div class="text-5xl">${beverageEmojis[index] || '☕'}</div>
+                </div>
+                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">${beverage.name}</h4>
+                <p class="text-dt-yellow-400 text-sm mb-4">${beverage.description}</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-dt-glacing">$${beverage.price.toFixed(2)}</span>
+                    <button class="add-menu-item bg-dt-blue-500 text-white px-4 py-2 rounded-full text-sm hover:bg-dt-blue-700 transition-colors" 
+                            data-id="${beverage.id}" 
+                            data-name="${beverage.name}" 
+                            data-price="${beverage.price}">
+                        Agregar
+                    </button>
+                </div>
+            `;
+            
+            grid.appendChild(card);
+        });
     }
 
     /**
