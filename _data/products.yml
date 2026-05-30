@@ -5,416 +5,404 @@
 
 # Category Definitions
 categories:
-  - id: "promociones"
-    name: "Promociones"
-    display_name: "Promoción"
-  - id: "personalizadas"
-    name: "Personalizadas"
-    display_name: "Personalizada"
-  - id: "docenas"
-    name: "Docenas"
-    display_name: "Docena"
-  - id: "combos"
-    name: "Combos"
-    display_name: "Combo"
-  - id: "media-docena"
-    name: "Media Docena"
-    display_name: "Media Docena"
-  - id: "pa-tres"
-    name: "Pa Tres"
-    display_name: "Pa Tres"
-  - id: "bebidas"
-    name: "Bebidas"
-    display_name: "Bebida"
-  - id: "mercaderia"
-    name: "Mercadería"
-    display_name: "Mercadería"
+    - id: "combos"
+      name: "Combos"
+      display_name: "Combo"
+    - id: "personalizadas"
+      name: "Personalizadas"
+      display_name: "Personalizada"
+    - id: "bebidas"
+      name: "Bebidas"
+      display_name: "Bebida"
+    - id: "individuales"
+      name: "Individuales"
+      display_name: "Individual"
+    - id: "torres"
+      name: "Torres"
+      display_name: "Torre"
+    - id: "cajas"
+      name: "Cajas"
+      display_name: "Caja"
+    - id: "ramos"
+      name: "Ramos"
+      display_name: "Ramo"
+    - id: "promociones"
+      name: "Promociones"
+      display_name: "Promoción"
+    - id: "docenas"
+      name: "Docenas"
+      display_name: "Docena"
+    - id: "mercaderia"
+      name: "Mercadería"
+      display_name: "Mercadería"
 
 # All Products Organized by Category
-promociones:
-  - id: 1
-    name: "Promo Quincena - 1 Docena Avellana"
-    category: "promociones"
-    price: 11.99
-    original_price: 12.30
-    description: "1 docena donuts de avellana o nutela"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 2
-    name: "Promo - 3 Berlines"
-    category: "promociones"
-    price: 2.99
-    original_price: 3.30
-    description: "3 berlines con relleno de tu elección"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 3
-    name: "Promo - Sábados y Domingos"
-    category: "promociones"
-    price: 12.99
-    original_price: 15.99
-    description: "1 docena donuts + 3 GRATIS. Fin de semana"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-personalizadas:
-  - id: 4
-    name: "12 Minis Mensaje"
-    category: "personalizadas"
-    price: 15.00
-    description: "12 mini donuts con mensaje personalizado"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 5
-    name: "3 Donuts 1 Personalizada"
-    category: "personalizadas"
-    price: 9.97
-    description: "1 personalizada con relleno + 2 anillos"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 6
-    name: "6 Donuts 1 Personalizada"
-    category: "personalizadas"
-    price: 15.99
-    description: "1 personalizada con relleno + 5 anillos"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-  - id: 7
-    name: "6 Donuts Mensaje"
-    category: "personalizadas"
-    price: 12.50
-    original_price: 14.99
-    description: "Caja 6 donuts con relleno y mensaje escrito"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-  - id: 8
-    name: "Mega Donut"
-    category: "personalizadas"
-    price: 19.99
-    description: "1 donut gigante para 14 personas aprox"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-  - id: 9
-    name: "Mood Donut"
-    category: "personalizadas"
-    price: 3.50
-    original_price: 4.50
-    description: "Donut con mensaje y dibujito personalizado"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-  - id: 10
-    name: "Ramo Donuts - 6 Minis + 3 Flores"
-    category: "personalizadas"
-    price: 14.00
-    description: "Ramo personalizado perfecto para regalo"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-  - id: 11
-    name: "Mega Mood"
-    category: "personalizadas"
-    price: 19.99
-    description: "Mega donut personalizada"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-docenas:
-  - id: 12
-    name: "2 Docenas Mini Donitas"
-    category: "docenas"
-    price: 18.00
-    description: "2 docenas de mini donita 7cm de tamaño"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-    featured: true
-  - id: 13
-    name: "Docena Donuts"
-    category: "docenas"
-    price: 12.90
-    description: "1 docena variada 11cm tamaño regular"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-    featured: true
-  - id: 14
-    name: "Docena Glaseadas"
-    category: "docenas"
-    price: 12.90
-    description: "1 docena donuts glaseada 11cm"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-    featured: true
-  - id: 15
-    name: "Docena Premium"
-    category: "docenas"
-    price: 15.99
-    description: "1 docena Boston cream rellenas de pastelera"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 16
-    name: "Docena Donitas"
-    category: "docenas"
-    price: 9.00
-    description: "1 docena donitas pequeñas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
 combos:
-  - id: 17
-    name: "Combo Pa 2 - Anillos"
-    category: "combos"
-    price: 5.75
-    description: "2 vasos 14oz capuchino iced + 3 donuts anillo"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "28aa4f6c-0544-41c1-a5c4-a08752594d48"
+      name: "combo 3 dia del niño 3 minis y 1 leche"
+      category: "combos"
+      price: 3.99
+      description: "3 mini donuts 1 leche"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/60254711/a182850d-f44b-4193-b2de-51600527e4d5.jpg"
 
-  - id: 18
-    name: "Combo Pa 1 - Donut + Bebida"
-    category: "combos"
-    price: 3.70
-    original_price: 3.99
-    description: "1 vaso 14oz capuchino iced + 1 donut anillo"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "bb04de59-d78d-4b48-886d-87cbe98f7cd8"
+      name: "combo 2 : dia del niño 1 mood donut"
+      category: "combos"
+      price: 4.50
+      description: "1 mood donut personalizada sea de mario o de la princesa . con caja. tiene relleno  y mensajito escrito"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/60254705/a5598dc2-a5e0-4c08-9079-4edd452d08b4.jpg"
 
-  - id: 19
-    name: "Combo Pa Todos - 4 Bebidas + 12 Anillos"
-    category: "combos"
-    price: 17.99
-    original_price: 29.99
-    description: "4 vasos 14oz capuchino iced + 1 docena anillos"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "43269bcc-8f61-4732-bffc-9749ee1026a0"
+      name: "dia del niño combo 1"
+      category: "combos"
+      price: 4.99
+      description: "1 hotwheels  coleccionable  + 3 minis."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/60254703/28f0e133-f9fa-4ecd-a829-ca89d954ef83.jpg"
 
-  - id: 20
-    name: "Combo Pa 1 - 3 Minis + 1 Bebida"
-    category: "combos"
-    price: 4.99
-    description: "3 mini donuts + 1 bebida de tu elección"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "e5ae7d9e-ad9e-4f74-9cbf-752c96f25be1"
+      name: "Combo Mundial 4"
+      category: "combos"
+      price: 35.99
+      description: "24 Donuts + 2 Bebidas, BENEFICIO COLECCIONABLE, 1 ALBUM pasta suave, 1 Paquetes (7 cromos)"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/60234508/1a973672-84d1-46f2-aaa3-441da0b3c872.jpg"
+      featured: true
 
-media_docena:
-  - id: 21
-    name: "6 Donuts"
-    category: "media-docena"
-    price: 6.60
-    description: "6 donuts variada 11cm tamaño regular"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "32393f1a-5747-47d4-b9b8-0f058ba6ce18"
+      name: "Combo Mundial 3"
+      category: "combos"
+      price: 20.99
+      description: "12 Donuts + 2 Bebidas, Beneficio Coleccionable, 3 Paquetes (21 cromos)"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/60234509/9fb81596-8738-4b63-8c28-b9b25b16b7b4.jpg"
 
-  - id: 22
-    name: "6 Berlines"
-    category: "media-docena"
-    price: 6.60
-    description: "6 berlines con relleno variado"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "9a2ecdc0-79ec-484f-adde-18ee6239711f"
+      name: "Combo Mundial 2"
+      category: "combos"
+      price: 12.99
+      description: "6 Donuts + 2 Bebidas, Beneficio colecionable, 2 Paquetes (14 cromos)"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/60234511/a31c0b58-36b1-4e25-ad77-ac6e1ac759ac.jpg"
 
-  - id: 23
-    name: "6 Mini Donitas"
-    category: "media-docena"
-    price: 4.50
-    description: "6 donitas pequeñas 7cm de tamaño"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 24
-    name: "6 Premium"
-    category: "media-docena"
-    price: 7.99
-    description: "6 donuts con relleno, cobertura y toping"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-pa_tres:
-  - id: 25
-    name: "3 Anillos"
-    category: "pa-tres"
-    price: 3.30
-    description: "3 donuts 11cm tamaño regular"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 26
-    name: "3 Berlines"
-    category: "pa-tres"
-    price: 3.30
-    description: "3 berlines con relleno"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 27
-    name: "3 Mini Donitas"
-    category: "pa-tres"
-    price: 2.50
-    description: "3 donitas pequeñas - la dosis perfecta"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 28
-    name: "3 Premium"
-    category: "pa-tres"
-    price: 3.99
-    description: "3 donuts con glaseado, relleno y toping"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "0b0cb717-1eea-4b30-8cff-0e80cf5eeb30"
+      name: "Combo Mundial 1"
+      category: "combos"
+      price: 6.99
+      description: "3 Donuts + 2 Bebidas, Beneficio Coleccionable, 1 Paquete (7 cromos)"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/60234510/b5d4ed2b-c5e0-4eaa-953e-e6f89968db1a.jpg"
 
 bebidas:
-  - id: 29
-    name: "Bubble Coffee"
-    category: "bebidas"
-    price: 1.99
-    original_price: 2.99
-    description: "Vaso con café con burbujas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "ddd15217-98f0-4547-93ff-be4a8aee8671"
+      name: "Capuchino 9 oz"
+      category: "bebidas"
+      price: 1.25
+      description: "Capuchino 9 oz, vaso 9 oz capuchino caliente."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057596/bd170406-7c62-4246-9e1a-a67be1029581.png"
 
-  - id: 30
-    name: "Bubble Tea"
-    category: "bebidas"
-    price: 2.99
-    description: "Delicioso té frío con burbujas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "aad6d87c-eaa6-4e94-9a58-efb016bc1413"
+      name: "Chocolate con leche 14 oz"
+      category: "bebidas"
+      price: 2.50
+      description: "vaso de 14 oz de chocolate caliente"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057602/cbe89880-15c8-4a99-8f6d-cf7b14a67fc3.png"
 
-  - id: 31
-    name: "Frapuchino"
-    category: "bebidas"
-    price: 2.99
-    description: "Delicioso batido con hielo de café"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "dee22a20-4d96-45d4-9662-e6b1faced109"
+      name: "Iced capuchino 9 oz"
+      category: "bebidas"
+      price: 1.50
+      description: "Iced capuchino 9 oz - vaso 9 oz capuchino con hielos"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057590/096f7552-8559-4b4b-89e2-b1398995e529.png"
 
-  - id: 32
-    name: "Iced Capuchino"
-    category: "bebidas"
-    price: 2.50
-    description: "Vaso de capuchino en dos sabores y tamaños"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "998ba706-3fd2-4d65-b391-b84dbf6da8ba"
+      name: "Chocolate con leche 9 oz"
+      category: "bebidas"
+      price: 1.79
+      description: "Vaso de 9 oz regular de chocolate."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057609/16995efd-9144-4bb2-91e4-17c417e5933d.png"
 
-  - id: 33
-    name: "Iced Coffee"
-    category: "bebidas"
-    price: 2.99
-    description: "Vaso de café con hielos"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "5921268b-e0ac-4507-bd4e-559fbddf9af6"
+      name: "Latte 14Oz"
+      category: "bebidas"
+      price: 1.99
+      description: "Latte 14Oz - Vaso 14 oz latte doble dosis de leche. Sin personalizar."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057598/7e9b4083-9e58-4324-91fa-0f9683f3679b.png"
 
-  - id: 34
-    name: "Iced Leche"
-    category: "bebidas"
-    price: 1.50
-    original_price: 2.50
-    description: "Vaso de leche con hielos"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "e4ecc899-a5ab-46bf-9846-f45aba1f9da6"
+      name: "Iced americano 14 oz"
+      category: "bebidas"
+      price: 1.90
+      description: "Iced americano 14 oz"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057571/f32d3212-ac18-4567-86c5-a72b71a3c746.png"
 
-  - id: 35
-    name: "Iced Tea"
-    category: "bebidas"
-    price: 2.50
-    description: "Vaso de té helado en dos sabores"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "bd4f6e2b-b119-4466-82c6-bee9cff67184"
+      name: "Buble tea 14oz"
+      category: "bebidas"
+      price: 2.50
+      description: "buble tea 14oz"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057561/1def36b3-4f0c-4d8c-839c-b2b540628ffd.png"
 
-  - id: 36
-    name: "Smoothie"
-    category: "bebidas"
-    price: 4.50
-    description: "Vaso mezclado con frutas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "2ce8538c-1349-4976-98a0-fce74344f212"
+      name: "Chocolate caliente 9 oz"
+      category: "bebidas"
+      price: 1.79
+      description: "1 bebida chocolate caliente."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057560/69f9f723-1fe2-4131-a9c5-7db06a7c68b2.png"
 
-  - id: 37
-    name: "Americano"
-    category: "bebidas"
-    price: 1.79
-    original_price: 2.99
-    description: "Un expreso + 4oz de agua"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "dc7c596d-1fc8-4dbb-961e-65cce149b6aa"
+      name: "Americano 9 oz"
+      category: "bebidas"
+      price: 0.99
+      description: "Café americano de 9oz"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057544/818cd97f-9589-4149-b84c-3546e67ac461.png"
 
-  - id: 38
-    name: "Capuchino"
-    category: "bebidas"
-    price: 1.79
-    original_price: 2.99
-    description: "Clásico: 1 expreso + 4oz de leche"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+individuales:
+    - id: "c8471fac-7e41-403a-b3dc-58e4adb917a3"
+      name: "3 berlines"
+      category: "individuales"
+      price: 4.99
+      description: "3 donas (berlines) con relleno"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057608/646b2ac9-9ec8-45a9-8a18-ef19ce487f88.png"
 
-  - id: 39
-    name: "Chocolate Caliente"
-    category: "bebidas"
-    price: 1.79
-    original_price: 2.99
-    description: "Leche y chocolate caliente"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "53dd6e86-1b29-4f14-8b08-d93873382ab6"
+      name: "1 berlin"
+      category: "individuales"
+      price: 1.90
+      description: "1 berlin sabores a eleccion"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057582/193f1632-ac5a-441b-8011-76dfa7c3d010.png"
 
-  - id: 40
-    name: "Vaso Leche Caliente"
-    category: "bebidas"
-    price: 1.79
-    original_price: 2.99
-    description: "Vaso de leche caliente"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "313c86ed-2df6-486b-9422-9609704a5483"
+      name: "3 mini donuts"
+      category: "individuales"
+      price: 2.50
+      description: "3 mini donuts. Sabores a eleccion."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057574/7f637b96-9363-48fd-b23b-c7866316da4e.png"
+
+    - id: "ac69e593-92a9-4a6d-8a99-765d1929400c"
+      name: "3 anillos"
+      category: "individuales"
+      price: 5.50
+      description: "Dona 3 anillos, Trios. sabores eleccion."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057581/1f01f2e3-8a89-4bb5-ae54-5991af1970dc.png"
+
+torres:
+    - id: "81da846d-27cb-43c7-b155-9f5f24357a2a"
+      name: "Mega Torre yummy"
+      category: "torres"
+      price: 27.00
+      description: "Mega Torre yummy-1 Torre de donuts . 1 mega donuts gigante de base con relleno , 1 mega donut mediana con relleno. y una donut normal arriba. con decoracion y relleno a eleccion"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057603/f83a39c6-0df4-4aaf-83f0-1771ca686bef.png"
+      featured: true
+
+    - id: "2ea83561-bb35-468a-ba6a-7055b77302a1"
+      name: "Torre mini donuts 12un"
+      category: "torres"
+      price: 14.00
+      description: "Torre mini donuts personalizado, color princesa y decoracion especial."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057588/189e2a34-ba9b-48c7-bffa-608f439a742d.png"
+
+    - id: "29ac8b1e-3656-4ed1-8775-19ebc1211252"
+      name: "Mega Torre Baby"
+      category: "torres"
+      price: 25.00
+      description: "1 Torre de donuts,1 mega donuts gigante de base con relleno, 1 mega donut mediana sin relleno,  una donut normal arriba con decoracion y relleno a eleccion"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057548/1f09ae53-2440-448b-a1e2-2ce38e4d37ef.png"
+
+cajas:
+    - id: "c329ff78-c88c-4fa5-84f0-7d44cd9b4739"
+      name: "Caja 6 con frutas y mensaje - Personalizados"
+      category: "cajas"
+      price: 17.00
+      description: "6 donuts pesonalizadas con mensajes escritos y frutas 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057605/aa262d5d-8489-423a-966f-a67dfc734f29.png"
+
+    - id: "03c869c1-88f4-4910-9c99-be178247891c"
+      name: "Caja mi amor - Personalizados"
+      category: "cajas"
+      price: 15.99
+      description: "2 mood donuts rellenas 1 mood donut escrita detalles en fondant 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057585/cbd39a0f-d3fc-424d-94c1-72897165f434.png"
+
+    - id: "cccd1f18-c362-473c-bd81-a613c5f4e77d"
+      name: "Caja corazon Siempre - Personalizados"
+      category: "cajas"
+      price: 11.50
+      description: "1 mood donut 2 mini donuts personalizadas detalles en fondant 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057593/aabc50d1-4c3b-429f-99d6-e180ed250634.png"
+
+    - id: "2099266f-8dea-487f-ae78-9960b5cd885b"
+      name: "Caja Corazon Toda la vida - Personalizados"
+      category: "cajas"
+      price: 13.50
+      description: "mood donut especial rellena 2 miin berlines rellenos detalles en fondant 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057572/b31fd69c-85f9-4511-b38d-afe7aabcdde0.png"
+
+    - id: "b0d7df05-1b7c-4b55-ade6-33be1efaaaa5"
+      name: "Caja 6 con mensajes y dibujo mood - Personalizados"
+      category: "cajas"
+      price: 16.00
+      description: "6 donuts pesonalizadas con mensajes escritos y una con dibujito.."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057586/211fff43-3419-43ef-bd4f-ec5822bd86d1.png"
+
+    - id: "58773431-90aa-492f-8f42-c44553be4c43"
+      name: "Caja 3 con mensajes"
+      category: "cajas"
+      price: 7.00
+      description: "3 donuts con mensaje escrito y decoracion hermosa. Feliz Cumple no personalizado"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057599/55ee0e51-1739-4cfa-9e3d-3b4ea27526ce.png"
+
+    - id: "6fb243f3-9602-4d3a-874e-fbcc3faa01a7"
+      name: "Caja 6 con mensajes y dibujo - Personalizados"
+      category: "cajas"
+      price: 16.00
+      description: "6 donuts pesonalizadas con mensajes escritos y una con dibujito 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057580/1c6a0fac-7e57-4726-bf83-28a226c2ce84.png"
+
+    - id: "2cb9e54d-6067-423b-a092-d2d32fabf3e4"
+      name: "Caja Corazon Enamorados - Personalizados"
+      category: "cajas"
+      price: 12.50
+      description: "1 mood especial rellena, 2 mini donuts decoradas detalles en fondant 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057545/2728fce9-b65b-4800-a291-e00696fbf57c.png"
+
+ramos:
+    - id: "27465440-026a-4d20-b948-0ca054ec685a"
+      name: "Ramo super mood - Personalizados"
+      category: "ramos"
+      price: 18.00
+      description: "2 mood donuts rellenas personalizadas, 3 minis y girasoles frescos 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057587/2ce5c8b4-bc9c-4fb1-a542-1d8f7bd2cdce.png"
+      featured: true
+
+    - id: "5dbb8795-85f1-457a-b2bc-2e0fcc699570"
+      name: "Ramo girasoles - Personalizado"
+      category: "ramos"
+      price: 14.99
+      description: "6 mini donas personalizadas, detalles en fondant girasoles frescos 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057566/8aa540ac-3121-4a30-a1b0-c6d287e143cc.png"
+
+    - id: "0e317fc6-15bf-46ee-b41b-451b0e02a2af"
+      name: "Ramo mood donuts - Personalizados"
+      category: "ramos"
+      price: 17.00
+      description: "1 mood donut  5 mini donas y rosas frescas, laso 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057589/9ad56982-de53-445e-bdcd-6bbf33da0fec.png"
+
+    - id: "a72dd0b3-e0c0-4414-9f4b-65534f4c26c4"
+      name: "Ramo rosas"
+      category: "ramos"
+      price: 14.00
+      description: "6 minis decoradas detalle en fondant rosas frescas y lazo"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057584/ba22457f-c0f3-4ac8-9c82-f8b420d09ef7.png"
+
+personalizadas:
+    - id: "afd59ca7-d939-4663-a835-cba10589eab5"
+      name: "mood donut feliz cumple - Personalizada"
+      category: "personalizadas"
+      price: 4.50
+      description: "1 dona personalizada feliz cumpleaños 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057597/2c00314b-07e6-4c33-b266-ed961e60b190.png"
+
+    - id: "b0cb44f5-d505-45a9-b997-2b531bfb7609"
+      name: "Mood donut x3 - Personaliza 1"
+      category: "personalizadas"
+      price: 9.97
+      description: "2 donas sabor o relleno, y 1 dona personalizada 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057569/43ca0e17-23ad-49cb-b6ef-d60d995178ec.png"
+
+    - id: "abacd059-1729-430a-813f-39b1ddff028a"
+      name: "Mood donut - Personalizados"
+      category: "personalizadas"
+      price: 4.50
+      description: "1 dona personalizada 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057557/a789dc07-fa96-4dd5-92a1-804744e699b9.png"
+
+    - id: "0d0c1867-d639-4ebf-990c-68184e50780e"
+      name: "Mega donut - Personalizados"
+      category: "personalizadas"
+      price: 19.99
+      description: "La donut mas grande del ecuador (Texto personalizado) 🎨 Personalízala con el mensaje o imagen que desees."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057547/dd279185-b5f8-4f50-99c5-b907a0ee4c91.png"
+
+promociones:
+    - id: "320f9ce3-c693-43f0-80d7-80cb015552af"
+      name: "promo 4x3 paga por 3"
+      category: "promociones"
+      price: 5.50
+      description: "Promoción - paga por 3 y lleva 4 escoge sabores"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057562/77a978c2-d61a-48ca-b827-7c35b7eb4c15.png"
+
+    - id: "62e58308-f75c-477c-996a-128248434744"
+      name: "6 donitas"
+      category: "promociones"
+      price: 5.00
+      description: "Promoción de 6 donitas pequenias. Sabores a eleccion"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057553/6d856171-102f-40ea-8c61-ad87c8dab2d3.png"
+
+    - id: "6255f03c-ea57-4305-b6cd-71d38601f909"
+      name: "6 Premium"
+      category: "promociones"
+      price: 11.43
+      description: "6 donas relleno, Promoción de 6 donuts con glaseado, sabores a eleccion y con relleno a eleccion"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057567/60c4c9b4-e829-49e1-a16f-c388b52e33ea.png"
+
+    - id: "2ebb620f-1249-49f6-902d-5cf417c4bd7d"
+      name: "6 berlines"
+      category: "promociones"
+      price: 10.50
+      description: "6 donas relleno - Promoción de 6 donuts rellenos con espoloverado encima. Sabores a eleccion"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057564/1c383adb-2e1c-4f0a-bcde-2b8ae5182fba.png"
+
+    - id: "88e42dbe-2794-4357-aa54-e00afb80ed66"
+      name: "Promo 12x9 paga por 9"
+      category: "promociones"
+      price: 16.00
+      description: "Mega promoción - paga por 9 y lleva 12. escoge sabores"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057554/5bc0a08a-ffe8-481c-950c-4637fe4dd656.png"
+
+    - id: "873cd1d5-6bcb-4af5-8786-7829cdaafaee"
+      name: "6 donuts"
+      category: "promociones"
+      price: 10.50
+      description: "6 donas sabor - Promoción de 6 donuts variadas 11 cm. sabores a eleccion"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057577/e01a8965-941c-4e3e-9b0b-cadb3722feba.jpg"
+
+docenas:
+    - id: "466e4ab7-b999-4474-9d55-0171b63a0dd9"
+      name: "1 Docena glaseadas"
+      category: "docenas"
+      price: 18.50
+      description: "1 Docena, Promoción de 12 donuts solo glaseadas. 1 docena glaseadas, sin personalizar"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057550/f1131baf-3378-4e10-8d9d-f436a834639b.png"
+
+    - id: "c0325587-cff9-49ce-ac44-68b508ea493e"
+      name: "1 docena mini donuts"
+      category: "docenas"
+      price: 10.50
+      description: "12 donas sabor - Promoción de 12 mini donuts variadas a eleccion."
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057563/dd59ba1e-3ccf-484f-8c56-5930f2a79471.jpg"
+
+    - id: "65d34ea3-7f3e-4b5f-a4ab-8f2eaf2177a3"
+      name: "Frapuchino 14oz"
+      category: "docenas"
+      price: 3.50
+      description: "Frapuchino 14oz tamaño"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057551/ff4c8c7c-54a7-4988-bd95-c734a2484633.png"
 
 mercaderia:
-  - id: 41
-    name: "Gorra Diseño 1"
-    category: "mercaderia"
-    price: 7.50
-    original_price: 12.50
-    description: "Gorra diseño limitado exclusivo"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "81bd05db-3d93-4e99-9b26-14f66e74fe39"
+      name: "Jarron DT1 coleccionable"
+      category: "mercaderia"
+      price: 4.99
+      description: "Taza - Jarrón DT1 coleccionable"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057576/eeca9d5b-8150-4479-b30e-676221f0578b.png"
 
-  - id: 42
-    name: "Gorra Diseño 2"
-    category: "mercaderia"
-    price: 7.50
-    original_price: 12.50
-    description: "Gorra diseño limitado exclusivo"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
+    - id: "0425031a-a8ba-430b-94b1-3f10297fd5f9"
+      name: "Jarron DT2 coleccionable"
+      category: "mercaderia"
+      price: 4.99
+      description: "Jarron/Taza DT2 coleccionable"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057549/68fd8d50-796b-4435-874e-1081dfe1fb53.png"
 
-  - id: 43
-    name: "Gorra Diseño 3"
-    category: "mercaderia"
-    price: 7.50
-    original_price: 12.50
-    description: "Gorra diseño limitado exclusivo"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 44
-    name: "Jarro Café 1"
-    category: "mercaderia"
-    price: 5.39
-    original_price: 8.99
-    description: "Jarro especial para café"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 45
-    name: "Jarro Café 2"
-    category: "mercaderia"
-    price: 5.39
-    original_price: 8.99
-    description: "Jarro especial para café"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 46
-    name: "Jarro Café 3"
-    category: "mercaderia"
-    price: 5.39
-    original_price: 8.99
-    description: "Jarro especial para café"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 47
-    name: "Jarro Café 4"
-    category: "mercaderia"
-    price: 5.39
-    original_price: 8.99
-    description: "Jarro especial para café"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 48
-    name: "Pin 1"
-    category: "mercaderia"
-    price: 1.19
-    original_price: 1.99
-    description: "Pin para colocar en maletas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 49
-    name: "Pin 2"
-    category: "mercaderia"
-    price: 1.19
-    original_price: 1.99
-    description: "Pin para colocar en maletas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 50
-    name: "Pin 3"
-    category: "mercaderia"
-    price: 1.19
-    original_price: 1.99
-    description: "Pin para colocar en maletas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
-  - id: 51
-    name: "Pin 4"
-    category: "mercaderia"
-    price: 1.19
-    original_price: 1.99
-    description: "Pin para colocar en maletas"
-    image: "/assets/images/gallery-donut-box-ready-to-go.jpg"
-
+    - id: "dc87a481-e75c-4205-9785-5fd6c281a74d"
+      name: "Gorra disenio 3"
+      category: "mercaderia"
+      price: 12.99
+      description: "Gorra con diseño Donutterapia"
+      image: "https://jelou-ecommerce-bucket.s3.us-west-2.amazonaws.com/56057570/2accba68-5a36-401a-a701-600396d0917c.png"
