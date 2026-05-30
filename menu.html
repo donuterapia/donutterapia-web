@@ -91,57 +91,8 @@ description: "Explora nuestra colección de donuts artesanales. Clásicas, vegan
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Collection 1 -->
-            <div class="bg-gradient-to-br from-dt-purple-900/30 to-dt-purple-700/20 rounded-2xl p-8 collection-card">
-                <div class="text-center mb-6">
-                    <div class="text-5xl mb-4">🍩🍩🍩</div>
-                    <h4 class="font-konigsberg text-2xl text-dt-purple-200 mb-2">Docena del Panadero</h4>
-                    <p class="text-dt-yellow-400 text-sm">13 donas surtidas</p>
-                </div>
-                <div class="text-center mb-6">
-                    <span class="line-through text-dt-yellow-400/50">$52.00</span>
-                    <div class="text-dt-glacing font-bold text-3xl">$44.99</div>
-                    <p class="text-dt-yellow-400 text-sm mt-2">Ahorra $7.01</p>
-                </div>
-                <button class="w-full bg-dt-purple-700 text-white py-3 rounded-full font-bold hover:bg-dt-purple-900 transition-colors add-collection">
-                    Agregar Colección
-                </button>
-            </div>
-
-            <!-- Collection 2 -->
-            <div class="bg-gradient-to-br from-dt-blue-900/30 to-dt-blue-700/20 rounded-2xl p-8 collection-card">
-                <div class="text-center mb-6">
-                    <div class="text-5xl mb-4">🎉🍩🎂</div>
-                    <h4 class="font-konigsberg text-2xl text-dt-blue-200 mb-2">Paquete Fiesta</h4>
-                    <p class="text-dt-yellow-400 text-sm">24 mini donas + 6 regulares</p>
-                </div>
-                <div class="text-center mb-6">
-                    <span class="line-through text-dt-yellow-400/50">$65.00</span>
-                    <div class="text-dt-glacing font-bold text-3xl">$54.99</div>
-                    <p class="text-dt-yellow-400 text-sm mt-2">Ahorra $10.01</p>
-                </div>
-                <button class="w-full bg-dt-blue-700 text-white py-3 rounded-full font-bold hover:bg-dt-blue-900 transition-colors add-collection">
-                    Agregar Colección
-                </button>
-            </div>
-
-            <!-- Collection 3 -->
-            <div class="bg-gradient-to-br from-dt-glacing/20 to-pink-600/20 rounded-2xl p-8 collection-card">
-                <div class="text-center mb-6">
-                    <div class="text-5xl mb-4">❤️🍩💝</div>
-                    <h4 class="font-konigsberg text-2xl text-dt-glacing mb-2">Especial Enamorados</h4>
-                    <p class="text-dt-yellow-400 text-sm">6 premium + inmersión de chocolate</p>
-                </div>
-                <div class="text-center mb-6">
-                    <span class="line-through text-dt-yellow-400/50">$32.00</span>
-                    <div class="text-dt-glacing font-bold text-3xl">$26.99</div>
-                    <p class="text-dt-yellow-400 text-sm mt-2">Ahorra $5.01</p>
-                </div>
-                <button class="w-full bg-dt-glacing text-white py-3 rounded-full font-bold hover:bg-red-600 transition-colors add-collection">
-                    Agregar Colección
-                </button>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="collectionsGrid">
+            <!-- Collections will be populated by JavaScript -->
         </div>
     </div>
 </section>
@@ -157,66 +108,8 @@ description: "Explora nuestra colección de donuts artesanales. Clásicas, vegan
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Beverage 1 -->
-            <div class="bg-black rounded-2xl p-6 donut-hover">
-                <div class="bg-dt-blue-200 h-32 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="text-5xl">☕</div>
-                </div>
-                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Café Artesanal</h4>
-                <p class="text-dt-yellow-400 text-sm mb-4">Granos de origen único, recién tostados</p>
-                <div class="flex justify-between items-center">
-                    <span class="font-bold text-dt-glacing">$3.50 - $5.00</span>
-                    <button class="bg-dt-blue-500 text-white px-4 py-2 rounded-full text-sm hover:bg-dt-blue-700 transition-colors add-beverage">
-                        Agregar
-                    </button>
-                </div>
-            </div>
-
-            <!-- Beverage 2 -->
-            <div class="bg-black rounded-2xl p-6 donut-hover">
-                <div class="bg-dt-purple-200 h-32 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="text-5xl">🍵</div>
-                </div>
-                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Té Especial</h4>
-                <p class="text-dt-yellow-400 text-sm mb-4">Selección premium de té de hojas sueltas</p>
-                <div class="flex justify-between items-center">
-                    <span class="font-bold text-dt-glacing">$3.00 - $4.50</span>
-                    <button class="bg-dt-purple-500 text-white px-4 py-2 rounded-full text-sm hover:bg-dt-purple-700 transition-colors add-beverage">
-                        Agregar
-                    </button>
-                </div>
-            </div>
-
-            <!-- Beverage 3 -->
-            <div class="bg-black rounded-2xl p-6 donut-hover">
-                <div class="bg-dt-yellow-200 h-32 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="text-5xl">🥤</div>
-                </div>
-                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Cold Brew</h4>
-                <p class="text-dt-yellow-400 text-sm mb-4">Reposado 24 horas, suave y refrescante</p>
-                <div class="flex justify-between items-center">
-                    <span class="font-bold text-dt-glacing">$4.50 - $5.50</span>
-                    <button class="bg-dt-yellow-900 text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-800 transition-colors add-beverage">
-                        Agregar
-                    </button>
-                </div>
-            </div>
-
-            <!-- Beverage 4 -->
-            <div class="bg-black rounded-2xl p-6 donut-hover">
-                <div class="bg-dt-glacing/20 h-32 rounded-xl mb-4 flex items-center justify-center">
-                    <div class="text-5xl">🍫</div>
-                </div>
-                <h4 class="font-konigsberg text-xl text-dt-donut mb-2">Chocolate Caliente</h4>
-                <p class="text-dt-yellow-400 text-sm mb-4">Chocolate belga rico con crema batida</p>
-                <div class="flex justify-between items-center">
-                    <span class="font-bold text-dt-glacing">$4.75</span>
-                    <button class="bg-dt-glacing text-white px-4 py-2 rounded-full text-sm hover:bg-red-600 transition-colors add-beverage">
-                        Agregar
-                    </button>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="beveragesGrid">
+            <!-- Beverages will be populated by JavaScript -->
         </div>
     </div>
 </section>
