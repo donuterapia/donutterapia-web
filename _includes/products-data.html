@@ -6,7 +6,7 @@ window.productsData = {
     "{{ category[0] }}": [
     {% for product in category[1] %}
       {
-        "id": {{ product.id }},
+        "id": "{{ product.id }}",
         "name": "{{ product.name }}",
         "description": "{{ product.description }}",
         "price": {{ product.price }},
